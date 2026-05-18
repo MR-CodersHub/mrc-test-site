@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore insights on technology, development, and digital growth from the experts at MR CODERS HUB.">
+    <title>Dev Talks | Blog | MR CODERS HUB</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-purple': '#7C3AED',
+                        'brand-orange': '#F59E0B',
+                        'bg-main': '#F9FAFB',
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px -15px rgba(30, 58, 138, 0.12)',
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-blue: #1E3A8A;
+            --brand-purple: #7C3AED;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.85);
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--brand-blue);
+            box-shadow: 0 30px 60px -15px rgba(30, 58, 138, 0.15);
+        }
+
+        .number-badge {
+            background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-purple) 100%);
+            box-shadow: 0 10px 20px -5px rgba(30, 58, 138, 0.3);
+        }
+
+        .dotted-line {
+            background-image: radial-gradient(circle, #cbd5e1 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
+        }
+
+        /* ── Intern Profiles Scrolling ──────────────────────── */
+        .intern-scroll-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+
+        .intern-track {
+            display: flex;
+            width: max-content;
+            animation: scroll-left 40s linear infinite;
+        }
+
+        .intern-scroll-container:hover .intern-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .intern-card {
+            flex-shrink: 0;
+            width: 180px;
+            margin: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .intern-image-wrapper {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid white;
+            box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.1);
+            margin-bottom: 1rem;
+            transition: all 0.4s ease;
+        }
+
+        .intern-card:hover .intern-image-wrapper {
+            transform: scale(1.1) translateY(-5px);
+            border-color: var(--brand-blue);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-purple) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            display: inline-block;
+            white-space: nowrap;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="bg-[#F8FAFC] text-gray-900 overflow-x-hidden antialiased">
+
+    <!-- Global Navigation -->
+
+    <!-- Navigation Spacer -->
+    <div class="h-16 lg:h-20"></div>
+
+    <!-- 1. HERO SECTION -->
+    <header
+        class="relative min-h-[30vh] sm:min-h-[50vh] flex items-center justify-center overflow-hidden py-12 sm:py-0">
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/img/bg2.jpg" alt="Knowledge Hub" class="w-full h-full object-cover opacity-40 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-bg-main"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10 w-full pt-16">
+            <div class="reveal">
+                <h1
+                    class="hero-title font-black mb-8 text-gray-900 font-outfit leading-[1.1] sm:leading-none whitespace-nowrap">
+                    Knowledge <span class="gradient-text italic font-serif">Hub</span></h1>
+                <p class="text-xl md:text-2xl text-gray-700 font-medium leading-relaxed max-w-3xl mx-auto mb-12">
+                    Explore IEEE-based research, real student projects, and practical technical insights developed
+                    through hands-on learning and execution at MR CODERS HUB. </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1.5 JOURNEY MIND MAP SECTION -->
+    <section class="relative py-12 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0">
+
+                <!-- Step 1: Learning -->
+                <div class="flex-1 flex flex-col items-center text-center group reveal">
+                    <div
+                        class="w-24 h-24 rounded-full glass-card flex items-center justify-center mb-6 relative z-10 border-2 border-brand-blue/30 group-hover:border-brand-blue transition-all duration-500">
+                        <i data-lucide="book-open" class="w-12 h-12 text-brand-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 uppercase tracking-widest mb-3">Learning</h3>
+                    <div class="flex flex-col gap-1">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">IEEE
+                            Standards</span>
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Tech Research</span>
+                    </div>
+                </div>
+
+                <!-- Connector 1 -->
+                <div class="hidden md:flex flex-col items-center justify-center w-24 reveal delay-100">
+                    <svg class="w-full h-8" viewBox="0 0 100 20" fill="none">
+                        <path d="M0 10H100" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 4" />
+                        <path d="M95 5L100 10L95 15" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <!-- Step 2: Building -->
+                <div class="flex-1 flex flex-col items-center text-center group reveal delay-200">
+                    <div
+                        class="w-24 h-24 rounded-full glass-card flex items-center justify-center mb-6 relative z-10 border-2 border-brand-purple/30 group-hover:border-brand-purple transition-all duration-500">
+                        <i data-lucide="code-2" class="w-12 h-12 text-brand-purple"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 uppercase tracking-widest mb-3">Building</h3>
+                    <div class="flex flex-col gap-1">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Live Projects</span>
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Real
+                            Execution</span>
+                    </div>
+                </div>
+
+                <!-- Connector 2 -->
+                <div class="hidden md:flex flex-col items-center justify-center w-24 reveal delay-300">
+                    <svg class="w-full h-8" viewBox="0 0 100 20" fill="none">
+                        <path d="M0 10H100" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 4" />
+                        <path d="M95 5L100 10L95 15" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <!-- Step 3: Publishing -->
+                <div class="flex-1 flex flex-col items-center text-center group reveal delay-400">
+                    <div
+                        class="w-24 h-24 rounded-full glass-card flex items-center justify-center mb-6 relative z-10 border-2 border-brand-orange/30 group-hover:border-brand-orange transition-all duration-500">
+                        <i data-lucide="share-2" class="w-12 h-12 text-brand-orange"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 uppercase tracking-widest mb-3">Publishing</h3>
+                    <div class="flex flex-col gap-1">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Tech Insights</span>
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Market Ready</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. INFOGRAPHIC BLOG GRID SECTION -->
+    <section class="relative responsive-py px-6">
+        <!-- Background Asset -->
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img src="./assets/img/blog-bg.png" alt="Mesh Gradient" class="w-full h-full object-cover">
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="max-w-7xl mx-auto px-6 text-center mb-16 md:mb-24">
+                <h2 class="section-title font-black text-gray-900">Research & Publications</h2>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 lg:gap-12 mobile-slider">
+
+                <!-- Card 01 -->
+                <a href="./assets/files/Harish.pdf"
+                    class="glass-card p-8 rounded-[2rem] relative reveal w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-3rem)]">
+                    <div
+                        class="number-badge absolute -top-4 -left-4 w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-lg">
+                        01</div>
+                    <div class="mb-6 text-brand-blue">
+                        <i data-lucide="file-text" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-6 tracking-tight leading-tight">Self-Learning
+                        Agricultural Robot for Intelligent Weed Detection and Selective Removal Using Deep Reinforcement
+                        Learning</h3>
+                    <div class="space-y-4 pt-4 border-t border-gray-100">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Student</p>
+                            <p class="text-brand-blue font-bold text-lg">Harish Raghav Kumar S</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Degree</p>
+                                <p class="text-gray-600 font-semibold text-xs">BCA</p>
+                            </div>
+                            <span
+                                class="px-3 py-1 bg-brand-blue/10 text-brand-blue rounded-full text-[9px] font-black uppercase tracking-tighter">Intern</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 02 -->
+                <a href="./assets/files/Hemanth.pdf"
+                    class="glass-card p-8 rounded-[2rem] relative reveal delay-100 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-3rem)]">
+                    <div
+                        class="number-badge absolute -top-4 -left-4 w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-lg">
+                        02</div>
+                    <div class="mb-6 text-brand-purple">
+                        <i data-lucide="file-text" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-6 tracking-tight leading-tight">Hybrid Graph Neural
+                        Network Model for Crop Yield Prediction Using Multi-Source Agricultural Data Fusion</h3>
+                    <div class="space-y-4 pt-4 border-t border-gray-100">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Student</p>
+                            <p class="text-brand-purple font-bold text-lg">Hemanth Kumar P</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Degree</p>
+                                <p class="text-gray-600 font-semibold text-xs">BCA</p>
+                            </div>
+                            <span
+                                class="px-3 py-1 bg-brand-purple/10 text-brand-purple rounded-full text-[9px] font-black uppercase tracking-tighter">Learner</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 03 -->
+                <a href="./assets/files/Kamali.pdf"
+                    class="glass-card p-8 rounded-[2rem] relative reveal delay-200 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-3rem)]">
+                    <div
+                        class="number-badge absolute -top-4 -left-4 w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-lg">
+                        03</div>
+                    <div class="mb-6 text-brand-orange">
+                        <i data-lucide="file-text" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-6 tracking-tight leading-tight">Algorithm Influence
+                        on Political Opinions</h3>
+                    <div class="space-y-4 pt-4 border-t border-gray-100">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Student</p>
+                            <p class="text-brand-orange font-bold text-lg">Kamali D</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Degree</p>
+                                <p class="text-gray-600 font-semibold text-xs">BCA</p>
+                            </div>
+                            <span
+                                class="px-3 py-1 bg-brand-orange/10 text-brand-orange rounded-full text-[9px] font-black uppercase tracking-tighter">Learner</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 04 -->
+                <a href="./assets/files/Kaviya.pdf"
+                    class="glass-card p-8 rounded-[2rem] relative reveal w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-3rem)]">
+                    <div
+                        class="number-badge absolute -top-4 -left-4 w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-lg">
+                        04</div>
+                    <div class="mb-6 text-blue-600">
+                        <i data-lucide="file-text" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-6 tracking-tight leading-tight">Influencer Economy-An
+                        Emerging Professional Path in the Digital Labor Ecosystem</h3>
+                    <div class="space-y-4 pt-4 border-t border-gray-100">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Student</p>
+                            <p class="text-blue-600 font-bold text-lg">Kaviya S</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Degree</p>
+                                <p class="text-gray-600 font-semibold text-xs">BCA</p>
+                            </div>
+                            <span
+                                class="px-3 py-1 bg-blue-600/10 text-blue-600 rounded-full text-[9px] font-black uppercase tracking-tighter">Learner</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 05 -->
+                <a href="./assets/files/Kiruthiga.pdf"
+                    class="glass-card p-8 rounded-[2rem] relative reveal delay-100 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-3rem)]">
+                    <div
+                        class="number-badge absolute -top-4 -left-4 w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-lg">
+                        05</div>
+                    <div class="mb-6 text-purple-600">
+                        <i data-lucide="file-text" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-6 tracking-tight leading-tight">AI-Based Food Waste
+                        Prediction and Redistribution Network Using Real-Time Agricultural Data</h3>
+                    <div class="space-y-4 pt-4 border-t border-gray-100">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Student</p>
+                            <p class="text-purple-600 font-bold text-lg">Kiruthika E</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Degree</p>
+                                <p class="text-gray-600 font-semibold text-xs">BCA</p>
+                            </div>
+                            <span
+                                class="px-3 py-1 bg-purple-600/10 text-purple-600 rounded-full text-[9px] font-black uppercase tracking-tighter">Learner</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 06 -->
+                <a href="./assets/files/Lavanya.pdf"
+                    class="glass-card p-8 rounded-[2rem] relative reveal delay-200 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-3rem)]">
+                    <div
+                        class="number-badge absolute -top-4 -left-4 w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-lg">
+                        06</div>
+                    <div class="mb-6 text-indigo-600">
+                        <i data-lucide="file-text" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-6 tracking-tight leading-tight">Cognitive Smart
+                        Irrigation System Using Neuromorphic Computing for Ultra-Low Power Agricultural Intelligence
+                    </h3>
+                    <div class="space-y-4 pt-4 border-t border-gray-100">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Student</p>
+                            <p class="text-indigo-600 font-bold text-lg">Lavanya</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Degree</p>
+                                <p class="text-gray-600 font-semibold text-xs">BCA</p>
+                            </div>
+                            <span
+                                class="px-3 py-1 bg-indigo-600/10 text-indigo-600 rounded-full text-[9px] font-black uppercase tracking-tighter">Learner</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 07 -->
+                <a href="./assets/files/Narmadha.pdf"
+                    class="glass-card p-8 rounded-[2rem] relative reveal w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-3rem)]">
+                    <div
+                        class="number-badge absolute -top-4 -left-4 w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-lg">
+                        07</div>
+                    <div class="mb-6 text-red-600">
+                        <i data-lucide="file-text" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-6 tracking-tight leading-tight">Role of Social Media
+                        in Building Small Businesses</h3>
+                    <div class="space-y-4 pt-4 border-t border-gray-100">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Student</p>
+                            <p class="text-red-600 font-bold text-lg">Narmatha N M</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Degree</p>
+                                <p class="text-gray-600 font-semibold text-xs">BCA</p>
+                            </div>
+                            <span
+                                class="px-3 py-1 bg-red-600/10 text-red-600 rounded-full text-[9px] font-black uppercase tracking-tighter">Learner</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 08 -->
+                <a href="./assets/files/Praveen.pdf"
+                    class="glass-card p-8 rounded-[2rem] relative reveal delay-100 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-3rem)]">
+                    <div
+                        class="number-badge absolute -top-4 -left-4 w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-lg">
+                        08</div>
+                    <div class="mb-6 text-emerald-600">
+                        <i data-lucide="file-text" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-6 tracking-tight leading-tight">Satellite–IoT
+                        Integrated Framework for Large-Scale Agricultural Monitoring and Yield Forecasting Using Deep
+                        Learning</h3>
+                    <div class="space-y-4 pt-4 border-t border-gray-100">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Student</p>
+                            <p class="text-emerald-600 font-bold text-lg">Praveen Venkatesh S</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Degree</p>
+                                <p class="text-gray-600 font-semibold text-xs">BCA</p>
+                            </div>
+                            <span
+                                class="px-3 py-1 bg-emerald-600/10 text-emerald-600 rounded-full text-[9px] font-black uppercase tracking-tighter">Learner</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 09 -->
+                <a href="./assets/files/Saranya.pdf"
+                    class="glass-card p-8 rounded-[2rem] relative reveal delay-200 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-3rem)]">
+                    <div
+                        class="number-badge absolute -top-4 -left-4 w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-lg">
+                        09</div>
+                    <div class="mb-6 text-brand-blue">
+                        <i data-lucide="file-text" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-6 tracking-tight leading-tight">Bio-Inspired Neural
+                        Swarm Intelligence for Autonomous Pollination Robots in Smart Agriculture</h3>
+                    <div class="space-y-4 pt-4 border-t border-gray-100">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Student</p>
+                            <p class="text-brand-blue font-bold text-lg">Saranya</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Degree</p>
+                                <p class="text-gray-600 font-semibold text-xs">BCA</p>
+                            </div>
+                            <span
+                                class="px-3 py-1 bg-brand-blue/10 text-brand-blue rounded-full text-[9px] font-black uppercase tracking-tighter">Learner</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. INTERN PROFILES SECTION -->
+    <section class="py-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-24">
+            <p class="text-xs uppercase tracking-[0.4em] text-brand-blue font-bold mb-4">Our Talent</p>
+            <h2 class="section-title font-black text-gray-900">Intern Profiles</h2>
+        </div>
+
+        <div class="intern-scroll-container reveal">
+            <div class="intern-track">
+                <a href="gowthami-portfolio-topaz.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/gowthami-pfp.png" class="w-full h-full object-cover" alt="Gowthami">
+                    </div>
+                    <p class="intern-name">Gowthami</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="harish-portfolio-virid.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/HARISH-PFP.png" class="w-full h-full object-cover" alt="Harish">
+                    </div>
+                    <p class="intern-name">Harish Raghav kumar S</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="kiruthika-portfolio-iota.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/kiruthika-pfp.png" class="w-full h-full object-cover" alt="Kiruthika">
+                    </div>
+                    <p class="intern-name">Kiruthika E</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="kishore-portfolio-brown.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/kishore-pfp.png" class="w-full h-full object-cover" alt="Kishore">
+                    </div>
+                    <p class="intern-name">Kishore</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="meenakshi-portfolio-six.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/meenakshi-pfp.png" class="w-full h-full object-cover" alt="Meenakshi">
+                    </div>
+                    <p class="intern-name">Meenakshi</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="pooja-portfolio-lac-eta.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/pooja-pfp.png" class="w-full h-full object-cover" alt="Pooja">
+                    </div>
+                    <p class="intern-name">Pooja</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="prashanth-portfolio-beta.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/PRASANTH-PFP.png" class="w-full h-full object-cover" alt="Prasanth">
+                    </div>
+                    <p class="intern-name">Prashanth</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="priyan-portfolio.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/PRIYAN-PFP.png" class="w-full h-full object-cover" alt="Priyan">
+                    </div>
+                    <p class="intern-name">Priyan</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="saranya-portfolio-navy.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/saranya-pfp.png" class="w-full h-full object-cover" alt="Saranya">
+                    </div>
+                    <p class="intern-name">Saranya</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="sweety-portfolio-two.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/sweety-pfp.png" class="w-full h-full object-cover" alt="Sweety">
+                    </div>
+                    <p class="intern-name">Sweety</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="tonya-portfolio.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/tonya-pfp.png" class="w-full h-full object-cover" alt="Tonya">
+                    </div>
+                    <p class="intern-name">Tonya</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <!-- Duplicated for Infinite Scroll -->
+                <a href="gowthami-portfolio-topaz.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/gowthami-pfp.png" class="w-full h-full object-cover" alt="Gowthami">
+                    </div>
+                    <p class="intern-name">Gowthami</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="harish-portfolio-virid.vercel.app/" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/HARISH-PFP.png" class="w-full h-full object-cover" alt="Harish">
+                    </div>
+                    <p class="intern-name">Harish Raghav Kumar</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="kiruthika-portfolio-iota.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/kiruthika-pfp.png" class="w-full h-full object-cover" alt="Kiruthika">
+                    </div>
+                    <p class="intern-name">Kiruthika</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="kishore-portfolio-brown.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/kishore-pfp.png" class="w-full h-full object-cover" alt="Kishore">
+                    </div>
+                    <p class="intern-name">Kishore</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="portfolio-lavanya-nine.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/lavanya-pfp.png" class="w-full h-full object-cover" alt="Lavanya">
+                    </div>
+                    <p class="intern-name">Lavanya</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="meenakshi-portfolio-six.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/meenakshi-pfp.png" class="w-full h-full object-cover" alt="Meenakshi">
+                    </div>
+                    <p class="intern-name">Meenakshi</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="pooja-portfolio-lac-eta.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/pooja-pfp.png" class="w-full h-full object-cover" alt="Pooja">
+                    </div>
+                    <p class="intern-name">Pooja</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="prashanth-portfolio-beta.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/PRASANTH-PFP.png" class="w-full h-full object-cover" alt="Prasanth">
+                    </div>
+                    <p class="intern-name">Prashanth</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="priyan-portfolio.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/PRIYAN-PFP.png" class="w-full h-full object-cover" alt="Priyan">
+                    </div>
+                    <p class="intern-name">Priyan</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="saranya-portfolio-navy.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/saranya-pfp.png" class="w-full h-full object-cover" alt="Saranya">
+                    </div>
+                    <p class="intern-name">Saranya</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="sweety-portfolio-two.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/sweety-pfp.png" class="w-full h-full object-cover" alt="Sweety">
+                    </div>
+                    <p class="intern-name">Sweety</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+                <a href="tonya-portfolio.vercel.app" class="intern-card">
+                    <div class="intern-image-wrapper">
+                        <img src="./assets/img/tonya-pfp.png" class="w-full h-full object-cover" alt="Tonya">
+                    </div>
+                    <p class="intern-name">Tonya</p>
+                    <p class="intern-role">Web Intern</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CTA SECTION -->
+    <section class="py-16 px-6">
+        <div
+            class="max-w-4xl mx-auto bg-slate-900 rounded-[2.5rem] p-10 md:p-14 text-center text-white relative overflow-hidden reveal">
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+            </div>
+             <h2 class="hero-title font-black mb-12 font-outfit leading-none tracking-tight">Ready to build <br> <span
+                    class="italic font-serif "> your next project?</span> </h2>
+            <a href="contact.html"
+                class="inline-block px-10 py-5 bg-white text-brand-blue rounded-2xl font-black uppercase tracking-widest text-xs hover:scale-105 transition-all relative z-10">
+                Start a Conversation
+            </a>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <style>
+        /* WhatsApp Button Container */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            /* Official WhatsApp Green */
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            /* On-load Animation */
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            animation: wa-float-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+        }
+
+        /* Hover Effects */
+        .whatsapp-float:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
+            background-color: #20b858;
+        }
+
+        /* SVG Icon Sizing */
+        .whatsapp-float svg {
+            width: 34px;
+            height: 34px;
+            fill: currentColor;
+        }
+
+        /* Tooltip Styling */
+        .wa-tooltip {
+            position: absolute;
+            right: 75px;
+            /* Spaced out from the button */
+            background-color: #1f2937;
+            /* Dark slate color */
+            color: white;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            transform: translateX(10px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tooltip Arrow pointing to the button */
+        .wa-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -6px;
+            transform: translateY(-50%);
+            border-width: 6px 0 6px 6px;
+            border-style: solid;
+            border-color: transparent transparent transparent #1f2937;
+        }
+
+        /* Show tooltip on hover (Desktop only) */
+        @media (hover: hover) {
+            .whatsapp-float:hover .wa-tooltip {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+        }
+
+        /* Keyframe Animation */
+        @keyframes wa-float-in {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .whatsapp-float svg {
+                width: 30px;
+                height: 30px;
+            }
+
+            .wa-tooltip {
+                display: none;
+                /* Hide tooltip on mobile to prevent clutter */
+            }
+        }
+    </style>
+
+    <!-- HTML Structure -->
+    <a href="#" id="whatsapp-btn" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp">
+        <!-- Official WhatsApp SVG Vector -->
+        <svg viewBox="0 0 24 24" fill="white">
+            <path
+                d="M20.52 3.48A11.94 11.94 0 0012.05 0C5.4 0 .02 5.38.02 12.03c0 2.12.56 4.2 1.62 6.04L0 24l6.11-1.6a12.03 12.03 0 005.94 1.52h.01c6.65 0 12.03-5.38 12.03-12.03 0-3.21-1.25-6.22-3.57-8.41zM12.05 21.9h-.01a9.88 9.88 0 01-5.03-1.38l-.36-.21-3.63.95.97-3.54-.23-.36a9.86 9.86 0 01-1.51-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 012.9 7.01c0 5.47-4.45 9.92-9.92 9.92zm5.48-7.39c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z" />
+        </svg>
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+    <!-- JavaScript Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const waButton = document.getElementById('whatsapp-btn');
+
+            // --- CONFIGURATION ---
+            // Use your actual MR CODERS HUB number (Country code without '+')
+            const phoneNumber = '919360739559';
+
+            // Create a dynamic message based on the current page the user is viewing
+            const pageTitle = document.title.split('|')[0].trim();
+            const message = `Hello MR CODERS HUB! I was looking at the "${pageTitle}" page and I'd like to know more about your services.`;
+
+            // Properly encode the message for URL transmission
+            const encodedMessage = encodeURIComponent(message);
+
+            // Construct the official WhatsApp API URL
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            // Assign to button
+            waButton.setAttribute('href', whatsappUrl);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Job-Oriented Courses in Chennai | MR CODERS HUB</title>
+    <meta name="description"
+        content="Learn digital marketing, web development, and data analytics with real projects and internships in Chennai. Get job-ready with MR CODERS HUB.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-purple': '#7C3AED',
+                        'brand-orange': '#F59E0B',
+                        'bg-main': '#F9FAFB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px -15px rgba(30, 58, 138, 0.12)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-blue: #1E3A8A;
+            --brand-purple: #7C3AED;
+            --brand-orange: #F59E0B;
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-purple) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .tag-pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            background: rgba(30, 58, 138, 0.05);
+            color: var(--brand-blue);
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: 1px solid rgba(30, 58, 138, 0.1);
+        }
+
+        /* ── Student Testimonials Carousel Custom Styles ───────────────────────── */
+        .student-testimonial-card {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .student-testimonial-card:hover {
+            transform: translateY(-12px) scale(1.015) rotateX(2deg) rotateY(-1deg);
+            box-shadow: 0 35px 60px -20px rgba(124, 58, 237, 0.16), 0 0 40px 5px rgba(30, 58, 138, 0.03);
+            border-color: rgba(124, 58, 237, 0.25);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Gentle shine reflection effect on hover */
+        .student-testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transition: all 0.8s ease;
+            z-index: 1;
+        }
+
+        .student-testimonial-card:hover::before {
+            left: 150%;
+        }
+
+        /* Micro-animations inside the card */
+        .student-testimonial-card .star-container i {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .student-testimonial-card:hover .star-container i {
+            transform: scale(1.2);
+        }
+        
+        /* Staggered star animation on hover */
+        .student-testimonial-card:hover .star-container i:nth-child(1) { transition-delay: 0.05s; }
+        .student-testimonial-card:hover .star-container i:nth-child(2) { transition-delay: 0.1s; }
+        .student-testimonial-card:hover .star-container i:nth-child(3) { transition-delay: 0.15s; }
+        .student-testimonial-card:hover .star-container i:nth-child(4) { transition-delay: 0.2s; }
+        .student-testimonial-card:hover .star-container i:nth-child(5) { transition-delay: 0.25s; }
+
+        /* Rotate the background quote on hover */
+        .student-testimonial-card .quote-icon {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .student-testimonial-card:hover .quote-icon {
+            transform: rotate(195deg) scale(1.15);
+            color: rgba(124, 58, 237, 0.08) !important;
+        }
+
+        #studentCarouselTrack {
+            will-change: transform;
+        }
+    </style>
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="bg-bg-main text-gray-900 overflow-x-hidden antialiased">
+
+    <!-- Global Navigation -->
+
+    <!-- Navigation Spacer -->
+    <div class="h-16 sm:h-12 lg:h-20"></div>
+
+    <!-- 1. HERO SECTION -->
+    <section
+        class="relative min-h-[70vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden py-12 sm:py-0">
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/img/bg2.jpg" alt="Job-Ready Courses"
+                class="w-full h-full object-cover opacity-40 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-bg-main"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div class="reveal">
+                <h1 class="hero-title font-black mb-8 text-gray-900 font-outfit leading-[1.1] sm:leading-none">
+                    Job-Ready Courses. <br class="hidden sm:block"> <span class="gradient-text italic font-serif">with
+                        Real Experience.</span>
+                </h1>
+                <div
+                    class="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 rounded-full bg-brand-blue/5 border border-brand-blue/10 mb-8 max-w-full overflow-hidden">
+                    <span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse flex-shrink-0"></span>
+                    <span
+                        class="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.4em] text-brand-blue truncate">Avadi,
+                        Chennai Hub</span>
+                </div>
+                <p class="text-xl md:text-2xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto mb-12">
+                    MR CODERS HUB offers industry-focused training in Digital Marketing, Web Dev, and Data Analytics
+                    with real client projects and internships.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6 mb-4">
+                    <a href="#courses"
+                        class="w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-6 bg-brand-purple text-white rounded-2xl font-black text-lg sm:text-xl hover:scale-105 transition-all shadow-premium">
+                        Explore Courses
+                    </a>
+                    <a href="booking.html"
+                        class="w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-6 bg-white border border-gray-200 text-gray-900 rounded-2xl font-black text-lg sm:text-xl hover:bg-gray-50 transition-all">
+                        Internship Program
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. WHY THESE COURSES WORK -->
+    <section class="py-20 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span class="text-[10px] font-black text-brand-blue uppercase tracking-[0.5em] block mb-6">Outcome
+                        Driven</span>
+                    <h2 class="section-title font-black text-gray-900 mb-8 font-outfit">
+                        Why Our Courses <br> <span class="italic font-serif text-brand-blue">Actually Get You
+                            Hired</span>
+                    </h2>
+                    <p class="text-xl text-slate-600 font-medium leading-relaxed mb-10">
+                        Unlike traditional institutes, our courses are designed with one goal: making you useful to an
+                        employer from Day 1.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 text-lg font-bold text-gray-900">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-brand-blue"></i> Real-world project
+                            execution
+                        </div>
+                        <div class="flex items-center gap-4 text-lg font-bold text-gray-900">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-brand-blue"></i> Industry tools and
+                            workflows
+                        </div>
+                        <div class="flex items-center gap-4 text-lg font-bold text-gray-900">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-brand-blue"></i> Internship-based learning
+                        </div>
+                        <div class="flex items-center gap-4 text-lg font-bold text-gray-900">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-brand-blue"></i> Portfolio development
+                        </div>
+                    </div>
+                </div>
+                <div class="relative adaptive-rounded overflow-hidden aspect-square shadow-premium">
+                    <img src="./assets/img/bg3.jpg" alt="Team Collaboration" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-brand-blue/10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. COURSES SECTION (UPGRADED) -->
+    <section id="courses" class="responsive-py bg-slate-50 reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="section-title font-black text-gray-900 font-outfit mb-4">Professional Skills Track</h2>
+                <p class="text-xl text-slate-500 font-medium">Select your path and start executing.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center responsive-gap mobile-slider">
+                <!-- Data Analysis -->
+                <div
+                    class="group bg-white responsive-p rounded-[2.5rem] sm:rounded-[3.5rem] border border-slate-100 shadow-sm flex flex-col transition-all hover:shadow-premium hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="flex justify-between items-start mb-10">
+                        <span class="tag-pill">Includes Internship</span>
+                        <div
+                            class="w-14 h-14 rounded-2xl  bg-brand-blue/5 text-brand-blue flex items-center justify-center">
+                            <img src="./assets/img/powerBI.png" class="w-10 h-10">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 font-outfit">Data Analysis Mastery</h3>
+                    <p class="text-slate-500 font-medium text-sm leading-relaxed mb-8">Master Power BI, SQL, and Python
+                        with real-world dataset projects and corporate reporting workflows.</p>
+                    <ul class="space-y-3 mb-10 text-sm font-bold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Real client projects</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Portfolio-ready work</li>
+                    </ul>
+                    <div class="mt-auto pt-8 border-t border-slate-50 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Duration: 3
+                                Months</p>
+                            <p class="text-2xl font-black text-gray-900">₹7,999</p>
+                        </div>
+                        <a href="course-data-analysis.html"
+                            class="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center hover:bg-brand-blue hover:text-white transition-all">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div
+                    class="group bg-white responsive-p rounded-[2.5rem] sm:rounded-[3.5rem] border border-slate-100 shadow-sm flex flex-col transition-all hover:shadow-premium hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="flex justify-between items-start mb-10">
+                        <span class="tag-pill">Includes Internship</span>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-brand-blue/5 text-brand-blue flex items-center justify-center transition-all">
+                            <img src="./assets/img/web.png" class="w-10 h-10">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 font-outfit">Full Stack Web Engineering</h3>
+                    <p class="text-slate-500 font-medium text-sm leading-relaxed mb-8">Build scalable apps with React,
+                        Node, and MongoDB. Includes deployment and cloud operations.</p>
+                    <ul class="space-y-3 mb-10 text-sm font-bold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Build live web apps</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Industrial Git workflows</li>
+                    </ul>
+                    <div class="mt-auto pt-8 border-t border-slate-50 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Duration: 3
+                                Months</p>
+                            <p class="text-2xl font-black text-gray-900">₹8,999</p>
+                        </div>
+                        <a href="course-web-development.html"
+                            class="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center hover:bg-brand-blue transition-all">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div
+                    class="group bg-white p-10 rounded-[3.5rem] border border-slate-100 shadow-sm flex flex-col transition-all hover:shadow-premium hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="flex justify-between items-start mb-10">
+                        <span class="tag-pill">Includes Internship</span>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-brand-blue/5 text-brand-blue flex items-center justify-center">
+                            <img src="./assets/img/meta.png" class="w-10 h-10">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 font-outfit">Digital Marketing Mastery</h3>
+                    <p class="text-slate-500 font-medium text-sm leading-relaxed mb-8">Learn SEO, Paid Ads, and Social
+                        Media by executing real-time campaigns for actual clients.</p>
+                    <ul class="space-y-3 mb-10 text-sm font-bold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Real client projects</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Ads budget execution</li>
+                    </ul>
+                    <div class="mt-auto pt-8 border-t border-slate-50 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Duration: 3
+                                Months</p>
+                            <p class="text-2xl font-black text-gray-900">₹6,999</p>
+                        </div>
+                        <a href="course-digital-marketing.html"
+                            class="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center hover:bg-brand-blue transition-all">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- MS Office -->
+                <div
+                    class="group bg-white p-10 rounded-[3.5rem] border border-slate-100 shadow-sm flex flex-col transition-all hover:shadow-premium hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="flex justify-between items-start mb-10">
+                        <span class="tag-pill">Real Office Tasks</span>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-brand-blue/5 text-brand-blue flex items-center justify-center">
+                            <img src="./assets/img/word.png" class="w-10 h-10">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 font-outfit">MS Office Course</h3>
+                    <p class="text-slate-500 font-medium text-sm leading-relaxed mb-8">Master Excel, Word, PPT, and
+                        Teams with hands-on industrial scenarios and document design.</p>
+                    <ul class="space-y-3 mb-10 text-sm font-bold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Job-ready skills</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Corporate reporting</li>
+                    </ul>
+                    <div class="mt-auto pt-8 border-t border-slate-50 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Duration: 2
+                                Months</p>
+                            <p class="text-2xl font-black text-gray-900">₹3,499</p>
+                        </div>
+                        <a href="course-ms-office.html"
+                            class="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center hover:bg-brand-blue transition-all">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Java Fullstack -->
+                <div
+                    class="group bg-white p-10 rounded-[3.5rem] border border-slate-100 shadow-sm flex flex-col transition-all hover:shadow-premium hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="flex justify-between items-start mb-10">
+                        <span class="tag-pill">Enterprise Track</span>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-brand-blue/5 text-brand-blue flex items-center justify-center">
+                            <img src="./assets/img/java.png" class="w-10 h-10" alt="java">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 font-outfit">Java Fullstack Development</h3>
+                    <p class="text-slate-500 font-medium text-sm leading-relaxed mb-8">Build enterprise applications
+                        using Java, Spring Boot, and SQL with industrial architecture.</p>
+                    <ul class="space-y-3 mb-10 text-sm font-bold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Real project experience</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Backend logic mastery</li>
+                    </ul>
+                    <div class="mt-auto pt-8 border-t border-slate-50 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Duration: 3
+                                Months</p>
+                            <p class="text-2xl font-black text-gray-900">₹8,999</p>
+                        </div>
+                        <a href="course-java.html"
+                            class="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center hover:bg-brand-blue transition-all">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Python Fullstack -->
+                <div
+                    class="group bg-white p-10 rounded-[3.5rem] border border-slate-100 shadow-sm flex flex-col transition-all hover:shadow-premium hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="flex justify-between items-start mb-10">
+                        <span class="tag-pill">AI & Data Track</span>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-brand-blue/5 text-brand-blue flex items-center justify-center transition-all">
+                            <img src="./assets/img/python.png" class="w-10 h-10" alt="python">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 font-outfit">Python Fullstack Development</h3>
+                    <p class="text-slate-500 font-medium text-sm leading-relaxed mb-8">Learn Python, Django, and modern
+                        web frameworks to build data-driven web applications.</p>
+                    <ul class="space-y-3 mb-10 text-sm font-bold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Data-driven apps</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Deployment ready</li>
+                    </ul>
+                    <div class="mt-auto pt-8 border-t border-slate-50 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Duration: 3
+                                Months</p>
+                            <p class="text-2xl font-black text-gray-900">₹8,499</p>
+                        </div>
+                        <a href="course-python.html"
+                            class="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center hover:bg-brand-blue transition-all">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tally with GST -->
+                <div
+                    class="group bg-white p-10 rounded-[3.5rem] border border-slate-100 shadow-sm flex flex-col transition-all hover:shadow-premium hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="flex justify-between items-start mb-10">
+                        <span class="tag-pill">Accounting Track</span>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-brand-blue/5 text-brand-blue flex items-center justify-center transition-all">
+                            <img src="./assets/img/tally.jpeg" class="w-10 h-10">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 font-outfit">Tally with GST</h3>
+                    <p class="text-slate-500 font-medium text-sm leading-relaxed mb-8">Master Tally Prime, GST filing,
+                        and financial accounting for modern industrial business support.</p>
+                    <ul class="space-y-3 mb-10 text-sm font-bold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            GST filing practical</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Financial auditing</li>
+                    </ul>
+                    <div class="mt-auto pt-8 border-t border-slate-50 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Duration: 2
+                                Months</p>
+                            <p class="text-2xl font-black text-gray-900">₹4,999</p>
+                        </div>
+                        <a href="course-tally.html"
+                            class="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center hover:bg-brand-blue transition-all">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Core Programming Base -->
+                <div
+                    class="group bg-white p-10 rounded-[3.5rem] border border-slate-100 shadow-sm flex flex-col transition-all hover:shadow-premium hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="flex justify-between items-start mb-10">
+                        <span class="tag-pill">Logic & Algo Track</span>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-brand-blue/5 text-brand-blue flex items-center justify-center transition-all">
+                            <img src="./assets/img/cs.png" class="w-10 h-10" alt="c">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 font-outfit">Core Programming Base</h3>
+                    <p class="text-slate-500 font-medium text-sm leading-relaxed mb-8">Develop unbreakable logic
+                        foundations in C, C++, and Java to power enterprise software engineering.</p>
+                    <ul class="space-y-3 mb-10 text-sm font-bold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Logic & Algo focus</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Industrial programming</li>
+                    </ul>
+                    <div class="mt-auto pt-8 border-t border-slate-50 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Duration: 3
+                                Months</p>
+                            <p class="text-2xl font-black text-gray-900">₹6,499</p>
+                        </div>
+                        <a href="course-core-programming.html"
+                            class="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center hover:bg-brand-blue transition-all">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Custom Course Offer Card -->
+                <div
+                    class="group bg-slate-900 p-10 adaptive-rounded border border-white/5 shadow-2xl flex flex-col items-center text-center transition-all hover:bg-slate-850 hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div
+                        class="w-20 h-20 rounded-[2rem] bg-brand-blue/20 flex items-center justify-center text-brand-blue mb-10 group-hover:scale-110 transition-all">
+                        <i data-lucide="message-square" class="w-10 h-10"></i>
+                    </div>
+                    <h4 class="section-title font-black text-white mb-6 tracking-tight leading-tight font-outfit">Need a
+                        Custom Course <br> or Career Path?</h4>
+                    <p class="text-[15px] text-white/40 leading-relaxed mb-10 font-medium italic">Request personalized
+                        training modules or exclusive project guidance tailored to your goals.</p>
+                    <div class="mt-auto w-full">
+                        <a href="contact.html"
+                            class="inline-block w-full py-6 bg-brand-blue text-white text-sm font-black rounded-2xl hover:bg-blue-600 transition-all shadow-premium uppercase tracking-widest">Request
+                            Program</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WHO SHOULD JOIN -->
+    <section class="responsive-py bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="section-title font-black text-gray-900 font-outfit">Who These Courses Are For</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mobile-slider">
+                <div
+                    class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6"><i
+                            data-lucide="graduation-cap" class="w-6 h-6 text-brand-blue"></i></div>
+                    <span class="font-bold text-gray-900">College Students </span>
+                </div>
+                <div
+                    class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6"><i
+                            data-lucide="user-plus" class="w-6 h-6 text-brand-purple"></i></div>
+                    <span class="font-bold text-gray-900">Freshers looking <br> for jobs</span>
+                </div>
+                <div
+                    class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6"><i
+                            data-lucide="refresh-cw" class="w-6 h-6 text-brand-orange"></i></div>
+                    <span class="font-bold text-gray-900">Career <br> switchers</span>
+                </div>
+                <div
+                    class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6"><i
+                            data-lucide="rocket" class="w-6 h-6 text-emerald-500"></i></div>
+                    <span class="font-bold text-gray-900">Aspiring <br> Entrepreneurs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. INTERNSHIP SECTION (UPGRADED) -->
+    <section id="internships"
+        class="responsive-py bg-slate-900 text-white reveal adaptive-rounded mx-4 sm:mx-6 md:mx-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="section-title font-black mb-8 font-outfit leading-tight">Internship Program with <br>
+                        <span class="text-blue-500 italic font-serif">Real Client Work</span></h2>
+                    <p class="text-xl text-white/50 mb-10">Gain hands-on experience by working on real projects across
+                        digital marketing, web development, and analytics.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-center gap-4 text-lg font-bold">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-blue"></i> Real-time execution
+                        </div>
+                        <div class="flex items-center gap-4 text-lg font-bold">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-blue"></i> Mentor feedback
+                        </div>
+                        <div class="flex items-center gap-4 text-lg font-bold">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-blue"></i> Performance evaluation
+                        </div>
+                        <div class="flex items-center gap-4 text-lg font-bold">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-blue"></i> Certificate + Portfolio
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 md:p-12 bg-white adaptive-rounded text-center shadow-premium">
+                    <i data-lucide="briefcase" class="w-12 h-12 text-brand-blue mx-auto mb-6"></i>
+                    <h3 class="section-title font-black mb-4 text-black font-outfit leading-none">Avadi Internship Hub
+                    </h3>
+                    <p class="text-black/50 mb-10 font-medium text-lg">Join 150+ students who have transitioned into
+                        real careers through our internship-driven training model.</p>
+                    <a href="contact.html"
+                        class="inline-block px-12 py-6 bg-slate-900 text-white rounded-2xl font-black text-xl hover:scale-105 transition-all shadow-premium">Apply
+                        for Internship</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Testimonials Section -->
+    <section id="student-testimonials" class="py-24 bg-[#f5f7fb] overflow-hidden relative reveal">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-purple/5 border border-brand-purple/10 mb-4">
+                    <span class="w-2 h-2 rounded-full bg-brand-purple animate-pulse"></span>
+                    <span class="text-[10px] font-black uppercase tracking-[0.2em] text-brand-purple">Student Testimonials</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 font-outfit mb-4">
+                    What Our <span class="gradient-text italic font-serif">Students Say</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-slate-500 font-medium max-w-2xl mx-auto">
+                    Real learning experiences from students trained at <span class="text-brand-blue font-bold">MR CODERS HUB</span>.
+                </p>
+            </div>
+
+            <!-- Carousel Wrapper -->
+            <div class="relative w-full max-w-5xl mx-auto px-4 sm:px-8">
+                <!-- Carousel Container -->
+                <div class="overflow-hidden py-4 -mx-4" id="studentCarouselTrackContainer">
+                    <div class="flex transition-transform duration-500 ease-out" id="studentCarouselTrack">
+                        <!-- Slide 1: Dharshan -->
+                        <div class="w-full md:w-1/2 px-4 flex-shrink-0">
+                            <div class="student-testimonial-card relative bg-white/70 backdrop-blur-md border border-slate-200/60 rounded-[28px] p-8 sm:p-10 shadow-[0_20px_50px_-15px_rgba(30,58,138,0.04)] h-full flex flex-col justify-between overflow-hidden cursor-pointer">
+                                <!-- Top Accent Gradient Line -->
+                                <div class="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-brand-blue via-brand-purple to-brand-orange"></div>
+                                
+                                <i data-lucide="quote" class="quote-icon absolute -right-2 -top-2 w-28 h-28 text-slate-100/50 stroke-[1.5] pointer-events-none transform rotate-180"></i>
+                                <div class="relative z-10 flex flex-col h-full justify-between">
+                                    <div>
+                                        <div class="flex justify-between items-center mb-6">
+                                            <div class="star-container flex gap-1 text-brand-orange">
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                            </div>
+                                            <span class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-emerald-50/80 border border-emerald-100/60 text-[10px] font-black text-emerald-600 uppercase tracking-widest">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                Full Stack Intern
+                                            </span>
+                                        </div>
+                                        <p class="text-slate-600 text-sm sm:text-base font-medium leading-relaxed mb-8">
+                                            “Joining <span class="text-brand-purple font-bold">MR CODERS HUB</span> helped me understand real <span class="italic font-serif text-brand-blue font-bold">full stack development</span> beyond theory. I learned frontend, backend, APIs, database integration, and deployment through practical projects. The training approach focused heavily on <span class="italic font-serif text-brand-blue font-bold">hands-on implementation</span>, which improved my confidence and coding skills significantly.”
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-4 border-t border-slate-100 pt-6 mt-auto">
+                                        <div>
+                                            <h4 class="text-base font-black text-gray-900 font-outfit">Dharshan</h4>
+                                            <p class="text-xs font-bold text-brand-blue uppercase tracking-wider">Full Stack Web Development</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Indhu -->
+                        <div class="w-full md:w-1/2 px-4 flex-shrink-0">
+                            <div class="student-testimonial-card relative bg-white/70 backdrop-blur-md border border-slate-200/60 rounded-[28px] p-8 sm:p-10 shadow-[0_20px_50px_-15px_rgba(30,58,138,0.04)] h-full flex flex-col justify-between overflow-hidden cursor-pointer">
+                                <!-- Top Accent Gradient Line -->
+                                <div class="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-brand-blue via-brand-purple to-brand-orange"></div>
+                                
+                                <i data-lucide="quote" class="quote-icon absolute -right-2 -top-2 w-28 h-28 text-slate-100/50 stroke-[1.5] pointer-events-none transform rotate-180"></i>
+                                <div class="relative z-10 flex flex-col h-full justify-between">
+                                    <div>
+                                        <div class="flex justify-between items-center mb-6">
+                                            <div class="star-container flex gap-1 text-brand-orange">
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                            </div>
+                                            <span class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-emerald-50/80 border border-emerald-100/60 text-[10px] font-black text-emerald-600 uppercase tracking-widest">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                Data Analyst
+                                            </span>
+                                        </div>
+                                        <p class="text-slate-600 text-sm sm:text-base font-medium leading-relaxed mb-8">
+                                            “The <span class="italic font-serif text-brand-blue font-bold">Data Analysis</span> training at MR CODERS HUB gave me practical exposure to dashboards, reporting, and real-time datasets. The sessions were easy to understand and focused on <span class="italic font-serif text-brand-blue font-bold">industry-level skills</span> instead of only theory. I now feel more confident working with data and analytics tools.”
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-4 border-t border-slate-100 pt-6 mt-auto">
+                                        <div>
+                                            <h4 class="text-base font-black text-gray-900 font-outfit">Indhu</h4>
+                                            <p class="text-xs font-bold text-brand-blue uppercase tracking-wider">Data Analysis</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Praveen -->
+                        <div class="w-full md:w-1/2 px-4 flex-shrink-0">
+                            <div class="student-testimonial-card relative bg-white/70 backdrop-blur-md border border-slate-200/60 rounded-[28px] p-8 sm:p-10 shadow-[0_20px_50px_-15px_rgba(30,58,138,0.04)] h-full flex flex-col justify-between overflow-hidden cursor-pointer">
+                                <!-- Top Accent Gradient Line -->
+                                <div class="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-brand-blue via-brand-purple to-brand-orange"></div>
+                                
+                                <i data-lucide="quote" class="quote-icon absolute -right-2 -top-2 w-28 h-28 text-slate-100/50 stroke-[1.5] pointer-events-none transform rotate-180"></i>
+                                <div class="relative z-10 flex flex-col h-full justify-between">
+                                    <div>
+                                        <div class="flex justify-between items-center mb-6">
+                                            <div class="star-container flex gap-1 text-brand-orange">
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                            </div>
+                                            <span class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-emerald-50/80 border border-emerald-100/60 text-[10px] font-black text-emerald-600 uppercase tracking-widest">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                Tally Expert
+                                            </span>
+                                        </div>
+                                        <p class="text-slate-600 text-sm sm:text-base font-medium leading-relaxed mb-8">
+                                            “The course helped me improve both <span class="italic font-serif text-brand-blue font-bold">accounting and office management</span> skills with practical training in Tally, Excel, GST basics, and documentation workflows. The real-time examples and practice sessions made learning much easier and more professional.”
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-4 border-t border-slate-100 pt-6 mt-auto">
+                                        <div>
+                                            <h4 class="text-base font-black text-gray-900 font-outfit">Praveen</h4>
+                                            <p class="text-xs font-bold text-brand-blue uppercase tracking-wider">Tally with MS Office Suite</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Doshwanth -->
+                        <div class="w-full md:w-1/2 px-4 flex-shrink-0">
+                            <div class="student-testimonial-card relative bg-white/70 backdrop-blur-md border border-slate-200/60 rounded-[28px] p-8 sm:p-10 shadow-[0_20px_50px_-15px_rgba(30,58,138,0.04)] h-full flex flex-col justify-between overflow-hidden cursor-pointer">
+                                <!-- Top Accent Gradient Line -->
+                                <div class="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-brand-blue via-brand-purple to-brand-orange"></div>
+                                
+                                <i data-lucide="quote" class="quote-icon absolute -right-2 -top-2 w-28 h-28 text-slate-100/50 stroke-[1.5] pointer-events-none transform rotate-180"></i>
+                                <div class="relative z-10 flex flex-col h-full justify-between">
+                                    <div>
+                                        <div class="flex justify-between items-center mb-6">
+                                            <div class="star-container flex gap-1 text-brand-orange">
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                            </div>
+                                            <span class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-emerald-50/80 border border-emerald-100/60 text-[10px] font-black text-emerald-600 uppercase tracking-widest">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                Office Pro
+                                            </span>
+                                        </div>
+                                        <p class="text-slate-600 text-sm sm:text-base font-medium leading-relaxed mb-8">
+                                            “The <span class="italic font-serif text-brand-blue font-bold">MS Office Suite</span> training improved my productivity, formatting, Excel, and presentation skills. Every topic was explained clearly with <span class="italic font-serif text-brand-blue font-bold">practical exercises</span> and real examples. The course helped me build confidence for academic and office-related work environments.”
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-4 border-t border-slate-100 pt-6 mt-auto">
+                                        <div>
+                                            <h4 class="text-base font-black text-gray-900 font-outfit">Doshwanth</h4>
+                                            <p class="text-xs font-bold text-brand-blue uppercase tracking-wider">MS Office Suite</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <button id="studentPrevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-10 w-12 h-12 rounded-full bg-white border border-slate-200 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 text-slate-800 flex items-center justify-center transition-all z-20 cursor-pointer focus:outline-none" aria-label="Previous testimonial">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+                <button id="studentNextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-10 w-12 h-12 rounded-full bg-white border border-slate-200 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 text-slate-800 flex items-center justify-center transition-all z-20 cursor-pointer focus:outline-none" aria-label="Next testimonial">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Pagination Dots -->
+            <div class="flex justify-center gap-2 mt-8" id="studentCarouselDots">
+                <!-- Dots will be generated here -->
+            </div>
+        </div>
+        
+        <!-- Background subtle shapes/blobs matching existing premium styling -->
+        <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-blue/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-purple/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+    </section>
+
+    <!-- 6. CAREER OUTCOMES -->
+    <section class="responsive-py bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="section-title font-black text-gray-900 font-outfit">What You Achieve After the Course</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mobile-slider">
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-brand-blue/5 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="zap" class="w-8 h-8"></i></div>
+                    <h4 class="text-lg font-black mb-2">Job-Ready Skills</h4>
+                    <p class="text-sm text-slate-500 font-medium">Master industry-standard tools and workflows used by
+                        pros.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-brand-purple/5 text-brand-purple rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="folder" class="w-8 h-8"></i></div>
+                    <h4 class="text-lg font-black mb-2">Portfolio of Projects</h4>
+                    <p class="text-sm text-slate-500 font-medium">A diverse showcase of real-world projects to impress
+                        recruiters.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-brand-orange/5 text-brand-orange rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="award" class="w-8 h-8"></i></div>
+                    <h4 class="text-lg font-black mb-2">Internship Experience</h4>
+                    <p class="text-sm text-slate-500 font-medium">Validated professional experience for your resume.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="smile" class="w-8 h-8"></i></div>
+                    <h4 class="text-lg font-black mb-2">Work Confidence</h4>
+                    <p class="text-sm text-slate-500 font-medium">The confidence to handle real client tasks
+                        independently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. LOCAL SEO SECTION -->
+    <section class="responsive-py bg-slate-50 reveal">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="section-title font-black text-gray-900 font-outfit mb-8 leading-tight">Best Skill Development
+                Institute in <span class="italic font-serif text-brand-blue">Avadi, Chennai</span></h2>
+            <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                MR CODERS HUB provides industry-focused training and internship programs for students across Chennai and
+                Tamil Nadu, helping them transition from learning to real-world execution.
+            </p>
+        </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section class="py-20 bg-white reveal">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 font-outfit">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Which is the best course for getting a job in
+                            Chennai?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Courses like web development, digital marketing, and data analytics with real project
+                            experience offer the best job opportunities in today's market.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Do your courses include internship?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, all our professional certification programs include a mandatory internship with real
+                            client projects to ensure practical exposure.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Are these courses suitable for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, our courses start from the absolute basics and progress systematically to advanced
+                            real-world execution.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Do you provide placement support?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            We provide comprehensive career guidance, portfolio building, and interview preparation
+                            support to help you secure the right role.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FINAL CTA -->
+    <section
+        class="responsive-py bg-slate-900 text-white text-center reveal adaptive-rounded mx-4 sm:mx-6 md:mx-10 mb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-blue/5 blur-[120px] rounded-full"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="hero-title font-black mb-12 font-outfit leading-none tracking-tight">Start Learning with <span
+                    class="italic font-serif ">Real Projects</span> Today</h2>
+            <p class="text-xl md:text-2xl text-white/50 mb-16 max-w-2xl mx-auto font-medium">
+                Bridge the gap between learning and earning with our project-based training model.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="contact.html"
+                    class="w-full sm:w-auto px-12 py-6 bg-white text-slate-900 rounded-3xl font-black text-xl hover:scale-105 transition-all shadow-premium">
+                    Get Career Guidance
+                </a>
+                <a href="booking.html"
+                    class="w-full sm:w-auto px-12 py-6 bg-transparent border-2 border-white/20 text-white rounded-3xl font-black text-xl hover:bg-white/10 transition-all">
+                    Explore Internship
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const panel = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    const isOpen = panel.style.maxHeight;
+
+                    document.querySelectorAll('.faq-panel').forEach(p => p.style.maxHeight = null);
+                    document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                    if (!isOpen) {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <style>
+        /* WhatsApp Button Container */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            /* Official WhatsApp Green */
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            /* On-load Animation */
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            animation: wa-float-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+        }
+
+        /* Hover Effects */
+        .whatsapp-float:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
+            background-color: #20b858;
+        }
+
+        /* SVG Icon Sizing */
+        .whatsapp-float svg {
+            width: 34px;
+            height: 34px;
+            fill: currentColor;
+        }
+
+        /* Tooltip Styling */
+        .wa-tooltip {
+            position: absolute;
+            right: 75px;
+            /* Spaced out from the button */
+            background-color: #1f2937;
+            /* Dark slate color */
+            color: white;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            transform: translateX(10px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tooltip Arrow pointing to the button */
+        .wa-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -6px;
+            transform: translateY(-50%);
+            border-width: 6px 0 6px 6px;
+            border-style: solid;
+            border-color: transparent transparent transparent #1f2937;
+        }
+
+        /* Show tooltip on hover (Desktop only) */
+        @media (hover: hover) {
+            .whatsapp-float:hover .wa-tooltip {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+        }
+
+        /* Keyframe Animation */
+        @keyframes wa-float-in {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .whatsapp-float svg {
+                width: 30px;
+                height: 30px;
+            }
+
+            .wa-tooltip {
+                display: none;
+                /* Hide tooltip on mobile to prevent clutter */
+            }
+        }
+    </style>
+
+    <!-- HTML Structure -->
+    <a href="#" id="whatsapp-btn" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp">
+        <!-- Official WhatsApp SVG Vector -->
+        <svg viewBox="0 0 24 24" fill="white">
+            <path
+                d="M20.52 3.48A11.94 11.94 0 0012.05 0C5.4 0 .02 5.38.02 12.03c0 2.12.56 4.2 1.62 6.04L0 24l6.11-1.6a12.03 12.03 0 005.94 1.52h.01c6.65 0 12.03-5.38 12.03-12.03 0-3.21-1.25-6.22-3.57-8.41zM12.05 21.9h-.01a9.88 9.88 0 01-5.03-1.38l-.36-.21-3.63.95.97-3.54-.23-.36a9.86 9.86 0 01-1.51-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 012.9 7.01c0 5.47-4.45 9.92-9.92 9.92zm5.48-7.39c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z" />
+        </svg>
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+    <!-- JavaScript Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const waButton = document.getElementById('whatsapp-btn');
+
+            // --- CONFIGURATION ---
+            // Use your actual MR CODERS HUB number (Country code without '+')
+            const phoneNumber = '919360739559';
+
+            // Create a dynamic message based on the current page the user is viewing
+            const pageTitle = document.title.split('|')[0].trim();
+            const message = `Hello MR CODERS HUB! I was looking at the "${pageTitle}" page and I'd like to know more about your services.`;
+
+            // Properly encode the message for URL transmission
+            const encodedMessage = encodeURIComponent(message);
+
+            // Construct the official WhatsApp API URL
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            // Assign to button
+            waButton.setAttribute('href', whatsappUrl);
+        });
+    </script>
+
+    <!-- Student Testimonials Carousel Script -->
+    <script>
+        (function() {
+            const track = document.getElementById('studentCarouselTrack');
+            const prevBtn = document.getElementById('studentPrevBtn');
+            const nextBtn = document.getElementById('studentNextBtn');
+            const dotsContainer = document.getElementById('studentCarouselDots');
+            if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
+
+            const originalSlides = Array.from(track.children);
+            const originalCount = originalSlides.length;
+
+            // Clone slides for infinite loop
+            const lastClone = originalSlides[originalCount - 1].cloneNode(true);
+            track.insertBefore(lastClone, originalSlides[0]);
+
+            const firstClone = originalSlides[0].cloneNode(true);
+            const secondClone = originalSlides[1].cloneNode(true);
+            track.appendChild(firstClone);
+            track.appendChild(secondClone);
+
+            let currentIndex = 1;
+            let isTransitioning = false;
+            let autoplayInterval;
+
+            // Generate dots
+            for (let i = 0; i < originalCount; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'w-3 h-3 rounded-full bg-slate-300 transition-all duration-300 focus:outline-none';
+                dot.setAttribute('aria-label', `Go to testimonial slide ${i + 1}`);
+                dotsContainer.appendChild(dot);
+            }
+            const dots = Array.from(dotsContainer.children);
+
+            function getSlideWidthPercent() {
+                return window.innerWidth >= 768 ? 50 : 100;
+            }
+
+            function updateCarousel(hasTransition = true) {
+                const percent = getSlideWidthPercent();
+                if (hasTransition) {
+                    track.style.transition = 'transform 500ms cubic-bezier(0.16, 1, 0.3, 1)';
+                } else {
+                    track.style.transition = 'none';
+                }
+                track.style.transform = `translateX(-${currentIndex * percent}%)`;
+
+                // Update Dots
+                let activeDotIndex = 0;
+                if (currentIndex === 0) activeDotIndex = originalCount - 1;
+                else if (currentIndex === 5) activeDotIndex = 0;
+                else if (currentIndex === 6) activeDotIndex = 1;
+                else activeDotIndex = currentIndex - 1;
+
+                dots.forEach((dot, i) => {
+                    if (i === activeDotIndex) {
+                        dot.className = 'w-8 h-3 rounded-full bg-[#7C3AED] transition-all duration-300 focus:outline-none';
+                    } else {
+                        dot.className = 'w-3 h-3 rounded-full bg-slate-300 transition-all duration-300 focus:outline-none hover:bg-slate-400';
+                    }
+                });
+            }
+
+            updateCarousel(false);
+
+            function next() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                currentIndex++;
+                updateCarousel(true);
+            }
+
+            function prev() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                currentIndex--;
+                updateCarousel(true);
+            }
+
+            track.addEventListener('transitionend', () => {
+                isTransitioning = false;
+                if (currentIndex === 5) {
+                    currentIndex = 1;
+                    updateCarousel(false);
+                } else if (currentIndex === 0) {
+                    currentIndex = 4;
+                    updateCarousel(false);
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                next();
+                resetAutoplay();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                prev();
+                resetAutoplay();
+            });
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    if (isTransitioning) return;
+                    currentIndex = i + 1;
+                    updateCarousel(true);
+                    resetAutoplay();
+                });
+            });
+
+            function startAutoplay() {
+                stopAutoplay();
+                autoplayInterval = setInterval(next, 5000);
+            }
+
+            function stopAutoplay() {
+                if (autoplayInterval) clearInterval(autoplayInterval);
+            }
+
+            function resetAutoplay() {
+                stopAutoplay();
+                startAutoplay();
+            }
+
+            startAutoplay();
+
+            const container = document.getElementById('studentCarouselTrackContainer');
+            if (container) {
+                container.addEventListener('mouseenter', stopAutoplay);
+                container.addEventListener('mouseleave', startAutoplay);
+            }
+
+            // Mobile touch swipe support
+            let startX = 0;
+            let isSwiping = false;
+
+            track.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isSwiping = true;
+                stopAutoplay();
+            }, { passive: true });
+
+            track.addEventListener('touchmove', (e) => {
+                if (!isSwiping) return;
+            }, { passive: true });
+
+            track.addEventListener('touchend', (e) => {
+                if (!isSwiping) return;
+                isSwiping = false;
+                const endX = e.changedTouches[0].clientX;
+                const diffX = endX - startX;
+
+                if (diffX > 50) {
+                    prev();
+                } else if (diffX < -50) {
+                    next();
+                }
+                startAutoplay();
+            }, { passive: true });
+
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    updateCarousel(false);
+                }, 100);
+            });
+
+            // Initialize Lucide icons on clones
+            setTimeout(() => {
+                if (window.lucide) {
+                    window.lucide.createIcons();
+                }
+            }, 100);
+        })();
+    </script>
+</body>
+</html>

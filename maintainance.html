@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>We'll Be Right Back | MR CODERS HUB</title>
+    <meta name="description" content="MR Coders Hub is currently undergoing scheduled maintenance. We'll be right back shortly!">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* ── Entrance animations ── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes floatY {
+            0%,100% { transform: translateY(0); }
+            50%      { transform: translateY(-12px); }
+        }
+        @keyframes shimmer {
+            0%   { background-position: -400px 0; }
+            100% { background-position: 400px 0; }
+        }
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+        @keyframes pulse-ring {
+            0%   { transform: translateX(-50%) scale(0.85); opacity: 0.5; }
+            100% { transform: translateX(-50%) scale(1.6);  opacity: 0; }
+        }
+        @keyframes countdown-tick {
+            0%   { transform: scale(1); }
+            50%  { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+
+        .fade-up  { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+        .delay-1  { animation-delay: 0.15s; }
+        .delay-2  { animation-delay: 0.30s; }
+        .delay-3  { animation-delay: 0.45s; }
+        .delay-4  { animation-delay: 0.60s; }
+        .delay-5  { animation-delay: 0.75s; }
+
+        .float-img { animation: floatY 5s ease-in-out infinite; }
+
+        /* Animated progress bar shimmer */
+        .progress-shimmer {
+            background: linear-gradient(
+                90deg,
+                #3b82f6 0%,
+                #6366f1 40%,
+                #93c5fd 60%,
+                #3b82f6 100%
+            );
+            background-size: 400px 100%;
+            animation: shimmer 2.2s linear infinite;
+        }
+
+        /* Spinning gear icon */
+        .spin-gear { animation: spin-slow 6s linear infinite; }
+
+        /* Pulse rings beneath illustration */
+        .pulse-ring {
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(59,130,246,0.12);
+            animation: pulse-ring 2.6s ease-out infinite;
+        }
+        .pulse-ring-2 {
+            animation-delay: 0.9s;
+            background: rgba(59,130,246,0.07);
+        }
+
+        /* CTA button */
+        .btn-home {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            box-shadow: 0 8px 30px rgba(59,130,246,0.40);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .btn-home:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 14px 40px rgba(59,130,246,0.50);
+        }
+        .btn-home:active { transform: scale(0.97); }
+
+        /* Contact card */
+        .contact-card {
+            border: 1px solid rgba(59,130,246,0.15);
+            background: rgba(239,246,255,0.6);
+            backdrop-filter: blur(8px);
+            transition: box-shadow 0.25s ease, transform 0.25s ease;
+        }
+        .contact-card:hover {
+            box-shadow: 0 8px 30px rgba(59,130,246,0.12);
+            transform: translateY(-2px);
+        }
+
+        /* Countdown digits */
+        .digit-box {
+            animation: countdown-tick 1s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="font-[Inter] bg-white text-gray-900 overflow-x-hidden w-full antialiased">
+
+    <!-- No main nav/footer on maintenance page — intentional -->
+
+    <main class="min-h-screen flex flex-col items-center justify-center px-6 py-16 relative overflow-hidden">
+
+        <!-- Ambient background blobs -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-blue-50 rounded-full blur-[140px] opacity-70"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-50 rounded-full blur-[120px] opacity-60"></div>
+            <div class="absolute top-1/2 right-10 w-64 h-64 bg-yellow-50 rounded-full blur-[80px] opacity-40"></div>
+        </div>
+
+        <div class="relative z-10 max-w-lg w-full mx-auto text-center">
+            <!-- ── Hero Illustration ── -->
+            <div class="relative inline-block mb-4 fade-up delay-1">
+                <!-- Pulse ground shadow -->
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring pulse-ring-2"></div>
+
+                <img
+                    src="./assets/img/maintanence-page.png"
+                    alt="3D character leaning on a browser window showing maintenance in progress"
+                    class="relative z-10 w-full max-w-[400px] mx-auto object-contain float-img select-none"
+                    draggable="false"
+                >
+            </div>
+
+            <!-- ── Heading ── -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-4 fade-up delay-2 font-[Outfit]">
+                We'll be right back!
+            </h1>
+
+            <!-- ── Subtitle ── -->
+            <p class="text-base sm:text-lg text-gray-500 font-medium leading-relaxed mb-8 max-w-sm mx-auto fade-up delay-2">
+                We're currently working on improving our site.<br class="hidden sm:inline">
+                Please check back soon.
+            </p>
+
+            <!-- ── Animated Progress Bar ── -->
+            <div class="max-w-xs mx-auto mb-10 fade-up delay-3">
+                <div class="flex justify-between text-[10px] uppercase tracking-widest text-gray-400 mb-3 font-bold">
+                    <span class="flex items-center gap-1.5">
+                        <svg class="w-3 h-3 spin-gear text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                        Maintenance in Progress
+                    </span>
+                    <span class="text-blue-600 font-black">72%</span>
+                </div>
+                <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                    <div class="progress-shimmer h-full rounded-full" style="width: 72%;"></div>
+                </div>
+                <p class="text-[10px] text-gray-300 font-bold uppercase tracking-widest mt-2 text-right">Almost there…</p>
+            </div>
+
+            <!-- ── CTA – Go Back Home ── -->
+            <div class="fade-up delay-3">
+                <a
+                    href="index.html"
+                    id="btn-go-home"
+                    class="btn-home inline-flex items-center justify-center gap-3 w-full sm:w-auto px-12 py-4 rounded-2xl text-white font-bold text-base tracking-wide"
+                >
+                    <i data-lucide="home" class="w-5 h-5"></i>
+                    Go Back Home
+                </a>
+            </div>
+
+            <!-- ── Contact card ── -->
+            <div class="mt-8 contact-card rounded-2xl px-8 py-5 fade-up delay-4">
+                <p class="text-sm text-gray-500 font-medium mb-1">Need urgent help? Reach us at</p>
+                <a href="mailto:info@mrcodershub.com" class="text-blue-600 font-bold hover:underline text-sm">
+                    info@mrcodershub.com
+                </a>
+                <div class="flex items-center justify-center gap-6 mt-4 text-xs text-gray-400 font-semibold">
+                    <a href="https://www.instagram.com/mr_coders_hub" target="_blank" rel="noopener" class="hover:text-pink-500 transition-colors flex items-center gap-1.5">
+                        <i data-lucide="instagram" class="w-3.5 h-3.5"></i> Instagram
+                    </a>
+                    <span class="w-px h-3 bg-gray-200"></span>
+                    <a href="https://www.facebook.com/profile.php?id=61585504880348" target="_blank" rel="noopener" class="hover:text-blue-600 transition-colors flex items-center gap-1.5">
+                        <i data-lucide="facebook" class="w-3.5 h-3.5"></i> Facebook
+                    </a>
+                    <span class="w-px h-3 bg-gray-200"></span>
+                    <a href="https://www.linkedin.com/in/mr-codeds-hub-b96b95406" target="_blank" rel="noopener" class="hover:text-blue-700 transition-colors flex items-center gap-1.5">
+                        <i data-lucide="linkedin" class="w-3.5 h-3.5"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <!-- ── Brand footer ── -->
+            <p class="mt-10 text-[10px] font-black uppercase tracking-[0.5em] text-gray-300 fade-up delay-5">
+                MR CODERS HUB &bull; Excellence in Execution
+            </p>
+        </div>
+    </main>
+
+    <script>
+        // Initialise Lucide icons (no main.js on maintenance page)
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        window.addEventListener('load', () => {
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR CODERS HUB | Internship, Digital Marketing & Web Development in Chennai</title>
+    <meta name="description" content="Learn with real projects and internships or grow your business with SEO, digital marketing, and web development services in Chennai.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-purple': '#7C3AED',
+                        'brand-orange': '#F59E0B',
+                        'bg-main': '#F9FAFB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #3b82f6;
+            --dark: #0f172a;
+        }
+
+        #mobile-menu-btn {
+            display: none !important;
+        }
+
+        /* ── Hero word cycling animation ─────────────────────────────── */
+        .hero-word-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-word-ghost {
+            visibility: hidden;
+            white-space: nowrap;
+        }
+
+        .hero-word-animated {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+
+        @media (min-width: 768px) {
+            .hero-word-animated {
+                position: absolute;
+                inset: 0;
+            }
+        }
+
+        .hero-word-animated.exit {
+            opacity: 0;
+            transform: translateY(-40%);
+        }
+
+        .hero-word-animated.enter {
+            opacity: 0;
+            transform: translateY(40%);
+            transition: none;
+        }
+
+        .hero-word-animated.enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+
+        /* ── Ribbon Background from Projects ──────────────────────────── */
+        .ribbon-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .ribbon {
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            border: 120px solid rgba(59, 130, 246, 0.04);
+            border-radius: 500px;
+            top: -25%;
+            left: -25%;
+            animation: drift 30s infinite linear;
+        }
+
+        .ribbon-2 {
+            border-color: rgba(30, 58, 138, 0.03);
+            width: 120%;
+            height: 120%;
+            top: 10%;
+            left: 20%;
+            animation: drift-reverse 45s infinite linear;
+        }
+
+        @keyframes drift {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes drift-reverse {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Project Card Base from Projects.html */
+        .project-card {
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px);
+        }
+
+        /* ── Testimonial System (7-Card Bento Layout) ─────────────────────────────── */
+        .testimonial-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            align-items: stretch;
+            min-height: 800px;
+        }
+
+        .testimonial-card {
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            cursor: pointer;
+            background: white;
+            border: 1px solid #f3f4f6;
+            border-radius: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1.75rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(30, 58, 138, 0.08);
+            border-color: var(--brand-blue);
+        }
+
+        /* Bento Slots */
+        .pos-1 { grid-column: 1; grid-row: 1; z-index: 5; }
+        .pos-2 { 
+            grid-column: 2; 
+            grid-row: 1 / span 2; 
+            z-index: 10; 
+            padding: 0 !important; 
+            border-width: 2px; 
+            display: flex;
+            flex-direction: column;
+        } /* Primary */
+        .pos-3 { grid-column: 3; grid-row: 1; z-index: 5; }
+        .pos-4 { grid-column: 1; grid-row: 2; z-index: 5; }
+        .pos-5 { grid-column: 3; grid-row: 2; z-index: 5; }
+        .pos-6 { grid-column: 1 / span 2; grid-row: 3; z-index: 5; }
+        .pos-7 { grid-column: 3; grid-row: 3; z-index: 5; }
+
+        .testimonial-card.hidden {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            pointer-events: none;
+            transform: scale(0.8) translateY(20px);
+        }
+
+        /* Hero Visuals (Image or Initials) */
+        .t-hero-img, .testimonial-card > .t-avatar { display: none; }
+        .pos-2 .t-hero-img, .pos-2 > .t-avatar { 
+            display: flex !important; 
+            width: 100% !important; 
+            height: 50% !important; 
+            object-fit: contain !important;
+            padding: 2.5rem;
+            background: #f8fafc;
+            border-radius: 0 !important;
+            border: none !important;
+            border-bottom: 1px solid #f3f4f6 !important;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(3rem, 10vw, 5rem);
+            font-weight: 900;
+        }
+
+        /* Support for Logos to fit perfectly */
+        .pos-2 .t-hero-img.t-contain {
+            object-fit: contain !important;
+            padding: 3rem;
+            background: #f8fafc;
+        }
+
+        .t-card-body {
+            padding: 1.75rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .pos-2 .t-card-body { padding: 2.5rem; }
+
+        /* Elements Styling */
+        .t-quote { 
+            font-weight: 500; 
+            line-height: 1.6; 
+            color: #4b5563; 
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        .pos-2 .t-quote { font-size: 1.35rem; color: #1f2937; }
+
+        .t-avatar { 
+            width: 3.5rem; 
+            height: 3.5rem; 
+            border-radius: 9999px; 
+            object-fit: contain; 
+            padding: 0.25rem;
+            background: white;
+            flex-shrink: 0;
+            border: 2px solid #f3f4f6;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .pos-2 .t-card-body .t-avatar { display: none; }
+
+        .testimonial-card .t-avatar { transition: all 0.6s ease; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+        .testimonial-card.primary .t-avatar { width: 3rem; height: 3rem; font-size: 0.875rem; }
+        .testimonial-card:not(.primary) .t-avatar { width: 2.5rem; height: 2.5rem; font-size: 0.75rem; }
+
+        .t-name { font-weight: 800; color: #111827; font-size: 1rem; }
+        .t-role { font-size: 0.75rem; font-weight: 600; color: var(--brand-blue); text-transform: uppercase; letter-spacing: 0.05em; }
+
+        .t-instagram {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            color: #E1306C;
+            opacity: 0.3;
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover .t-instagram { opacity: 1; transform: scale(1.1) rotate(5deg); }
+
+        .testimonial-card .t-icon {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 1023px) {
+            .testimonial-container { 
+                /* Inherits mobile-slider utility from main.js */
+                min-height: auto !important;
+            }
+            
+            .testimonial-card {
+                /* Let main.js handle mobile slider widths and positions */
+                scroll-snap-align: center;
+                opacity: 1 !important;
+                visibility: visible !important;
+                transform: none !important;
+                position: relative !important;
+                padding: 1.25rem !important;
+                border-radius: 2rem !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                grid-column: auto !important;
+                grid-row: auto !important;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+                background: white !important;
+                border: 1px solid #f3f4f6 !important;
+                transition: none !important;
+                margin: 0 !important;
+            }
+
+            /* Force hide ALL hero visuals on mobile regardless of position */
+            .testimonial-card .t-hero-img, 
+            .testimonial-card .t-hero-initials,
+            .testimonial-card > .t-avatar { 
+                display: none !important; 
+            }
+
+            .t-card-body { 
+                padding: 0 !important; 
+                flex: 1; 
+                display: flex; 
+                flex-direction: column; 
+                justify-content: space-between; 
+            }
+
+            /* Restore profile avatar on mobile */
+            .t-card-body .t-avatar { 
+                display: flex !important; 
+                width: 2.75rem !important; 
+                height: 2.75rem !important; 
+                visibility: visible !important; 
+                border-radius: 9999px !important; 
+            }
+
+            .t-card-body > div:first-child {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 90px; /* Aligns quotes across cards */
+            }
+
+            .t-card-body > div:last-child {
+                margin-top: 0.75rem !important;
+                padding-top: 0.75rem;
+                border-top: 1px solid #f9fafb;
+            }
+
+            .t-quote { 
+                font-size: 0.9rem !important; 
+                line-height: 1.5 !important; 
+                margin-bottom: 0 !important; 
+                color: #4b5563 !important;
+                display: -webkit-box;
+                --webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .t-name { font-size: 0.9rem !important; color: #111827 !important; font-weight: 700 !important; }
+            .t-role { font-size: 0.65rem !important; color: var(--brand-blue) !important; }
+            .t-instagram { top: 1.25rem !important; right: 1.25rem !important; opacity: 1 !important; display: block !important; transform: none !important; }
+            .testimonial-card .t-icon { margin-bottom: 0.5rem !important; }
+            .testimonial-nav-btn { display: none !important; }
+        }
+
+        @media (max-width: 639px) {
+            .flip-card:hover:not(.flipped) {
+                transform: none; /* Disable hover scale on small touch devices */
+            }
+        }
+
+        /* ── Project Card Flip ─────────────────────────────── */
+        .flip-card {
+            perspective: 1200px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 32px;
+            overflow: hidden;
+            inset: 0;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(145deg, #020617 0%, #1e1b4b 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .flip-card:hover:not(.flipped) {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-purple) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal-active { opacity: 1; transform: translateY(0); }
+        
+    </style>
+
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="font-[Inter] bg-[#F9FAFB] text-gray-900 overflow-x-hidden w-full">
+
+    <section class="relative min-h-[70vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden py-8 sm:py-0">
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/img/bg2.jpg" 
+                 alt="Hero Background" 
+                 class="w-full h-full object-cover opacity-40 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-[#F9FAFB]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full pt-16">
+            <div class="text-center md:text-left flex flex-col items-center md:items-start w-full relative z-10 reveal">
+                <!-- Animated headline -->
+                 <h1 class="hero-title font-black mb-8 text-gray-900 flex flex-row items-center gap-x-3 justify-center md:justify-start w-full transition-all font-outfit leading-[1.2] tracking-tight overflow-visible">
+                    <span>Build</span>
+                    <span class="hero-word-wrapper relative inline-flex items-center min-h-[1.4em] min-w-[2.5em]" aria-live="polite">
+                        <span class="hero-word-ghost hidden sm:block font-serif" aria-hidden="true">Projects</span>
+                        <span class="hero-word-animated gradient-text italic font-serif" id="heroWord">Skills</span>
+                    </span>
+                </h1>
+                <p class="text-sm md:text-2xl text-gray-600 mb-12 max-w-xl mx-auto md:mx-0 leading-relaxed font-medium px-2 text-justify md:text-left">
+                MR Coders Hub, based in Avadi, Chennai, equips students with real project experience to become job-ready while helping businesses grow through data-driven digital marketing, SEO, and web development.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 w-full">
+                    <a href="category1.html"
+                        class="group relative px-8 py-4 sm:px-12 sm:py-6 bg-blue-900 text-white rounded-full text-sm font-bold hover:scale-105 transition-all shadow-[0_20px_50px_rgba(30,58,138,0.3)] flex items-center gap-2 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-800 to-indigo-900 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <span class="relative z-10 uppercase tracking-widest text-xs">Explore Courses</span>
+                    </a>
+                    <a href="about.html"
+                        class="px-8 py-4 sm:px-12 sm:py-6 bg-white/60 backdrop-blur-md border border-slate-200/50 text-slate-900 rounded-full text-sm font-bold hover:bg-white hover:border-blue-900 hover:scale-105 transition-all shadow-xl flex items-center gap-2">
+                        <span class="uppercase tracking-widest text-xs">Get to Know Us</span>
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center md:justify-end items-center overflow-visible w-full mt-16 md:mt-0 relative">
+                <div class="absolute inset-0 blur-[100px] rounded-full z-0 w-[140%] h-[140%] -left-[20%] -top-[20%] animate-pulse"></div>
+                <img id="heroImage" src="./assets/img/hero-learn-hd.png" alt="Learn Character"
+                    class="w-full max-w-[420px] sm:max-w-[480px] h-auto object-contain z-10 float-animation transition-opacity duration-300">
+            </div>
+        </div>
+    </section>
+    <!-- 2. WHO WE HELP SECTION -->
+    <section class="responsive-py bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title font-black text-gray-900 mb-4 font-outfit">Two Paths. One Execution-Driven Platform.</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mobile-slider">
+                <!-- For Students -->
+                <div class="responsive-p bg-slate-50 adaptive-rounded border border-gray-100 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-brand-blue/10 text-brand-blue rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                        <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-6 font-outfit">For Students</h3>
+                    <p class="text-lg text-gray-600 mb-8 font-medium italic">Gain practical experience through:</p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-gray-800 font-bold">
+                            <span class="w-2 h-2 rounded-full bg-brand-blue"></span> Career Guidance
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-800 font-bold">
+                            <span class="w-2 h-2 rounded-full bg-brand-blue"></span> Skill-Based Courses
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-800 font-bold">
+                            <span class="w-2 h-2 rounded-full bg-brand-blue"></span> Internship with Real Client Projects
+                        </li>
+                    </ul>
+                    <p class="text-gray-500 mb-10">Build a portfolio, gain confidence, and become job-ready.</p>
+                    <a href="category1.html" class="inline-flex items-center gap-3 px-8 py-4 bg-brand-blue text-white rounded-full font-bold uppercase tracking-widest text-xs hover:scale-105 transition-all">Explore Programs <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+
+                <!-- For Businesses -->
+                <div class="responsive-p bg-slate-900 text-white adaptive-rounded hover:shadow-2xl transition-all group">
+                    <div class="w-14 h-14 bg-white/10 text-white rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white group-hover:text-brand-blue transition-all">
+                        <i data-lucide="briefcase" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-6 font-outfit">For Businesses</h3>
+                    <p class="text-lg text-gray-400 mb-8 font-medium italic">Scale your brand with:</p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-gray-200 font-bold">
+                            <span class="w-2 h-2 rounded-full bg-brand-orange"></span> Digital Marketing
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-200 font-bold">
+                            <span class="w-2 h-2 rounded-full bg-brand-orange"></span> SEO & Local SEO
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-200 font-bold">
+                            <span class="w-2 h-2 rounded-full bg-brand-orange"></span> Web Development
+                        </li>
+                    </ul>
+                    <p class="text-gray-400 mb-10">Get measurable results with data-driven strategies.</p>
+                    <a href="category2.html" class="inline-flex items-center gap-3 px-8 py-4 bg-white text-brand-blue rounded-full font-bold uppercase tracking-widest text-xs hover:scale-105 transition-all">Explore Services <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PROBLEM SECTION -->
+    <section class="responsive-py bg-gray-50 reveal">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title font-black text-gray-900 mb-4">Why Most Students and Businesses Struggle</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mobile-slider">
+                <div class="space-y-8">
+                    <h4 class="text-2xl font-black text-brand-blue flex items-center gap-3">Students <i data-lucide="frown" class="w-6 h-6"></i></h4>
+                    <ul class="space-y-6">
+                        <li class="p-6 bg-white rounded-2xl border-l-4 border-red-400 shadow-sm flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-red-400 font-black">X</span>
+                            <p class="text-lg font-bold text-gray-700">No real project experience</p>
+                        </li>
+                        <li class="p-6 bg-white rounded-2xl border-l-4 border-red-400 shadow-sm flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-red-400 font-black">X</span>
+                            <p class="text-lg font-bold text-gray-700">No portfolio to show</p>
+                        </li>
+                        <li class="p-6 bg-white rounded-2xl border-l-4 border-red-400 shadow-sm flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-red-400 font-black">X</span>
+                            <p class="text-lg font-bold text-gray-700">Lack of job readiness</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-8">
+                    <h4 class="text-2xl font-black text-brand-purple flex items-center gap-3">Businesses <i data-lucide="trending-down" class="w-6 h-6"></i></h4>
+                    <ul class="space-y-6">
+                        <li class="p-6 bg-white rounded-2xl border-l-4 border-orange-400 shadow-sm flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center text-orange-400 font-black">X</span>
+                            <p class="text-lg font-bold text-gray-700">Spending on marketing without results</p>
+                        </li>
+                        <li class="p-6 bg-white rounded-2xl border-l-4 border-orange-400 shadow-sm flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center text-orange-400 font-black">X</span>
+                            <p class="text-lg font-bold text-gray-700">Low lead generation</p>
+                        </li>
+                        <li class="p-6 bg-white rounded-2xl border-l-4 border-orange-400 shadow-sm flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center text-orange-400 font-black">X</span>
+                            <p class="text-lg font-bold text-gray-700">No clear growth strategy</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-20 responsive-p bg-slate-900 text-white adaptive-rounded text-center shadow-premium">
+                <h5 class="text-2xl  font-black mb-6 font-outfit">The Solution</h5>
+                <p class="text-xl font-medium leading-relaxed max-w-4xl mx-auto opacity-90 text-left">We bridge the gap with execution-driven learning and performance-focused digital strategies that deliver measurable outcomes. We provide real projects not just theories. </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. RESULTS / PROOF SECTION -->
+    <section class="responsive-py bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="section-title font-black text-gray-900 mb-16">Results That Speak for Themselves</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mobile-slider">
+                <div class="p-8">
+                    <div class="text-4xl md:text-7xl font-black text-brand-blue mb-4">150+</div>
+                    <p class="text-sm font-black uppercase tracking-widest text-gray-400">Students Trained</p>
+                </div>
+                <div class="p-8">
+                    <div class="text-3xl md:text-7xl font-black text-brand-purple mb-4">120+</div>
+                    <p class="text-sm font-black uppercase tracking-widest text-gray-400">Projects Completed</p>
+                </div>
+                <div class="p-8">
+                    <div class="text-3xl md:text-7xl font-black text-brand-orange mb-4">20+</div>
+                    <p class="text-sm font-black uppercase tracking-widest text-gray-400">Clients Served</p>
+                </div>
+                <div class="p-8">
+                    <div class="text-3xl md:text-7xl font-black text-green-500 mb-4">100%</div>
+                    <p class="text-sm font-black uppercase tracking-widest text-gray-400">Growth Achieved</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. INTERNSHIP HIGHLIGHT SECTION -->
+    <section class="responsive-py bg-slate-900 text-white adaptive-rounded responsive-mx mb-20 relative overflow-hidden reveal">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+                <div>
+                    <h2 class="section-title font-black mb-8 leading-none">3-Month Internship with <br> <span class="text-blue-500 italic font-serif">Real Client Work</span></h2>
+                    <p class="text-xl md:text-2xl text-gray-400 font-medium mb-10">Stop learning theory. Start executing.</p>
+                    <ul class="space-y-6 mb-12">
+                        <li class="flex items-center gap-4 text-xl font-bold">
+                            <span class="w-8 h-8 rounded-xl bg-brand-blue flex items-center justify-center text-sm">01</span>
+                            Work on live client projects
+                        </li>
+                        <li class="flex items-center gap-4 text-xl font-bold">
+                            <span class="w-8 h-8 rounded-xl bg-brand-blue flex items-center justify-center text-sm">02</span>
+                            Build portfolio-ready work
+                        </li>
+                        <li class="flex items-center gap-4 text-xl font-bold">
+                            <span class="w-8 h-8 rounded-xl bg-brand-blue flex items-center justify-center text-sm">03</span>
+                            Get performance-based feedback
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="inline-flex items-center gap-3 px-10 py-5 bg-white text-brand-blue rounded-full font-bold uppercase tracking-widest text-sm hover:scale-105 transition-all">Apply for Internship <i data-lucide="send" class="w-5 h-5"></i></a>
+                </div>
+                <div class="relative">
+                    <img src="./assets/img/bg1.jpg" alt="Internship" class="adaptive-rounded shadow-2xl transition-all duration-700">
+                    <div class="absolute -bottom-6 -left-6 bg-brand-blue p-8 adaptive-rounded shadow-premium">
+                        <p class="text-3xl font-black leading-none mb-2 font-outfit">90%</p>
+                        <p class="text-[10px] font-black uppercase tracking-[0.2em] text-white/60">Placement Focus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CASE STUDIES / IMPACT SECTION -->
+    <section class="responsive-py bg-white reveal">
+        <div class="max-w-full  mt-14 px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="section-title font-black text-gray-900 mb-4">Real Impact. Real Results.</h2>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-12 mobile-slider">
+                <!-- Case 1 -->
+                <div class="responsive-p bg-gray-50 adaptive-rounded hover:shadow-xl transition-all border border-gray-100 shadow-premium w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]">
+                    <p class="text-[10px] font-black text-brand-blue uppercase tracking-widest mb-4">Case 1: Local Retail</p>
+                    <h4 class="text-2xl font-black mb-6 font-outfit">Chennai Retail Business</h4>
+                    <p class="text-gray-500 mb-8 font-medium">We optimized their local search presence and digital identity.</p>
+                    <div class="text-2xl font-black text-green-500 font-outfit">+210%</div>
+                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Organic Traffic Increase</p>
+                </div>
+                <!-- Case 2 -->
+                <div class="responsive-p bg-gray-50 adaptive-rounded hover:shadow-xl transition-all border border-gray-100 shadow-premium w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]">
+                    <p class="text-[10px] font-black text-brand-purple uppercase tracking-widest mb-4">Case 2: Career Pivot</p>
+                    <h4 class="text-2xl font-black mb-6 font-outfit">Student to Developer</h4>
+                    <p class="text-gray-500 mb-8 font-medium">A fresher student built 5 real projects during the internship.</p>
+                    <div class="text-2xl font-black text-brand-purple font-outfit leading-tight">Built Portfolio → Got Hired</div>
+                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mt-2">Career Transformation</p>
+                </div>
+                <!-- Case 3 -->
+                <div class="responsive-p bg-gray-50 adaptive-rounded hover:shadow-xl transition-all border border-gray-100 shadow-premium w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]">
+                    <p class="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-4">Case 3: Efficiency</p>
+                    <h4 class="text-2xl font-black mb-6 font-outfit">Service Business</h4>
+                    <p class="text-gray-500 mb-8 font-medium">Automated their lead capture and improved digital funnel.</p>
+                    <div class="text-2xl font-black text-red-500 font-outfit">-45%</div>
+                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Cost Reduction + Improved Leads</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. HOW IT WORKS SECTION -->
+    <section class="responsive-py bg-gray-50 reveal">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="section-title font-black text-gray-900 mb-4">Our Proven Process</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 mobile-slider">
+                <div>
+                    <h4 class="text-2xl font-black text-brand-blue mb-10 flex items-center gap-3"><i data-lucide="graduation-cap" class="w-8 h-8"></i> For Students</h4>
+                    <div class="space-y-8 pl-16 relative">
+                        <div class="relative">
+                            <span class="absolute -left-[48px] top-0 w-8 h-8 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold">1</span>
+                            <h5 class="text-xl font-bold mb-2">Career Guidance</h5>
+                            <p class="text-gray-500">Mapping your interest with industry demands.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[48px] top-0 w-8 h-8 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold">2</span>
+                            <h5 class="text-xl font-bold mb-2">Skill Training</h5>
+                            <p class="text-gray-500">Intensive practical training on core tech.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[48px] top-0 w-8 h-8 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold">3</span>
+                            <h5 class="text-xl font-bold mb-2">Live Projects</h5>
+                            <p class="text-gray-500">Working on internal product building.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[48px] top-0 w-8 h-8 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold">4</span>
+                            <h5 class="text-xl font-bold mb-2">Internship</h5>
+                            <p class="text-gray-500">Executing real client deliverables.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[48px] top-0 w-8 h-8 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold">5</span>
+                            <h5 class="text-xl font-bold mb-2">Career Support</h5>
+                            <p class="text-gray-500">Interview prep and placement assistance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-black text-brand-purple mb-10 flex items-center gap-3"><i data-lucide="briefcase" class="w-8 h-8"></i> For Businesses</h4>
+                    <div class="space-y-8 pl-16 relative">
+                        <div class="relative">
+                            <span class="absolute -left-[48px] top-0 w-8 h-8 bg-brand-purple text-white rounded-full flex items-center justify-center font-bold">1</span>
+                            <h5 class="text-xl font-bold mb-2">Audit</h5>
+                            <p class="text-gray-500">Analyzing your current digital performance.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[48px] top-0 w-8 h-8 bg-brand-purple text-white rounded-full flex items-center justify-center font-bold">2</span>
+                            <h5 class="text-xl font-bold mb-2">Strategy</h5>
+                            <p class="text-gray-500">Developing a result-driven growth map.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[48px] top-0 w-8 h-8 bg-brand-purple text-white rounded-full flex items-center justify-center font-bold">3</span>
+                            <h5 class="text-xl font-bold mb-2">Execution</h5>
+                            <p class="text-gray-500">Implementing SEO, Ads, and Development.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[48px] top-0 w-8 h-8 bg-brand-purple text-white rounded-full flex items-center justify-center font-bold">4</span>
+                            <h5 class="text-xl font-bold mb-2">Optimization</h5>
+                            <p class="text-gray-500">Scaling results based on data tracking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. TESTIMONIALS SECTION -->
+    <section class="max-w-7xl mx-auto w-full px-4 md:px-8 lg:px-10 py-16 md:py-20">
+
+        <div class="text-center mb-16">
+            <h2 class="text-xs uppercase tracking-[0.5em] text-brand-blue font-bold mb-4">Authentic Feedback</h2>
+            <h3 class="text-2xl sm:text-4xl md:text-5xl font-black mb-6 tracking-tighter text-gray-900">What Our Clients Says</h3>
+            <p class="text-gray-500 text-base md:text-xl font-medium leading-relaxed max-w-3xl mx-auto">
+                Words from the people who worked with us. <br> We don’t just deliver. We make it count.
+            </p>
+        </div>
+
+        <div class="relative">
+            <div class="testimonial-container mobile-slider" id="testimonialContainer">
+                <div data-index="0" class="testimonial-card pos-1">
+                    <a href="https://www.sivamitech.com/">
+                        <img src="./assets/img/sivam.png" alt="profile" class="t-hero-img t-contain">
+                        <i data-lucide="instagram" class="t-instagram"></i>
+                        <div class="t-card-body">
+                            <div>
+                                <div class="flex gap-1 t-icon">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <p class="t-quote">"Working with MR CODERS HUB was a smooth and professional experience. They delivered a clean, modern website that represents our brand perfectly."</p>
+                            </div>
+                            <div class="flex items-center gap-4 text-left">
+                                <img src="./assets/img/sivam.png" alt="sivam iTech logo" class="t-avatar"> 
+                                <div>
+                                    <p class="t-name">Vishwa</p>
+                                    <p class="t-role">Sivam iTech</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div data-index="1" class="testimonial-card pos-2">
+                    <a href="https://www.bushraedu.com/">
+                    <img src="./assets/img/bushra.png" alt="profile" class="t-hero-img t-contain">
+                    <i data-lucide="instagram" class="t-instagram"></i>
+                    <div class="t-card-body">
+                        <div>
+                            <div class="flex gap-1 t-icon">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                            <p class="t-quote">"We are very happy with the website developed by MR CODERS HUB for our school. The team was responsive, creative, and delivered exactly what we expected."</p>
+                        </div>
+                        <div class="flex items-center gap-4 text-left">
+                            <img src="./assets/img/bushra.png" alt="Bushra Matriculation School logo" class="t-avatar">
+                            <div>
+                                <p class="t-name">Jammeema</p>
+                                <p class="t-role">Bushra Matriculation School</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div data-index="2" class="testimonial-card pos-3">
+                    <a href="https://keyboardistacadamy.in/">
+                    <img src="./assets/img/agilan.jpeg" alt="profile" class="t-hero-img">
+                    <i data-lucide="instagram" class="t-instagram"></i>
+                    <div class="t-card-body">
+                        <div>
+                            <div class="flex gap-1 t-icon">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="t-quote">"MR CODERS HUB helped us improve both our website and social media presence with creative ideas and consistent support."</p>
+                        </div>
+                        <div class="flex items-center gap-4 text-left">
+                            <img src="./assets/img/agilan.jpeg" class="t-avatar" alt="agilan profile image">
+                            <div>
+                                <p class="t-name">Agilan</p>
+                                <p class="t-role">Keyboardist Academy</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div data-index="3" class="testimonial-card pos-4">
+                    <a href="https://www.instagram.com/cravefinity?igsh=aGl0a2IzbGJsbjNx">
+                    <img src="./assets/img/cravefinity.png" alt="profile" class="t-hero-img t-contain">
+                    <i data-lucide="instagram" class="t-instagram"></i>
+                    <div class="t-card-body">
+                        <div>
+                            <div class="flex gap-1 t-icon">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="t-quote">"Solid digital consulting and branding support. Their execution really helped improve our social media presence."</p>
+                        </div>
+                        <div class="flex items-center gap-4 text-left">
+                            <img src="./assets/img/cravefinity.png" alt="cravefinity logo" class="t-avatar">
+                            <div>
+                                <p class="t-name">Sharu</p>
+                                <p class="t-role">Cravefinity</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div data-index="4" class="testimonial-card pos-5">
+                    <a href="http://natchathra.in/">
+                    <img src="./assets/img/natchathra.png" alt="profile" class="t-hero-img t-contain">
+                    <i data-lucide="instagram" class="t-instagram"></i>
+                    <div class="t-card-body">
+                        <div>
+                            <div class="flex gap-1 t-icon">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="t-quote">"Excellent support for our website and social media management. Creative approach and timely execution."</p>
+                        </div>
+                        <div class="flex items-center gap-4 text-left">
+                            <img src="./assets/img/natchathra.png" alt="natchathra foods logo" class="t-avatar">
+                            <div>
+                                <p class="t-name">Parameshwari</p>
+                                <p class="t-role">Natchathra Foods</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div data-index="5" class="testimonial-card pos-6">
+                    <a href="https://jetcabs.in/">
+                    <img src="./assets/img/jetcabs.png" alt="profile" class="t-hero-img t-contain">
+                    <i data-lucide="instagram" class="t-instagram"></i>
+                    <div class="t-card-body">
+                        <div>
+                            <div class="flex gap-1 t-icon">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="t-quote">"MR CODERS HUB delivered a professional and user-friendly website for our cab service business. The team was supportive throughout the process and understood our requirements clearly. The final output matched our expectations perfectly."</p>
+                        </div>
+                        <div class="flex items-center gap-4 text-left">
+                            <div class="t-avatar bg-green-100 text-green-600">JC</div>
+                            <div>
+                                <p class="t-name">Ashok</p>
+                                <p class="t-role">Jet Cabs</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div data-index="6" class="testimonial-card pos-7">
+                    <a href="vm-traders.vercel.app">
+                        <img src="./assets/img/vmm.png" alt="profile" class="t-hero-img t-contain">
+                        <i data-lucide="instagram" class="t-instagram"></i>
+                        <div class="t-card-body">
+                            <div>
+                                <div class="flex gap-1 t-icon">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <p class="t-quote">"We had a great experience working with MR CODERS HUB for our e-commerce mobile application. The team developed the app with a clean interface and smooth functionality, making it easy for customers to browse and place orders. Professional work and good support throughout the project."</p>
+                            </div>
+                            <div class="flex items-center gap-4 text-left">
+                                <div class="t-avatar bg-gradient-to-tr from-blue-900 to-purple-800 text-white">VMM</div>
+                                <div>
+                                    <p class="t-name">Jayapal</p>
+                                    <p class="t-role">V.M.M Traders</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <!-- Mobile Dot Indicators -->
+            <div id="testimonial-dots"></div>
+        </div>
+    </section>
+
+
+    <!-- 9. FAQ SECTION -->
+    <section class="responsive-py bg-gray-50 reveal">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title font-black text-gray-900 mb-4">Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-white responsive-p adaptive-rounded shadow-premium border border-slate-50">
+                    <h5 class="text-xl font-black text-gray-900 mb-4 font-outfit">Q: Do you provide internship with real projects in Chennai?</h5>
+                    <p class="text-gray-600 font-medium leading-relaxed">Yes, our internship program includes real client work, performance tracking, and portfolio development.</p>
+                </div>
+                <div class="bg-white responsive-p adaptive-rounded shadow-premium border border-slate-50">
+                    <h5 class="text-xl font-black text-gray-900 mb-4 font-outfit">Q: Which course is best for getting a job in IT?</h5>
+                    <p class="text-gray-600 font-medium leading-relaxed">Courses like web development, digital marketing, and data analytics combined with real project experience provide the best job opportunities.</p>
+                </div>
+                <div class="bg-white responsive-p adaptive-rounded shadow-premium border border-slate-50">
+                    <h5 class="text-xl font-black text-gray-900 mb-4 font-outfit">Q: Do you offer digital marketing services for businesses in Chennai?</h5>
+                    <p class="text-gray-600 font-medium leading-relaxed">Yes, we provide SEO, social media marketing, and performance marketing services tailored for Chennai-based businesses.</p>
+                </div>
+                <div class="bg-white responsive-p adaptive-rounded shadow-premium border border-slate-50">
+                    <h5 class="text-xl font-black text-gray-900 mb-4 font-outfit">Q: How is your training different from other institutes?</h5>
+                    <p class="text-gray-600 font-medium leading-relaxed">We focus on execution — students work on real client projects instead of just learning theory.</p>
+                </div>
+                <div class="bg-white responsive-p adaptive-rounded shadow-premium border border-slate-50">
+                    <h5 class="text-xl font-black text-gray-900 mb-4 font-outfit">Q: Can you help my business generate leads online?</h5>
+                    <p class="text-gray-600 font-medium leading-relaxed">Yes, we build data-driven marketing strategies focused on lead generation and ROI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FINAL CTA SECTION -->
+    <section class="responsive-py bg-slate-900 text-white adaptive-rounded responsive-mx mb-20 relative overflow-hidden reveal">
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <h2 class="hero-title font-black mb-8 leading-none">Start Your Career or <br> <span class="italic font-serif">Grow Your Business Today</span></h2>
+            <p class="text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto font-medium">Stop learning without execution. Start building real skills and real results.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="contact.html" class="px-12 py-6 bg-white text-brand-blue rounded-full font-bold text-xl hover:scale-105 transition-all shadow-2xl">Get Career Guidance</a>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const status = document.getElementById('formStatus');
+            const submitBtn = document.getElementById('submitBtn');
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            // UI Feedback: Loading state
+            submitBtn.disabled = true;
+            const originalContent = submitBtn.innerHTML;
+            submitBtn.innerHTML = `<span>Processing...</span><i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i>`;
+            lucide.createIcons();
+
+            // Real API call to Pabbly Webhook
+            fetch('https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY5MDYzMzA0MzU1MjY0NTUzZCI_3D_pc/IjU3NjcwNTZlMDYzNzA0Mzc1MjY5NTUzZDUxMzci_pc', {
+                method: 'POST',
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                // UI Feedback: Success state
+                status.classList.remove('hidden', 'text-red-600');
+                status.classList.add('text-green-600');
+                status.textContent = "Success! Your message has been sent. We'll be in touch.";
+
+                submitBtn.innerHTML = `<span>Message Sent!</span><i data-lucide="check" class="w-4 h-4"></i>`;
+                submitBtn.classList.replace('bg-brand-blue', 'bg-green-600');
+                lucide.createIcons();
+
+                this.reset();
+            })
+            .catch(error => {
+                console.error('Submission Error:', error);
+                status.classList.remove('hidden', 'text-green-600');
+                status.classList.add('text-red-600');
+                status.textContent = "Oops! Something went wrong. Please try again later.";
+                
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalContent;
+                lucide.createIcons();
+            });
+        });
+    </script>
+
+    <!-- Hero cycling word and image animation -->
+    <script>
+        (function () {
+            const words = ['Skills', 'Projects', 'Future'];
+            const images = [
+                './assets/img/hero-learn-hd.png',
+                './assets/img/hero-project.png',
+                './assets/img/hero-future-hd.png'
+            ];
+            let current = 0;
+            const el = document.getElementById('heroWord');
+            const imgEl = document.getElementById('heroImage');
+            if (!el) return;
+
+            function cycle() {
+                // Phase 1: exit word and fade out image
+                el.classList.add('exit');
+                if (imgEl) imgEl.style.opacity = '0';
+
+                setTimeout(function () {
+                    // Phase 2: swap content and prep word for entry
+                    current = (current + 1) % words.length;
+                    el.textContent = words[current];
+                    if (imgEl) imgEl.src = images[current];
+
+                    el.classList.remove('exit');
+                    el.classList.add('enter');
+
+                    // Phase 3: trigger transitions
+                    requestAnimationFrame(function () {
+                        requestAnimationFrame(function () {
+                            el.classList.remove('enter');
+                            el.classList.add('enter-active');
+                            if (imgEl) imgEl.style.opacity = '1';
+
+                            setTimeout(function () {
+                                el.classList.remove('enter-active');
+                            }, 380); // corresponds to CSS transition time
+                        });
+                    });
+                }, 370);
+            }
+
+            setInterval(cycle, 3000); // 3 seconds per user request
+        })();
+        lucide.createIcons();
+
+         // ── Testimonial Rotation Logic ───────────────────────────────
+        (function () {
+            const container = document.getElementById('testimonialContainer');
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            if (!container) return;
+
+            // Disable custom rotation on mobile to let main.js slider take over
+            if (window.innerWidth < 1024) return;
+
+            let cards = Array.from(container.querySelectorAll('.testimonial-card'));
+            let autoplayTimer;
+            const AUTOPLAY_INTERVAL = 4000;
+
+            function updateClasses() {
+                cards.forEach((card, i) => {
+                    card.classList.remove('pos-1', 'pos-2', 'pos-3', 'pos-4', 'pos-5', 'pos-6', 'pos-7', 'hidden');
+                    if (i < 7) {
+                        card.classList.add(`pos-${i + 1}`);
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+                lucide.createIcons();
+            }
+
+            function next() {
+                const first = cards.shift();
+                cards.push(first);
+                updateClasses();
+            }
+
+            function prev() {
+                const last = cards.pop();
+                cards.unshift(last);
+                updateClasses();
+            }
+
+            function rotateTo(clickedCard) {
+                const index = cards.indexOf(clickedCard);
+                if (index === 0) return;
+                
+                for (let i = 0; i < index; i++) {
+                    const first = cards.shift();
+                    cards.push(first);
+                }
+                updateClasses();
+                resetAutoplay();
+            }
+
+            // Event Listeners
+            cards.forEach(card => {
+                card.addEventListener('click', () => rotateTo(card));
+            });
+
+            if (nextBtn) nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                next();
+                resetAutoplay();
+            });
+
+            if (prevBtn) prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                prev();
+                resetAutoplay();
+            });
+
+            // Auto Play Logic
+            function startAutoplay() {
+                stopAutoplay();
+                autoplayTimer = setInterval(next, AUTOPLAY_INTERVAL);
+            }
+
+            function stopAutoplay() {
+                if (autoplayTimer) clearInterval(autoplayTimer);
+            }
+
+            function resetAutoplay() {
+                stopAutoplay();
+                startAutoplay();
+            }
+
+            // Pause on hover
+            container.addEventListener('mouseenter', stopAutoplay);
+            container.addEventListener('mouseleave', startAutoplay);
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('mouseenter', stopAutoplay);
+                nextBtn.addEventListener('mouseleave', startAutoplay);
+            }
+            if (prevBtn) {
+                prevBtn.addEventListener('mouseenter', stopAutoplay);
+                prevBtn.addEventListener('mouseleave', startAutoplay);
+            }
+
+            // Initial setup
+            updateClasses();
+            startAutoplay();
+        })();
+
+    </script>
+    <!-- Floating WhatsApp Button -->
+<style>
+  /* WhatsApp Button Container */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* On-load Animation */
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    animation: wa-float-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+  }
+
+  /* Hover Effects */
+  .whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
+    background-color: #20b858;
+  }
+
+  /* SVG Icon Sizing */
+  .whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+  }
+
+  /* Tooltip Styling */
+  .wa-tooltip {
+    position: absolute;
+    right: 75px; /* Spaced out from the button */
+    background-color: #1f2937; /* Dark slate color */
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateX(10px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Tooltip Arrow pointing to the button */
+  .wa-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #1f2937;
+  }
+
+  /* Show tooltip on hover (Desktop only) */
+  @media (hover: hover) {
+    .whatsapp-float:hover .wa-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  /* Keyframe Animation */
+  @keyframes wa-float-in {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+      width: 55px;
+      height: 55px;
+    }
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+    }
+    .wa-tooltip {
+      display: none; /* Hide tooltip on mobile to prevent clutter */
+    }
+  }
+</style>
+
+<!-- HTML Structure -->
+<a href="#" id="whatsapp-btn" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <!-- Official WhatsApp SVG Vector -->
+ <svg viewBox="0 0 24 24" fill="white">
+  <path d="M20.52 3.48A11.94 11.94 0 0012.05 0C5.4 0 .02 5.38.02 12.03c0 2.12.56 4.2 1.62 6.04L0 24l6.11-1.6a12.03 12.03 0 005.94 1.52h.01c6.65 0 12.03-5.38 12.03-12.03 0-3.21-1.25-6.22-3.57-8.41zM12.05 21.9h-.01a9.88 9.88 0 01-5.03-1.38l-.36-.21-3.63.95.97-3.54-.23-.36a9.86 9.86 0 01-1.51-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 012.9 7.01c0 5.47-4.45 9.92-9.92 9.92zm5.48-7.39c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/>
+</svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<!-- JavaScript Functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const waButton = document.getElementById('whatsapp-btn');
+    
+    // --- CONFIGURATION ---
+    // Use your actual MR CODERS HUB number (Country code without '+')
+    const phoneNumber = '919360739559'; 
+    
+    // Create a dynamic message based on the current page the user is viewing
+    const pageTitle = document.title.split('|')[0].trim();
+    const message = `Hello MR CODERS HUB! I was looking at the "${pageTitle}" page and I'd like to know more about your services.`;
+    
+    // Properly encode the message for URL transmission
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Construct the official WhatsApp API URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Assign to button
+    waButton.setAttribute('href', whatsappUrl);
+  });
+</script>
+
+
+
+</body>
+
+</html>

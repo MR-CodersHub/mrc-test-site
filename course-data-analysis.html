@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Course in Chennai with Projects | MR CODERS HUB</title>
+    <meta name="description"
+        content="Learn data analytics with Python, SQL, and real projects in Chennai. Build dashboards and become job-ready with MR CODERS HUB.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-purple': '#7C3AED',
+                        'brand-orange': '#F59E0B',
+                        'bg-main': '#F9FAFB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px -15px rgba(30, 58, 138, 0.12)',
+                        'glow-blue': '0 0 30px rgba(30, 58, 138, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-blue: #1E3A8A;
+            --brand-purple: #7C3AED;
+            --brand-orange: #F59E0B;
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-purple) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .course-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .curriculum-line {
+            position: absolute;
+            left: 24px;
+            top: 40px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--brand-blue) 0%, transparent 100%);
+        }
+    </style>
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="bg-bg-main text-gray-900 overflow-x-hidden antialiased">
+
+    <!-- Global Navigation -->
+
+    <!-- Navigation Spacer -->
+    <div class="h-16 lg:h-20"></div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-8 pb-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue/5 rounded-full blur-[120px] -mr-48 -mt-48">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-purple/5 rounded-full blur-[100px] -ml-24 -mb-24">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div
+                        class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-brand-blue/5 border border-brand-blue/10 mb-8">
+                        <span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
+                        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-blue">Practical
+                            Excellence</span>
+                    </div>
+                    <h1 class="hero-title font-black mb-8 text-gray-900 font-outfit">
+                        Data Analytics Course in Chennai <span class="gradient-text italic font-serif">with Real
+                            Projects</span>
+                    </h1>
+                    <p class="text-xl text-slate-500 font-medium leading-relaxed mb-12">
+                        Learn data analysis using Python, SQL, and visualization tools with hands-on training at MR
+                        CODERS HUB, Avadi, Chennai.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 mb-12">
+                        <a href="contact.html"
+                            class="w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-6 bg-brand-blue text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-premium text-center">
+                            Enroll Now
+                        </a>
+                        <a href="#curriculum"
+                            class="w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-6 bg-white border border-gray-200 text-gray-900 rounded-2xl font-black text-lg hover:bg-gray-50 transition-all text-center">
+                            Get Course Details
+                        </a>
+                    </div>
+                    <div class="flex flex-wrap gap-8">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="database" class="w-5 h-5 text-brand-blue"></i>
+                            <span class="text-sm font-bold text-slate-400">Real Dataset Projects</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="cpu" class="w-5 h-5 text-brand-blue"></i>
+                            <span class="text-sm font-bold text-slate-400">Industry Tools</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="briefcase" class="w-5 h-5 text-brand-blue"></i>
+                            <span class="text-sm font-bold text-slate-400">Portfolio Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal delay-200 relative">
+                    <div class="relative adaptive-rounded overflow-hidden shadow-premium aspect-square bg-slate-900">
+                        <img src="./assets/img/c1.jpg" alt="Data Analytics Student"
+                            class="w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent">
+                        </div>
+                        <div
+                            class="absolute bottom-6 left-6 right-6 responsive-p glass-card adaptive-rounded border border-white/10">
+                            <p class="text-white font-bold mb-2 uppercase tracking-widest text-[10px]">Batch Focus</p>
+                            <h4 class="text-xl text-white font-black font-outfit">Financial Data Modeling</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. COURSE OVERVIEW -->
+    <section class="py-16 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span class="text-[10px] font-black text-brand-blue uppercase tracking-[0.5em] block mb-6">Course
+                        Objective</span>
+                    <h2 class="section-title font-black text-gray-900 tracking-tight leading-tight mb-8 font-outfit">
+                        Become a <br> <span class="italic font-serif text-brand-blue">Job-Ready</span> Data Analyst
+                    </h2>
+                    <p class="text-xl text-slate-600 font-medium leading-relaxed text-justify">
+                        This course is designed to help you analyze, interpret, and visualize data using real-world
+                        datasets. You will learn practical tools, statistical concepts, and data workflows required in
+                        today’s data-driven industries.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                        <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm"><i
+                                data-lucide="code-2" class="w-6 h-6 text-brand-blue"></i></div>
+                        <h4 class="font-black text-gray-900 mb-2">Python for Data</h4>
+                        <p class="text-sm text-slate-500 font-medium">Pandas, NumPy, and automation scripts.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                        <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm"><i
+                                data-lucide="search" class="w-6 h-6 text-brand-purple"></i></div>
+                        <h4 class="font-black text-gray-900 mb-2">EDA & Statistics</h4>
+                        <p class="text-sm text-slate-500 font-medium">Cleaning and exploring real-world patterns.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                        <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm"><i
+                                data-lucide="bar-chart-3" class="w-6 h-6 text-brand-orange"></i></div>
+                        <h4 class="font-black text-gray-900 mb-2">Visualization</h4>
+                        <p class="text-sm text-slate-500 font-medium">Power BI, Tableau, and Matplotlib.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                        <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm"><i
+                                data-lucide="database" class="w-6 h-6 text-brand-blue"></i></div>
+                        <h4 class="font-black text-gray-900 mb-2">SQL Mastery</h4>
+                        <p class="text-sm text-slate-500 font-medium">Advanced queries for large databases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="responsive-py bg-slate-50 reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="section-title font-black text-gray-900 tracking-tight font-outfit mb-4">What You Will Learn
+                </h2>
+                <p class="text-xl text-slate-500 font-medium">A comprehensive roadmap to industrial data analysis.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-32">
+                <div class="flex gap-6 p-8 bg-white rounded-3xl shadow-sm border border-slate-100">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-blue/5 text-brand-blue flex items-center justify-center shrink-0">
+                        <i data-lucide="check" class="w-6 h-6"></i></div>
+                    <div>
+                        <h4 class="text-xl font-black text-gray-900 mb-2">Python for Data Analysis</h4>
+                        <p class="text-sm text-slate-500 font-medium">Core programming concepts focused on data
+                            manipulation.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 p-8 bg-white rounded-3xl shadow-sm border border-slate-100">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-blue/5 text-brand-blue flex items-center justify-center shrink-0">
+                        <i data-lucide="check" class="w-6 h-6"></i></div>
+                    <div>
+                        <h4 class="text-xl font-black text-gray-900 mb-2">Cleaning & Preprocessing</h4>
+                        <p class="text-sm text-slate-500 font-medium">Handling missing values, noise, and data
+                            formatting.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 p-8 bg-white rounded-3xl shadow-sm border border-slate-100">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-blue/5 text-brand-blue flex items-center justify-center shrink-0">
+                        <i data-lucide="check" class="w-6 h-6"></i></div>
+                    <div>
+                        <h4 class="text-xl font-black text-gray-900 mb-2">Exploratory Data Analysis</h4>
+                        <p class="text-sm text-slate-500 font-medium">Finding patterns and insights using statistical
+                            EDA.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 p-8 bg-white rounded-3xl shadow-sm border border-slate-100">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-blue/5 text-brand-blue flex items-center justify-center shrink-0">
+                        <i data-lucide="check" class="w-6 h-6"></i></div>
+                    <div>
+                        <h4 class="text-xl font-black text-gray-900 mb-2">Dashboards & Viz</h4>
+                        <p class="text-sm text-slate-500 font-medium">Building interactive visuals for stakeholders.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 p-8 bg-white rounded-3xl shadow-sm border border-slate-100">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-blue/5 text-brand-blue flex items-center justify-center shrink-0">
+                        <i data-lucide="check" class="w-6 h-6"></i></div>
+                    <div>
+                        <h4 class="text-xl font-black text-gray-900 mb-2">SQL for Data Analysis</h4>
+                        <p class="text-sm text-slate-500 font-medium">Extracting and aggregating data from RDBMS.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 p-8 bg-white rounded-3xl shadow-sm border border-slate-100">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-blue/5 text-brand-blue flex items-center justify-center shrink-0">
+                        <i data-lucide="check" class="w-6 h-6"></i></div>
+                    <div>
+                        <h4 class="text-xl font-black text-gray-900 mb-2">Machine Learning Basics</h4>
+                        <p class="text-sm text-slate-500 font-medium">Introduction to predictive modeling and
+                            algorithms.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white adaptive-rounded p-10 md:p-20 shadow-premium border border-slate-100 text-center">
+                <h3 class="section-title font-black mb-12 font-outfit leading-none">Master Industry Tools</h3>
+                <div class="flex flex-wrap justify-center gap-10 opacity-70">
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="w-20 h-20 bg-slate-50 rounded-2xl flex items-center justify-center shadow-premium">
+                            <i data-lucide="terminal" class="w-10 h-10 text-slate-900"></i></div>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">Python</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="w-20 h-20 bg-slate-50 rounded-2xl flex items-center justify-center shadow-premium">
+                            <i data-lucide="database" class="w-10 h-10 text-slate-900"></i></div>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">SQL</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="w-20 h-20 bg-slate-50 rounded-2xl flex items-center justify-center shadow-premium">
+                            <i data-lucide="pie-chart" class="w-10 h-10 text-slate-900"></i></div>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">Power BI</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="w-20 h-20 bg-slate-50 rounded-2xl flex items-center justify-center shadow-premium">
+                            <i data-lucide="layout" class="w-10 h-10 text-slate-900"></i></div>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">Jupyter</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="w-20 h-20 bg-slate-50 rounded-2xl flex items-center justify-center shadow-premium">
+                            <i data-lucide="layers" class="w-10 h-10 text-slate-900"></i></div>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">Tableau</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="responsive-py bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-slate-900 adaptive-rounded p-6 sm:p-12 md:p-24 text-white overflow-hidden relative group">
+                <div
+                    class="absolute inset-0 bg-brand-blue/5 blur-[120px] opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+                    <div>
+                        <h2 class="section-title font-black mb-8 font-outfit">Work on <br> <span
+                                class="text-brand-blue italic">Real Data Projects</span></h2>
+                        <ul class="space-y-6 mb-12">
+                            <li class="flex items-center gap-4 text-base sm:text-xl font-medium text-white/70"><i
+                                    data-lucide="arrow-right-circle"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 text-brand-blue shrink-0"></i> Analyze real-world
+                                datasets</li>
+                            <li class="flex items-center gap-4 text-base sm:text-xl font-medium text-white/70"><i
+                                    data-lucide="arrow-right-circle"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 text-brand-blue shrink-0"></i> Perform data cleaning
+                                and transformation</li>
+                            <li class="flex items-center gap-4 text-base sm:text-xl font-medium text-white/70"><i
+                                    data-lucide="arrow-right-circle"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 text-brand-blue shrink-0"></i> Build dashboards and
+                                reports</li>
+                            <li class="flex items-center gap-4 text-base sm:text-xl font-medium text-white/70"><i
+                                    data-lucide="arrow-right-circle"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 text-brand-blue shrink-0"></i> Present insights and
+                                findings</li>
+                        </ul>
+                        <p class="text-sm font-bold text-white/30 uppercase tracking-widest">Bridging theory and
+                            industry practice</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 sm:p-8 bg-white/5 rounded-2xl border border-white/10 text-center">
+                            <h4 class="text-xl sm:text-3xl font-black mb-1">15+</h4>
+                            <p class="text-xs text-white/50 font-bold uppercase">Case Studies</p>
+                        </div>
+                        <div class="p-4 sm:p-8 bg-white/5 rounded-2xl border border-white/10 text-center">
+                            <h4 class="text-xl sm:text-3xl font-black mb-1">5+</h4>
+                            <p class="text-xs text-white/50 font-bold uppercase">Capstone Projects</p>
+                        </div>
+                        <div class="p-4 sm:p-8 bg-white/5 rounded-2xl border border-white/10 text-center">
+                            <h4 class="text-xl sm:text-3xl font-black mb-1">100%</h4>
+                            <p class="text-xs text-white/50 font-bold uppercase">Practical Work</p>
+                        </div>
+                        <div class="p-8 bg-white/5 rounded-3xl border border-white/10 text-center">
+                            <h4 class="text-xl font-black mb-2">24/7</h4>
+                            <p class="text-xs text-white/50 font-bold uppercase">Lab Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. WHO SHOULD JOIN & STRUCTURE -->
+    <section class="py-32 bg-slate-50 reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-black text-gray-900 font-outfit mb-12">Who Should Join</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-6 p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+                            <div
+                                class="w-10 h-10 bg-brand-blue/5 text-brand-blue rounded-lg flex items-center justify-center shrink-0">
+                                <i data-lucide="graduation-cap" class="w-5 h-5"></i></div>
+                            <span class="text-lg font-bold text-gray-900">Students (BCA, BSc, BBA, etc.)</span>
+                        </div>
+                        <div class="flex items-center gap-6 p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+                            <div
+                                class="w-10 h-10 bg-brand-purple/5 text-brand-purple rounded-lg flex items-center justify-center shrink-0">
+                                <i data-lucide="user-plus" class="w-5 h-5"></i></div>
+                            <span class="text-lg font-bold text-gray-900">Freshers entering data roles</span>
+                        </div>
+                        <div class="flex items-center gap-6 p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+                            <div
+                                class="w-10 h-10 bg-brand-orange/5 text-brand-orange rounded-lg flex items-center justify-center shrink-0">
+                                <i data-lucide="play" class="w-5 h-5"></i></div>
+                            <span class="text-lg font-bold text-gray-900">Beginners interested in analytics</span>
+                        </div>
+                        <div class="flex items-center gap-6 p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+                            <div
+                                class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center shrink-0">
+                                <i data-lucide="refresh-cw" class="w-5 h-5"></i></div>
+                            <span class="text-lg font-bold text-gray-900">Professionals switching careers</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-black text-gray-900 font-outfit mb-12">Course Structure</h2>
+                    <div class="space-y-8">
+                        <div class="relative pl-16">
+                            <div
+                                class="absolute left-0 top-0 w-12 h-12 bg-brand-blue text-white rounded-xl flex items-center justify-center font-black">
+                                01</div>
+                            <h4 class="text-xl font-black text-gray-900 mb-2">Month 1: Fundamentals</h4>
+                            <p class="text-slate-500 font-medium">Introduction to Python, Data Handling, and Exploratory
+                                Analysis.</p>
+                        </div>
+                        <div class="relative pl-16">
+                            <div
+                                class="absolute left-0 top-0 w-12 h-12 bg-brand-purple text-white rounded-xl flex items-center justify-center font-black">
+                                02</div>
+                            <h4 class="text-xl font-black text-gray-900 mb-2">Month 2: Stats & ML</h4>
+                            <p class="text-slate-500 font-medium">Statistics, Machine Learning basics, and Advanced
+                                Visualization.</p>
+                        </div>
+                        <div class="relative pl-16">
+                            <div
+                                class="absolute left-0 top-0 w-12 h-12 bg-brand-orange text-white rounded-xl flex items-center justify-center font-black">
+                                03</div>
+                            <h4 class="text-xl font-black text-gray-900 mb-2">Month 3: Applied Projects</h4>
+                            <p class="text-slate-500 font-medium">SQL, Time Series, Cloud basics, and Final Capstone
+                                Project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CURRICULUM -->
+    <section id="curriculum" class="py-16 bg-white reveal">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <span class="text-[10px] font-black text-brand-blue uppercase tracking-[0.5em] block mb-6">Execution
+                    Syllabus</span>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight font-outfit mb-8 leading-tight">
+                    12-Week Data Analytics <br> <span class="italic font-serif text-brand-blue">Practical
+                        Execution</span>
+                </h2>
+                <p class="text-xl text-slate-500 font-medium">A structured program designed to build real-world data
+                    skills.</p>
+            </div>
+
+            <div class="space-y-24">
+                <!-- Month 1 -->
+                <div class="relative">
+                    <h3 class="text-xl font-black text-brand-blue mb-12 uppercase tracking-widest pl-16">Month 1:
+                        Fundamentals</h3>
+                    <div class="curriculum-line"></div>
+                    <div class="space-y-16">
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-[18px] top-2 w-3 h-3 rounded-full bg-brand-blue border-2 border-white shadow-sm">
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 mb-2">Week 1: Introduction to Data Analysis</h4>
+                            <p class="text-sm text-slate-500 font-medium mb-4">Overview, data types, and tool setup
+                                (Python, Jupyter).</p>
+                            <div
+                                class="inline-block px-3 py-1 bg-slate-50 rounded-lg text-[10px] font-black text-brand-blue uppercase tracking-widest">
+                                Outcome: Tool Mastery</div>
+                        </div>
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-[18px] top-2 w-3 h-3 rounded-full bg-brand-blue border-2 border-white shadow-sm">
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 mb-2">Week 2: Data Handling with Python</h4>
+                            <p class="text-sm text-slate-500 font-medium mb-4">Collection, importing, and cleaning
+                                (Missing values, duplicates).</p>
+                            <div
+                                class="inline-block px-3 py-1 bg-slate-50 rounded-lg text-[10px] font-black text-brand-blue uppercase tracking-widest">
+                                Outcome: Data Preparation</div>
+                        </div>
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-[18px] top-2 w-3 h-3 rounded-full bg-brand-blue border-2 border-white shadow-sm">
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 mb-2">Week 3: Exploratory Data Analysis (EDA)
+                            </h4>
+                            <p class="text-sm text-slate-500 font-medium mb-4">Descriptive statistics and visualization
+                                techniques on real datasets.</p>
+                            <div
+                                class="inline-block px-3 py-1 bg-slate-50 rounded-lg text-[10px] font-black text-brand-blue uppercase tracking-widest">
+                                Outcome: Pattern Analysis</div>
+                        </div>
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-[18px] top-2 w-3 h-3 rounded-full bg-brand-blue border-2 border-white shadow-sm">
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 mb-2">Week 4: Feature Engineering</h4>
+                            <p class="text-sm text-slate-500 font-medium mb-4">Feature scaling, encoding, and
+                                transformation exercises.</p>
+                            <div
+                                class="inline-block px-3 py-1 bg-slate-50 rounded-lg text-[10px] font-black text-brand-blue uppercase tracking-widest">
+                                Outcome: Advanced Prep</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 2 -->
+                <div class="relative">
+                    <h3 class="text-xl font-black text-brand-purple mb-12 uppercase tracking-widest pl-16">Month 2:
+                        Stats & ML</h3>
+                    <div class="curriculum-line"
+                        style="background: linear-gradient(to bottom, var(--brand-purple) 0%, transparent 100%);"></div>
+                    <div class="space-y-16">
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-[18px] top-2 w-3 h-3 rounded-full bg-brand-purple border-2 border-white shadow-sm">
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 mb-2">Week 5: Probability & Statistics</h4>
+                            <p class="text-sm text-slate-500 font-medium mb-4">Distributions, Hypothesis testing, and
+                                Confidence intervals.</p>
+                            <div
+                                class="inline-block px-3 py-1 bg-slate-50 rounded-lg text-[10px] font-black text-brand-purple uppercase tracking-widest">
+                                Outcome: Stat Foundations</div>
+                        </div>
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-[18px] top-2 w-3 h-3 rounded-full bg-brand-purple border-2 border-white shadow-sm">
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 mb-2">Week 6: Introduction to Machine Learning
+                            </h4>
+                            <p class="text-sm text-slate-500 font-medium mb-4">Regression and classification basics with
+                                model implementation.</p>
+                            <div
+                                class="inline-block px-3 py-1 bg-slate-50 rounded-lg text-[10px] font-black text-brand-purple uppercase tracking-widest">
+                                Outcome: Predictive Modeling</div>
+                        </div>
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-[18px] top-2 w-3 h-3 rounded-full bg-brand-purple border-2 border-white shadow-sm">
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 mb-2">Week 7: Advanced Data Handling</h4>
+                            <p class="text-sm text-slate-500 font-medium mb-4">Advanced Pandas and NumPy operations for
+                                large datasets.</p>
+                            <div
+                                class="inline-block px-3 py-1 bg-slate-50 rounded-lg text-[10px] font-black text-brand-purple uppercase tracking-widest">
+                                Outcome: Data Scalability</div>
+                        </div>
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-[18px] top-2 w-3 h-3 rounded-full bg-brand-purple border-2 border-white shadow-sm">
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 mb-2">Week 8: Data Visualization & Reporting
+                            </h4>
+                            <p class="text-sm text-slate-500 font-medium mb-4">Advanced viz (Seaborn, Plotly) and
+                                Dashboard creation (Power BI).</p>
+                            <div
+                                class="inline-block px-3 py-1 bg-slate-50 rounded-lg text-[10px] font-black text-brand-purple uppercase tracking-widest">
+                                Outcome: Interactive Dashboards</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month 3 -->
+                <div class="relative">
+                    <h3 class="text-xl font-black text-brand-orange mb-12 uppercase tracking-widest pl-16">Month 3:
+                        Applied Analytics</h3>
+                    <div class="curriculum-line"
+                        style="background: linear-gradient(to bottom, var(--brand-orange) 0%, transparent 100%);"></div>
+                    <div class="space-y-16">
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-[18px] top-2 w-3 h-3 rounded-full bg-brand-orange border-2 border-white shadow-sm">
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 mb-2">Week 9: Working with Databases</h4>
+                            <p class="text-sm text-slate-500 font-medium mb-4">SQL queries, joins, aggregations, and
+                                data extraction.</p>
+                            <div
+                                class="inline-block px-3 py-1 bg-slate-50 rounded-lg text-[10px] font-black text-brand-orange uppercase tracking-widest">
+                                Outcome: RDBMS Expertise</div>
+                        </div>
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-[18px] top-2 w-3 h-3 rounded-full bg-brand-orange border-2 border-white shadow-sm">
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 mb-2">Week 10: Time Series Analysis</h4>
+                            <p class="text-sm text-slate-500 font-medium mb-4">Time-based analysis and forecasting
+                                techniques.</p>
+                            <div
+                                class="inline-block px-3 py-1 bg-slate-50 rounded-lg text-[10px] font-black text-brand-orange uppercase tracking-widest">
+                                Outcome: Trend Forecasting</div>
+                        </div>
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-[18px] top-2 w-3 h-3 rounded-full bg-brand-orange border-2 border-white shadow-sm">
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 mb-2">Week 11: Big Data & Cloud Basics</h4>
+                            <p class="text-sm text-slate-500 font-medium mb-4">Introduction to modern data
+                                infrastructure (AWS/Google Cloud).</p>
+                            <div
+                                class="inline-block px-3 py-1 bg-slate-50 rounded-lg text-[10px] font-black text-brand-orange uppercase tracking-widest">
+                                Outcome: Infrastructure Insights</div>
+                        </div>
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-[18px] top-2 w-3 h-3 rounded-full bg-brand-orange border-2 border-white shadow-sm">
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 mb-2">Week 12: Capstone Project</h4>
+                            <p class="text-sm text-slate-500 font-medium mb-4">Full implementation on a real-world
+                                dataset and presentation.</p>
+                            <div
+                                class="inline-block px-3 py-1 bg-slate-50 rounded-lg text-[10px] font-black text-brand-orange uppercase tracking-widest">
+                                Outcome: Portfolio Ready</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. INTERNSHIP & CAREER -->
+    <section class="py-32 bg-slate-900 text-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div class="p-12 bg-white/5 rounded-[3rem] border border-white/10">
+                    <h3 class="text-3xl font-black mb-8 font-outfit">Internship & Practical Exposure</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="layers" class="w-6 h-6 text-brand-blue"></i>
+                            <span class="text-lg font-bold">Project-Based Learning with Real Data</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="bar-chart" class="w-6 h-6 text-brand-blue"></i>
+                            <span class="text-lg font-bold">Build dashboards and reports</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="folder" class="w-6 h-6 text-brand-blue"></i>
+                            <span class="text-lg font-bold">Develop portfolio projects</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="trending-up" class="w-6 h-6 text-brand-blue"></i>
+                            <span class="text-lg font-bold">Gain practical industry exposure</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-black mb-12 font-outfit">Career Opportunities</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div
+                            class="p-8 bg-white/5 rounded-3xl border border-white/10 group hover:bg-brand-blue transition-colors">
+                            <h4 class="text-2xl font-black mb-2">Data Analyst</h4>
+                            <p class="text-white/50 text-sm font-medium">Core analytical roles in top firms.</p>
+                        </div>
+                        <div
+                            class="p-8 bg-white/5 rounded-3xl border border-white/10 group hover:bg-brand-purple transition-colors">
+                            <h4 class="text-2xl font-black mb-2">Business Analyst</h4>
+                            <p class="text-white/50 text-sm font-medium">Solving business gaps with data.</p>
+                        </div>
+                        <div
+                            class="p-8 bg-white/5 rounded-3xl border border-white/10 group hover:bg-brand-orange transition-colors">
+                            <h4 class="text-2xl font-black mb-2">Viz Specialist</h4>
+                            <p class="text-white/50 text-sm font-medium">Designing visual stories.</p>
+                        </div>
+                        <div
+                            class="p-8 bg-white/5 rounded-3xl border border-white/10 group hover:bg-emerald-500 transition-colors">
+                            <h4 class="text-2xl font-black mb-2">Jr. Scientist</h4>
+                            <p class="text-white/50 text-sm font-medium">The first step into AI/ML.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. LOCAL SEO & FAQ -->
+    <section class="py-32 bg-white reveal">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 font-outfit mb-8 leading-tight">Data Analytics
+                    Training in <span class="italic font-serif text-brand-blue">Avadi, Chennai</span></h2>
+                <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                    MR CODERS HUB provides practical data analytics training for students across Chennai, helping them
+                    gain real-world experience and industry-ready skills.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Q1 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Is this data analytics course suitable for
+                            beginners?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, the course starts from basics and progresses to advanced concepts, making it perfect
+                            for anyone starting their data journey.
+                        </div>
+                    </div>
+                </div>
+                <!-- Q2 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Will I work on real datasets?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Absolutely. You will work on real-world datasets from various industries to ensure you
+                            understand practical challenges.
+                        </div>
+                    </div>
+                </div>
+                <!-- Q3 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Do I need prior programming knowledge?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            No prior knowledge is required. We teach basic Python and SQL programming as part of the
+                            curriculum.
+                        </div>
+                    </div>
+                </div>
+                <!-- Q4 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">What tools will I learn?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            You will master Python (Pandas/NumPy), SQL, Power BI, and various data visualization
+                            libraries like Matplotlib and Seaborn.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FINAL CTA -->
+    <section
+        class="responsive-py bg-slate-900 text-white text-center reveal adaptive-rounded mx-4 sm:mx-6 md:mx-10 mb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-white/5 blur-[120px] rounded-full"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="hero-title font-black mb-12 font-outfit leading-none tracking-tight">Start Your <span
+                    class="italic font-serif ">Data Analytics</span> Career Today</h2>
+            <p class="text-xl md:text-2xl text-white/70 mb-16 max-w-2xl mx-auto font-medium">
+                Gain practical skills, work on real data, and become job-ready with our industry-led training program.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="contact.html"
+                    class="w-full sm:w-auto px-12 py-6 bg-white text-brand-blue rounded-3xl font-black text-xl hover:scale-105 transition-all shadow-premium">
+                    Enroll Now
+                </a>
+                <a href="contact.html"
+                    class="w-full sm:w-auto px-12 py-6 bg-transparent border-2 border-white/20 text-white rounded-3xl font-black text-xl hover:bg-white/10 transition-all">
+                    Talk to Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const panel = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    const isOpen = panel.style.maxHeight;
+
+                    document.querySelectorAll('.faq-panel').forEach(p => p.style.maxHeight = null);
+                    document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                    if (!isOpen) {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+<style>
+  /* WhatsApp Button Container */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* On-load Animation */
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    animation: wa-float-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+  }
+
+  /* Hover Effects */
+  .whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
+    background-color: #20b858;
+  }
+
+  /* SVG Icon Sizing */
+  .whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+  }
+
+  /* Tooltip Styling */
+  .wa-tooltip {
+    position: absolute;
+    right: 75px; /* Spaced out from the button */
+    background-color: #1f2937; /* Dark slate color */
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateX(10px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Tooltip Arrow pointing to the button */
+  .wa-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #1f2937;
+  }
+
+  /* Show tooltip on hover (Desktop only) */
+  @media (hover: hover) {
+    .whatsapp-float:hover .wa-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  /* Keyframe Animation */
+  @keyframes wa-float-in {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+      width: 55px;
+      height: 55px;
+    }
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+    }
+    .wa-tooltip {
+      display: none; /* Hide tooltip on mobile to prevent clutter */
+    }
+  }
+</style>
+
+<!-- HTML Structure -->
+<a href="#" id="whatsapp-btn" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <!-- Official WhatsApp SVG Vector -->
+ <svg viewBox="0 0 24 24" fill="white">
+  <path d="M20.52 3.48A11.94 11.94 0 0012.05 0C5.4 0 .02 5.38.02 12.03c0 2.12.56 4.2 1.62 6.04L0 24l6.11-1.6a12.03 12.03 0 005.94 1.52h.01c6.65 0 12.03-5.38 12.03-12.03 0-3.21-1.25-6.22-3.57-8.41zM12.05 21.9h-.01a9.88 9.88 0 01-5.03-1.38l-.36-.21-3.63.95.97-3.54-.23-.36a9.86 9.86 0 01-1.51-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 012.9 7.01c0 5.47-4.45 9.92-9.92 9.92zm5.48-7.39c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/>
+</svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<!-- JavaScript Functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const waButton = document.getElementById('whatsapp-btn');
+    
+    // --- CONFIGURATION ---
+    // Use your actual MR CODERS HUB number (Country code without '+')
+    const phoneNumber = '919360739559'; 
+    
+    // Create a dynamic message based on the current page the user is viewing
+    const pageTitle = document.title.split('|')[0].trim();
+    const message = `Hello MR CODERS HUB! I was looking at the "${pageTitle}" page and I'd like to know more about your services.`;
+    
+    // Properly encode the message for URL transmission
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Construct the official WhatsApp API URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Assign to button
+    waButton.setAttribute('href', whatsappUrl);
+  });
+</script>
+</body>
+
+</html>
