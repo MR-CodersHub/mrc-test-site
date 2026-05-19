@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Program in Chennai with Real Projects | MR CODERS HUB</title>
+    <meta name="description" content="Join internship programs in web development, digital marketing, data analytics, and more in Chennai. Gain real project experience with MR CODERS HUB.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-purple': '#7C3AED',
+                        'brand-indigo': '#6366F1',
+                        'brand-accent': '#8B5CF6',
+                        'bg-main': '#F9FAFB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px -15px rgba(99, 102, 241, 0.15)',
+                        'glow-indigo': '0 0 30px rgba(99, 102, 241, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-blue: #1E3A8A;
+            --brand-purple: #7C3AED;
+            --brand-indigo: #6366F1;
+            --brand-accent: #8B5CF6;
+        }
+
+        body { -webkit-font-smoothing: antialiased; }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal-active { opacity: 1; transform: translateY(0); }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--brand-indigo) 0%, var(--brand-accent) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .step-line {
+            position: absolute;
+            left: 20px;
+            top: 40px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--brand-indigo) 0%, transparent 100%);
+        }
+    </style>
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="bg-bg-main text-gray-900 overflow-x-hidden antialiased">
+
+    <!-- Global Navigation -->
+
+    <!-- Navigation Spacer -->
+    <div class="h-16 lg:h-20"></div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative min-h-[70vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden py-12 sm:py-0">
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/img/bg2.jpg" 
+                 alt="Internship Program" 
+                 class="w-full h-full object-cover opacity-40 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-bg-main"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div class="reveal">
+                <div class="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 rounded-full bg-brand-indigo/5 border border-brand-indigo/10 mb-8 max-w-full overflow-hidden">
+                    <span class="w-2 h-2 rounded-full bg-brand-indigo animate-pulse flex-shrink-0"></span>
+                    <span class="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.4em] text-brand-indigo truncate">Career Accelerator</span>
+                </div>
+                <h1 class="hero-title font-black mb-8 text-gray-900 font-outfit leading-[1.1] sm:leading-none">
+                    Industry-Focused. <br class="hidden sm:block"> <span class="gradient-text italic font-serif">Internship Program.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto mb-12">
+                    Gain hands-on experience by working on real projects across multiple domains at MR CODERS HUB, Avadi, Chennai.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6 mb-4">
+                    <a href="contact.html" class="w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-6 bg-brand-purple text-white rounded-2xl font-black text-lg sm:text-xl hover:scale-105 transition-all shadow-premium">
+                        Apply for Internship
+                    </a>
+                    <a href="#domains" class="w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-6 bg-white border border-gray-200 text-gray-900 rounded-2xl font-black text-lg sm:text-xl hover:bg-gray-50 transition-all">
+                        View Domains
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. INTRODUCTION -->
+    <section class="py-32 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span class="text-[10px] font-black text-brand-indigo uppercase tracking-[0.5em] block mb-6">Execution over Theory</span>
+                    <h2 class="section-title font-black text-gray-900 tracking-tight leading-tight mb-8 font-outfit">
+                        More Than an Internship — <br> <span class="italic font-serif gradient-text">A Career Execution Program</span>
+                    </h2>
+                    <p class="text-xl text-slate-600 font-medium leading-relaxed mb-8">
+                        This is not a theoretical internship. At MR CODERS HUB, you will work on real-world projects, solve practical problems, and gain hands-on experience aligned with industry expectations.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-lg font-bold text-gray-900">
+                            <i data-lucide="arrow-right" class="w-6 h-6 text-brand-indigo"></i> Academic learning
+                        </div>
+                        <div class="flex items-center gap-4 text-lg font-bold text-gray-900">
+                            <i data-lucide="arrow-right" class="w-6 h-6 text-brand-indigo"></i> Real-world execution
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 sm:gap-6">
+                    <div class="responsive-p bg-slate-50 rounded-[2rem] sm:rounded-[3rem] border border-slate-100 shadow-sm">
+                        <i data-lucide="target" class="w-10 h-10 text-brand-indigo mb-6"></i>
+                        <h4 class="text-lg font-black mb-2">Real Experience</h4>
+                        <p class="text-xs text-slate-500 font-medium leading-relaxed">No dummy tasks. Real business outcomes.</p>
+                    </div>
+                    <div class="responsive-p bg-slate-50 rounded-[2rem] sm:rounded-[3rem] border border-slate-100 shadow-sm">
+                        <i data-lucide="award" class="w-10 h-10 text-brand-blue mb-6"></i>
+                        <h4 class="text-lg font-black mb-2">Certification</h4>
+                        <p class="text-xs text-slate-500 font-medium leading-relaxed">Industry-recognized internship certificate.</p>
+                    </div>
+                    <div class="responsive-p bg-slate-50 rounded-[2rem] sm:rounded-[3rem] border border-slate-100 shadow-sm">
+                        <i data-lucide="users" class="w-10 h-10 text-brand-purple mb-6"></i>
+                        <h4 class="text-lg font-black mb-2">Mentor Support</h4>
+                        <p class="text-xs text-slate-500 font-medium leading-relaxed">Direct guidance from senior engineers.</p>
+                    </div>
+                    <div class="responsive-p bg-slate-50 rounded-[2rem] sm:rounded-[3rem] border border-slate-100 shadow-sm">
+                        <i data-lucide="briefcase" class="w-10 h-10 text-emerald-500 mb-6"></i>
+                        <h4 class="text-lg font-black mb-2">Career Support</h4>
+                        <p class="text-xs text-slate-500 font-medium leading-relaxed">Interview prep and placement guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. INTERNSHIP DOMAINS -->
+    <section id="domains" class="responsive-py bg-slate-50 reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="section-title font-black text-gray-900 font-outfit mb-4">Internship Domains & Offerings</h2>
+                <p class="text-xl text-slate-500 font-medium">Select your specialized domain and start building.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 responsive-gap mobile-slider">
+                <!-- Web Dev -->
+                <div class="group responsive-p bg-white rounded-[2.5rem] sm:rounded-[3.5rem] border border-slate-100 shadow-sm hover:shadow-premium hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 bg-brand-blue/5 text-brand-blue rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                        <i data-lucide="code" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-6 font-outfit leading-tight">Web Development</h3>
+                    <div class="space-y-4 mb-8">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Work on</p>
+                        <ul class="text-sm text-slate-600 font-medium space-y-2">
+                            <li>• Responsive Sites</li>
+                            <li>• Full Stack Integration</li>
+                            <li>• UI/UX Implementation</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-brand-blue uppercase tracking-widest">HTML, JS, Full Stack</span>
+                    </div>
+                </div>
+
+                <!-- Data Analytics -->
+                <div class="group responsive-p bg-white rounded-[2.5rem] sm:rounded-[3.5rem] border border-slate-100 shadow-sm hover:shadow-premium hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 bg-brand-purple/5 text-brand-purple rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-purple group-hover:text-white transition-colors">
+                        <i data-lucide="database" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-6 font-outfit leading-tight">Data Analytics</h3>
+                    <div class="space-y-4 mb-8">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Work on</p>
+                        <ul class="text-sm text-slate-600 font-medium space-y-2">
+                            <li>• Data Cleaning</li>
+                            <li>• Dashboards</li>
+                            <li>• Real Dataset Proj</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-brand-purple uppercase tracking-widest">Python, SQL, Viz</span>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="group p-10 bg-white rounded-[3.5rem] border border-slate-100 shadow-sm hover:shadow-premium hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 bg-brand-orange/5 text-brand-orange rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                        <i data-lucide="megaphone" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-6 font-outfit leading-tight">Digital Marketing</h3>
+                    <div class="space-y-4 mb-8">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Work on</p>
+                        <ul class="text-sm text-slate-600 font-medium space-y-2">
+                            <li>• SEO Optimization</li>
+                            <li>• Paid Ads Execution</li>
+                            <li>• Content Planning</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-brand-indigo uppercase tracking-widest">Ads, SEO, Analytics</span>
+                    </div>
+                </div>
+
+                <!-- Graphic Design -->
+                <div class="group p-10 bg-white rounded-[3.5rem] border border-slate-100 shadow-sm hover:shadow-premium hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i data-lucide="palette" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-6 font-outfit leading-tight">Graphic Design</h3>
+                    <div class="space-y-4 mb-8">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Work on</p>
+                        <ul class="text-sm text-slate-600 font-medium space-y-2">
+                            <li>• Social Media Creatives</li>
+                            <li>• Branding Elements</li>
+                            <li>• UI Design Concepts</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-emerald-600 uppercase tracking-widest">PS, Canva, Branding</span>
+                    </div>
+                </div>
+
+                <!-- Business -->
+                <div class="group p-10 bg-white rounded-[3.5rem] border border-slate-100 shadow-sm hover:shadow-premium hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 bg-brand-blue/5 text-brand-blue rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                        <i data-lucide="trending-up" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-6 font-outfit leading-tight">Business & Marketing</h3>
+                    <div class="space-y-4 mb-8">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Work on</p>
+                        <ul class="text-sm text-slate-600 font-medium space-y-2">
+                            <li>• Market Research</li>
+                            <li>• Strategy Analysis</li>
+                            <li>• Campaign Planning</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-brand-blue uppercase tracking-widest">Strategic Thinking</span>
+                    </div>
+                </div>
+
+                <!-- Android -->
+                <div class="group p-10 bg-white rounded-[3.5rem] border border-slate-100 shadow-sm hover:shadow-premium hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 bg-brand-purple/5 text-brand-purple rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-purple group-hover:text-white transition-colors">
+                        <i data-lucide="smartphone" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-6 font-outfit leading-tight">Android Development</h3>
+                    <div class="space-y-4 mb-8">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Work on</p>
+                        <ul class="text-sm text-slate-600 font-medium space-y-2">
+                            <li>• Mobile App Dev</li>
+                            <li>• UI Design for Apps</li>
+                            <li>• API Integration</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-brand-purple uppercase tracking-widest">Java, Kotlin, Architecture</span>
+                    </div>
+                </div>
+
+                <!-- Core Prog -->
+                <div class="group p-10 bg-white rounded-[3.5rem] border border-slate-100 shadow-sm hover:shadow-premium hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 bg-brand-orange/5 text-brand-orange rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                        <i data-lucide="binary" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-6 font-outfit leading-tight">Core Programming</h3>
+                    <div class="space-y-4 mb-8">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Work on</p>
+                        <ul class="text-sm text-slate-600 font-medium space-y-2">
+                            <li>• Logic Building</li>
+                            <li>• Coding Challenges</li>
+                            <li>• Mini Project Dev</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-brand-accent uppercase tracking-widest">Java, Python, Algorithms</span>
+                    </div>
+                </div>
+
+                <!-- Accounting -->
+                <div class="group p-10 bg-white rounded-[3.5rem] border border-slate-100 shadow-sm hover:shadow-premium hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i data-lucide="calculator" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-6 font-outfit leading-tight">Accounting & Tally</h3>
+                    <div class="space-y-4 mb-8">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Work on</p>
+                        <ul class="text-sm text-slate-600 font-medium space-y-2">
+                            <li>• Business Entries</li>
+                            <li>• GST Operations</li>
+                            <li>• Financial Reports</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-emerald-600 uppercase tracking-widest">Tally, GST, Accounting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PROGRAM STRUCTURE -->
+    <section class="py-32 bg-[#FDFCFB] reveal relative overflow-hidden">
+        <!-- Subtle Background Decorative Element -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-indigo/5 rounded-full blur-[100px] -mr-48 -mt-48"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-purple/5 rounded-full blur-[100px] -ml-48 -mb-48"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-24">
+                <span class="text-[10px] font-black text-brand-indigo uppercase tracking-[0.5em] block mb-4">The Journey</span>
+                <h2 class="section-title font-black text-gray-900 font-outfit mb-4">A Systematic Path to <span class="gradient-text italic font-serif">Industrial Excellence</span></h2>
+                <p class="text-xl text-slate-500 font-medium">From on-boarding to professional certification.</p>
+            </div>
+            
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Central Vertical Spine -->
+                <div class="absolute left-1/2 top-0 bottom-0 w-[2px] bg-slate-200 -translate-x-1/2 hidden md:block"></div>
+
+                <div class="space-y-12 md:space-y-0">
+                    
+                    <!-- Step 1: Icon Left, Text Right -->
+                    <div class="relative md:grid md:grid-cols-2 items-center group">
+                        <div class="hidden md:flex justify-end pr-20 relative">
+                            <div class="w-20 h-20 rounded-full bg-brand-blue flex items-center justify-center text-white shadow-[0_15px_30px_rgba(30,58,138,0.2)] group-hover:scale-110 transition-transform duration-500">
+                                <i data-lucide="target" class="w-10 h-10"></i>
+                            </div>
+                            <!-- Dashed Connecting Line -->
+                            <div class="absolute right-0 top-1/2 w-20 border-t-2 border-dashed border-slate-300 -translate-y-1/2"></div>
+                        </div>
+
+                        <!-- Spine Dot -->
+                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white border-4 border-brand-blue rounded-full z-20 hidden md:block"></div>
+
+                        <div class="md:pl-20 py-12">
+                            <div class="md:hidden flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full bg-brand-blue flex items-center justify-center text-white shadow-lg">
+                                    <i data-lucide="target" class="w-7 h-7"></i>
+                                </div>
+                                <span class="text-brand-blue font-black tracking-[0.3em] text-xs uppercase">Step 01</span>
+                            </div>
+                            <span class="hidden md:block text-brand-blue font-black tracking-[0.3em] text-sm uppercase mb-3">Step 01</span>
+                            <h4 class="text-3xl font-black text-gray-900 mb-4 font-outfit leading-tight">Domain Selection</h4>
+                            <p class="text-lg text-slate-500 font-medium leading-relaxed max-w-md">Choose your field of interest based on your career goals and industrial demand.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Text Left, Icon Right -->
+                    <div class="relative md:grid md:grid-cols-2 items-center group">
+                        <!-- Content Side (Left) -->
+                        <div class="md:pr-20 py-12 text-right order-2 md:order-1">
+                            <div class="md:hidden flex items-center gap-4 mb-6 justify-end">
+                                <span class="text-brand-purple font-black tracking-[0.3em] text-xs uppercase">Step 02</span>
+                                <div class="w-14 h-14 rounded-full bg-brand-purple flex items-center justify-center text-white shadow-lg">
+                                    <i data-lucide="book-open-check" class="w-7 h-7"></i>
+                                </div>
+                            </div>
+                            <span class="hidden md:block text-brand-purple font-black tracking-[0.3em] text-sm uppercase mb-3">Step 02</span>
+                            <h4 class="text-3xl font-black text-gray-900 mb-4 font-outfit leading-tight">Skill Training</h4>
+                            <p class="text-lg text-slate-500 font-medium leading-relaxed max-w-sm ml-auto">Refine your foundational knowledge before entering the high-stakes execution phase.</p>
+                        </div>
+
+                        <!-- Spine Dot -->
+                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white border-4 border-brand-purple rounded-full z-20 hidden md:block"></div>
+
+                        <!-- Icon Side (Right) -->
+                        <div class="hidden md:flex justify-start pl-20 relative order-2">
+                            <!-- Dashed Connecting Line -->
+                            <div class="absolute left-0 top-1/2 w-20 border-t-2 border-dashed border-slate-300 -translate-y-1/2"></div>
+                            <div class="w-20 h-20 rounded-full bg-brand-purple flex items-center justify-center text-white shadow-[0_15px_30px_rgba(124,58,237,0.2)] group-hover:scale-110 transition-transform duration-500">
+                                <i data-lucide="book-open-check" class="w-10 h-10"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Icon Left, Text Right -->
+                    <div class="relative md:grid md:grid-cols-2 items-center group">
+                        <!-- Icon Side (Left) -->
+                        <div class="hidden md:flex justify-end pr-20 relative">
+                            <div class="w-20 h-20 rounded-full bg-brand-indigo flex items-center justify-center text-white shadow-[0_15px_30px_rgba(99,102,241,0.2)] group-hover:scale-110 transition-transform duration-500">
+                                <i data-lucide="layers" class="w-10 h-10"></i>
+                            </div>
+                            <div class="absolute right-0 top-1/2 w-20 border-t-2 border-dashed border-slate-300 -translate-y-1/2"></div>
+                        </div>
+
+                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white border-4 border-brand-indigo rounded-full z-20 hidden md:block"></div>
+
+                        <!-- Content Side (Right) -->
+                        <div class="md:pl-20 py-12">
+                            <div class="md:hidden flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full bg-brand-indigo flex items-center justify-center text-white shadow-lg">
+                                    <i data-lucide="layers" class="w-7 h-7"></i>
+                                </div>
+                                <span class="text-brand-indigo font-black tracking-[0.3em] text-xs uppercase">Step 03</span>
+                            </div>
+                            <span class="hidden md:block text-brand-indigo font-black tracking-[0.3em] text-sm uppercase mb-3">Step 03</span>
+                            <h4 class="text-3xl font-black text-gray-900 mb-4 font-outfit leading-tight">Project Execution</h4>
+                            <p class="text-lg text-slate-500 font-medium leading-relaxed max-w-md">Start working on real or simulation-based project scenarios with actual client briefs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Text Left, Icon Right -->
+                    <div class="relative md:grid md:grid-cols-2 items-center group">
+                        <!-- Content Side (Left) -->
+                        <div class="md:pr-20 py-12 text-right order-2 md:order-1">
+                            <div class="md:hidden flex items-center gap-4 mb-6 justify-end">
+                                <span class="text-emerald-500 font-black tracking-[0.3em] text-xs uppercase">Step 04</span>
+                                <div class="w-14 h-14 rounded-full bg-emerald-500 flex items-center justify-center text-white shadow-lg">
+                                    <i data-lucide="user-check" class="w-7 h-7"></i>
+                                </div>
+                            </div>
+                            <span class="hidden md:block text-emerald-500 font-black tracking-[0.3em] text-sm uppercase mb-3">Step 04</span>
+                            <h4 class="text-3xl font-black text-gray-900 mb-4 font-outfit leading-tight">Mentor Review</h4>
+                            <p class="text-lg text-slate-500 font-medium leading-relaxed max-w-sm ml-auto">Get regular feedback from industry experts to improve your logic and code quality.</p>
+                        </div>
+
+                        <!-- Spine Dot -->
+                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white border-4 border-emerald-500 rounded-full z-20 hidden md:block"></div>
+
+                        <!-- Icon Side (Right) -->
+                        <div class="hidden md:flex justify-start pl-20 relative order-2">
+                            <!-- Dashed Connecting Line -->
+                            <div class="absolute left-0 top-1/2 w-20 border-t-2 border-dashed border-slate-300 -translate-y-1/2"></div>
+                            <div class="w-20 h-20 rounded-full bg-emerald-500 flex items-center justify-center text-white shadow-[0_15px_30px_rgba(16,185,129,0.2)] group-hover:scale-110 transition-transform duration-500">
+                                <i data-lucide="user-check" class="w-10 h-10"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Icon Left, Text Right -->
+                    <div class="relative md:grid md:grid-cols-2 items-center group">
+                        <div class="hidden md:flex justify-end pr-20 relative">
+                            <div class="w-20 h-20 rounded-full bg-brand-accent flex items-center justify-center text-white shadow-[0_15px_30px_rgba(139,92,246,0.2)] group-hover:scale-110 transition-transform duration-500">
+                                <i data-lucide="award" class="w-10 h-10"></i>
+                            </div>
+                            <div class="absolute right-0 top-1/2 w-20 border-t-2 border-dashed border-slate-300 -translate-y-1/2"></div>
+                        </div>
+
+                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white border-4 border-brand-accent rounded-full z-20 hidden md:block"></div>
+
+                        <div class="md:pl-20 py-12">
+                            <div class="md:hidden flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full bg-brand-accent flex items-center justify-center text-white shadow-lg">
+                                    <i data-lucide="award" class="w-7 h-7"></i>
+                                </div>
+                                <span class="text-brand-accent font-black tracking-[0.3em] text-xs uppercase">Step 05</span>
+                            </div>
+                            <span class="hidden md:block text-brand-accent font-black tracking-[0.3em] text-sm uppercase mb-3">Step 05</span>
+                            <h4 class="text-3xl font-black text-gray-900 mb-4 font-outfit leading-tight">Final Evaluation</h4>
+                            <p class="text-lg text-slate-500 font-medium leading-relaxed max-w-md">Complete your capstone and receive your official industry-recognized internship certification.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. REAL PROJECT EXPERIENCE -->
+    <section class="responsive-py bg-slate-900 text-white reveal adaptive-rounded mx-4 sm:mx-6 md:mx-10 mb-24 overflow-hidden text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="hero-title font-black mb-12 font-outfit leading-none tracking-tight">Work on <span class="italic font-serif gradient-text">Real Projects</span>, Not Dummy Tasks</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20 mobile-slider">
+                <div class="p-10 bg-white/5 rounded-[3rem] border border-white/10 group hover:bg-white/10 transition-all">
+                    <i data-lucide="hard-drive" class="w-12 h-12 text-brand-blue mx-auto mb-8"></i>
+                    <h4 class="text-xl font-black mb-4">Real Projects</h4>
+                    <p class="text-white/50 text-sm font-medium">Work on projects that mimic real industrial challenges and client requirements.</p>
+                </div>
+                <div class="p-10 bg-white/5 rounded-[3rem] border border-white/10 group hover:bg-white/10 transition-all">
+                    <i data-lucide="zap" class="w-12 h-12 text-brand-purple mx-auto mb-8"></i>
+                    <h4 class="text-xl font-black mb-4">Practical Problem Solving</h4>
+                    <p class="text-white/50 text-sm font-medium">Face real-time errors, bugs, and strategy hurdles to develop resilience.</p>
+                </div>
+                <div class="p-10 bg-white/5 rounded-[3rem] border border-white/10 group hover:bg-white/10 transition-all">
+                    <i data-lucide="folder-kanban" class="w-12 h-12 text-brand-indigo mx-auto mb-8"></i>
+                    <h4 class="text-xl font-black mb-4">Portfolio-Ready Work</h4>
+                    <p class="text-white/50 text-sm font-medium">Every project you complete becomes a powerful addition to your professional portfolio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. WHO SHOULD APPLY & IMPACT -->
+    <section class="responsive-py bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 font-outfit mb-12">Who This Internship Is For</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 font-bold text-gray-900">Students</div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 font-bold text-gray-900">Freshers</div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 font-bold text-gray-900">Final-year students</div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 font-bold text-gray-900">Skill learners</div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 font-outfit mb-12">How It Helps You</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 text-lg font-bold text-slate-500">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-blue"></i> Builds real portfolio
+                        </div>
+                        <div class="flex items-center gap-4 text-lg font-bold text-slate-500">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-blue"></i> Improves job readiness
+                        </div>
+                        <div class="flex items-center gap-4 text-lg font-bold text-slate-500">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-blue"></i> Enhances practical knowledge
+                        </div>
+                        <div class="flex items-center gap-4 text-lg font-bold text-slate-500">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-blue"></i> Prepares for interviews
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. LOCAL SEO & FAQ -->
+    <section class="py-32 bg-bg-main reveal">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="text-3xl md:text-5xl font-black text-gray-900 font-outfit mb-8 leading-tight">Best Internship Program in <span class="italic font-serif gradient-text">Avadi, Chennai</span></h2>
+                <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                    MR CODERS HUB provides industry-focused internship programs for students across Chennai, helping them gain real-world experience.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-white rounded-[2.5rem] overflow-hidden border border-slate-100">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Is this internship suitable for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, foundational training is provided before project execution to ensure every intern is ready for the technical tasks.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-white rounded-[2.5rem] overflow-hidden border border-slate-100">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Will I work on real projects?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, all interns work on real-world projects or simulation-based scenarios that mirror actual client requirements.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-white rounded-[2.5rem] overflow-hidden border border-slate-100">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Do you provide certificates?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, an official industry internship certification is provided upon successful completion of the program.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-white rounded-[2.5rem] overflow-hidden border border-slate-100">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Can I choose my domain?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, you can select from various domains like Web Dev, Data Analytics, Digital Marketing, and more based on your career goals.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FINAL CTA -->
+    <section class="responsive-py bg-slate-900 text-white text-center reveal adaptive-rounded mx-4 sm:mx-6 md:mx-10 mb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-white/5 blur-[120px] rounded-full"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="hero-title font-black mb-12 font-outfit leading-none tracking-tight">Start Your Internship <span class="italic font-serif">and Build Real Skills</span> </h2>
+            <p class="text-xl md:text-2xl text-white/70 mb-16 max-w-2xl mx-auto font-medium">
+                Don’t just learn. Execute, build, and grow your career with our hands-on internship program.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="contact.html" class="px-12 py-6 bg-white text-brand-blue rounded-3xl font-black text-xl hover:scale-105 transition-all shadow-2xl">
+                    Apply Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const panel = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    const isOpen = panel.style.maxHeight;
+
+                    document.querySelectorAll('.faq-panel').forEach(p => p.style.maxHeight = null);
+                    document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                    if (!isOpen) {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+<style>
+  /* WhatsApp Button Container */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* On-load Animation */
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    animation: wa-float-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+  }
+
+  /* Hover Effects */
+  .whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
+    background-color: #20b858;
+  }
+
+  /* SVG Icon Sizing */
+  .whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+  }
+
+  /* Tooltip Styling */
+  .wa-tooltip {
+    position: absolute;
+    right: 75px; /* Spaced out from the button */
+    background-color: #1f2937; /* Dark slate color */
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateX(10px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Tooltip Arrow pointing to the button */
+  .wa-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #1f2937;
+  }
+
+  /* Show tooltip on hover (Desktop only) */
+  @media (hover: hover) {
+    .whatsapp-float:hover .wa-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  /* Keyframe Animation */
+  @keyframes wa-float-in {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+      width: 55px;
+      height: 55px;
+    }
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+    }
+    .wa-tooltip {
+      display: none; /* Hide tooltip on mobile to prevent clutter */
+    }
+  }
+</style>
+
+<!-- HTML Structure -->
+<a href="#" id="whatsapp-btn" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <!-- Official WhatsApp SVG Vector -->
+ <svg viewBox="0 0 24 24" fill="white">
+  <path d="M20.52 3.48A11.94 11.94 0 0012.05 0C5.4 0 .02 5.38.02 12.03c0 2.12.56 4.2 1.62 6.04L0 24l6.11-1.6a12.03 12.03 0 005.94 1.52h.01c6.65 0 12.03-5.38 12.03-12.03 0-3.21-1.25-6.22-3.57-8.41zM12.05 21.9h-.01a9.88 9.88 0 01-5.03-1.38l-.36-.21-3.63.95.97-3.54-.23-.36a9.86 9.86 0 01-1.51-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 012.9 7.01c0 5.47-4.45 9.92-9.92 9.92zm5.48-7.39c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/>
+</svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<!-- JavaScript Functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const waButton = document.getElementById('whatsapp-btn');
+    
+    // --- CONFIGURATION ---
+    // Use your actual MR CODERS HUB number (Country code without '+')
+    const phoneNumber = '919360739559'; 
+    
+    // Create a dynamic message based on the current page the user is viewing
+    const pageTitle = document.title.split('|')[0].trim();
+    const message = `Hello MR CODERS HUB! I was looking at the "${pageTitle}" page and I'd like to know more about your services.`;
+    
+    // Properly encode the message for URL transmission
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Construct the official WhatsApp API URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Assign to button
+    waButton.setAttribute('href', whatsappUrl);
+  });
+</script>
+</body>
+
+</html>

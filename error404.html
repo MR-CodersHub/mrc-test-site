@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 – Page Not Found | MR CODERS HUB</title>
+    <meta name="description" content="Oops! The page you're looking for doesn't exist or has been moved. Head back to MR Coders Hub homepage.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* ── Entrance animation ─── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(32px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes floatY {
+            0%,100% { transform: translateY(0); }
+            50%      { transform: translateY(-14px); }
+        }
+        @keyframes pulse-ring {
+            0%   { transform: scale(0.9); opacity: 0.4; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+
+        .fade-up      { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+        .delay-1      { animation-delay: 0.15s; }
+        .delay-2      { animation-delay: 0.30s; }
+        .delay-3      { animation-delay: 0.45s; }
+        .delay-4      { animation-delay: 0.60s; }
+
+        .float-img    { animation: floatY 5s ease-in-out infinite; }
+
+        /* Subtle radial glow behind the image */
+        .blob-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 60%, rgba(239,68,68,0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Pulse rings under illustration */
+        .pulse-ring {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 240px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(239,68,68,0.10);
+            animation: pulse-ring 2.4s ease-out infinite;
+        }
+        .pulse-ring-2 {
+            animation-delay: 0.8s;
+            background: rgba(239,68,68,0.06);
+        }
+
+        /* CTA button glow */
+        .btn-home {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            box-shadow: 0 8px 30px rgba(59,130,246,0.40);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .btn-home:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 14px 40px rgba(59,130,246,0.50);
+        }
+        .btn-home:active {
+            transform: scale(0.97);
+        }
+
+        /* Secondary button */
+        .btn-secondary {
+            transition: transform 0.25s ease, background 0.25s ease;
+        }
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            background: #f3f4f6;
+        }
+    </style>
+</head>
+
+<body class="font-[Inter] bg-white text-gray-900 overflow-x-hidden w-full antialiased">
+   
+
+    <!-- ── Main 404 Section ── -->
+    <main class="min-h-screen flex flex-col items-center justify-center pt-4 pb-16 px-6 relative overflow-hidden">
+
+        <!-- Soft background pattern -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-50 rounded-full blur-[120px] opacity-60"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-red-50 rounded-full blur-[100px] opacity-50"></div>
+        </div>
+
+        <div class="relative z-10 max-w-lg w-full mx-auto text-center">
+
+            <!-- ── Illustration ── -->
+            <div class="relative inline-block mb-2 fade-up">
+                <div class="blob-bg"></div>
+
+                <!-- Pulse rings (shadow under the character) -->
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring pulse-ring-2"></div>
+
+                <img
+                    src="./assets/img/404-page.png"
+                    alt="404 – Confused character standing in front of large red 404 numbers"
+                    class="relative z-10 w-full max-w-[420px] mx-auto object-contain float-img select-none"
+                    draggable="false"
+                >
+            </div>
+
+            <!-- ── Heading ── -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-4 fade-up delay-1 font-[Outfit]">
+                Oops! Page not found
+            </h1>
+
+            <!-- ── Sub-copy ── -->
+            <p class="text-base sm:text-lg text-gray-500 font-medium leading-relaxed mb-10 max-w-sm mx-auto fade-up delay-2">
+                The page you're looking for doesn't exist<br class="hidden sm:inline"> or has been moved.
+            </p>
+
+            <!-- ── CTAs ── -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-up delay-3">
+
+                <!-- Primary – Go Back Home -->
+                <a
+                    href="index.html"
+                    id="btn-go-home"
+                    class="btn-home inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 rounded-2xl text-white font-bold text-base tracking-wide"
+                >
+                    <i data-lucide="home" class="w-5 h-5"></i>
+                    Go Back Home
+                </a>
+
+                <!-- Secondary – Contact Us -->
+                <a
+                    href="contact.html"
+                    id="btn-contact-us"
+                    class="btn-secondary inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 rounded-2xl bg-gray-100 text-gray-700 font-bold text-base tracking-wide border border-gray-200"
+                >
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    Contact Us
+                </a>
+            </div>
+
+            <!-- ── Brand footer line ── -->
+            <p class="mt-14 text-[10px] font-black uppercase tracking-[0.5em] text-gray-300 fade-up delay-4">
+                MR CODERS HUB &bull; Excellence in Execution
+            </p>
+        </div>
+    </main>
+
+</body>
+
+</html>

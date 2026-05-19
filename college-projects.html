@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Projects | Build with Real Innovation | MR CODERS HUB</title>
+    <meta name="description"
+        content="Industry-focused college projects for students in software, hardware, IoT, AI, and web technologies with complete guidance and support.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-purple': '#7C3AED',
+                        'brand-orange': '#F59E0B',
+                        'bg-main': '#F9FAFB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/global.css">
+
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #1E3A8A;
+            border-radius: 10px;
+        }
+
+        .project-card img {
+            opacity: 0;
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease !important;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1) translateY(-5px) !important;
+        }
+
+        /* Mobile Slider Styles */
+        @media (max-width: 767px) {
+            .projects-grid {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                overflow-y: visible !important;
+                scroll-snap-type: x mandatory !important;
+                -webkit-overflow-scrolling: touch !important;
+                gap: 1.5rem !important;
+                padding-top: 2rem !important;
+                padding-bottom: 4rem !important;
+                padding-left: 24px !important;
+                /* 48px total side space */
+                padding-right: 24px !important;
+                margin-left: -24px !important;
+                /* Pull back to allow full-width container */
+                margin-right: -24px !important;
+                width: calc(100% + 48px) !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+            }
+
+            .projects-grid::-webkit-scrollbar {
+                display: none !important;
+                /* Chrome, Safari, Opera */
+            }
+
+            .project-card {
+                flex: 0 0 calc(100vw - 64px) !important;
+                width: calc(100vw - 64px) !important;
+                aspect-ratio: 1 / 1 !important;
+                /* Square aspect ratio */
+                height: auto !important;
+                scroll-snap-align: center !important;
+                border-radius: 2.5rem !important;
+                /* Slightly tighter curves for square */
+                padding: 1.5rem !important;
+                position: relative !important;
+                overflow: hidden !important;
+            }
+
+            .project-card h3 {
+                font-size: 1.15rem !important;
+                /* Refined for square card */
+                line-height: 1.2 !important;
+                max-width: 85% !important;
+            }
+
+            .project-card p {
+                font-size: 0.8rem !important;
+                /* Smaller, cleaner text */
+                line-height: 1.4 !important;
+                max-width: 85% !important;
+            }
+
+            .project-card img {
+                width: 45% !important;
+                /* Smaller for square layout */
+                height: auto !important;
+                bottom: 0.75rem !important;
+                right: 1rem !important;
+                object-fit: contain !important;
+            }
+        }
+
+        /* Desktop Grid Centering Fix */
+        @media (min-width: 768px) {
+            .projects-grid {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
+
+            .project-card {
+                width: calc(50% - 20px) !important;
+                flex: 0 0 auto !important;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .project-card {
+                width: calc(33.333% - 27px) !important;
+            }
+        }
+
+        /* Align navbar layout with contact.html */
+        .max-w-7xl {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    </style>
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="bg-[#F9FAFB] text-gray-900 overflow-x-hidden w-full">
+
+    <!-- Navigation Spacer -->
+    <div class="h-16 lg:h-20"></div>
+
+    <!-- Hero Section -->
+    <section
+        class="relative min-h-[80vh] sm:min-h-[95vh] flex items-center justify-center overflow-hidden py-auto bg-white">
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/img/bg2.jpg" alt="College Projects"
+                class="w-full h-full object-cover opacity-30 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-[#F9FAFB]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center w-full">
+            <div class="reveal">
+                <!-- Location Badge -->
+                <div
+                    class="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-brand-blue/5 border border-brand-blue/10 mb-8">
+                    <span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
+                    <span class="text-[10px] font-black uppercase tracking-[0.4em] text-brand-blue">AVADI, CHENNAI
+                        HUB</span>
+                </div>
+
+                <h1
+                    class="hero-title font-black mb-8 text-gray-900 font-outfit leading-[1.1] sm:leading-none tracking-tight">
+                    College Projects. <br class="hidden sm:block">
+                    <span class="gradient-text italic font-serif">Built with Real Innovation.</span>
+                </h1>
+
+                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
+                    MR CODERS HUB provides industry-focused college projects for students in software, hardware, IoT,
+                    AI, and web technologies with complete guidance, documentation, and implementation support.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <a href="#projects"
+                        class="w-full sm:w-auto px-12 py-6 bg-brand-purple text-white rounded-2xl font-black text-xl hover:scale-105 transition-all shadow-premium">
+                        Explore Projects
+                    </a>
+                    <a href="#domains"
+                        class="w-full sm:w-auto px-12 py-6 bg-white border border-gray-200 text-gray-900 rounded-2xl font-black text-xl hover:bg-gray-50 transition-all shadow-xl">
+                        View Domains
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Showcase Section -->
+    <section id="projects" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <h2 class="section-title font-black text-gray-900 mb-6 font-outfit">Innovation Gallery</h2>
+                <p class="text-xl text-gray-500 max-w-3xl mx-auto font-medium">Explore our curated selection of
+                    high-impact college projects designed for real-world application and academic excellence.</p>
+            </div>
+
+            <div class="projects-grid mobile-slider flex flex-wrap justify-center gap-10">
+                <!-- Project 1: Real-Time Collaboration -->
+                <div onclick="openProjectModal('realtime-collab')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #3B82F6;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="users" class="w-4 h-4"></i> WEB PLATFORM
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Real-Time <br>
+                            Collaboration Platform</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">Multi-user digital workspace with
+                            zero-latency synchronization.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-blue-600 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/tech_character_collab_screen_1778481433294.png" alt="Collaboration"
+                        class="absolute bottom-6 right-6 w-56 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 2: Healthcare AI -->
+                <div onclick="openProjectModal('health-ai-bot')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #8B5CF6;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="bot" class="w-4 h-4"></i> AI & MACHINE LEARNING
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Healthcare <br>
+                            Diagnosis AI Chatbot</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">NLP-driven medical assistant for
+                            preliminary symptom analysis.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-purple-600 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/tech_character_medical_screen_1778481453567.png" alt="Medical AI"
+                        class="absolute bottom-6 right-6 w-56 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 3: Student Prediction -->
+                <div onclick="openProjectModal('student-prediction')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #10B981;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="trending-up" class="w-4 h-4"></i> DATA SCIENCE
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Student Performance
+                            <br> Prediction
+                        </h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">Predictive analytics identifying
+                            students at academic risk.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-emerald-600 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/tech_character_data_screen_1778481473574.png" alt="Data Science"
+                        class="absolute bottom-6 right-6 w-56 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 4: AI LMS -->
+                <div onclick="openProjectModal('ai-lms')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #6366F1;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="graduation-cap" class="w-4 h-4"></i> EDTECH AI
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">AI-Based Learning <br>
+                            Management</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">Adaptive education platform
+                            tailoring material to learning speeds.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-indigo-600 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/tech_character_learning_screen_1778481495467.png" alt="EdTech"
+                        class="absolute bottom-6 right-6 w-56 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 5: Fake News -->
+                <div onclick="openProjectModal('fake-news')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #EF4444;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="shield-alert" class="w-4 h-4"></i> CYBER SECURITY
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Fake News <br>
+                            Detection System</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">Deep learning system detecting
+                            authenticity of news articles.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-red-600 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/tech_icon_security_screen_1778481515461.png" alt="Security"
+                        class="absolute bottom-6 right-6 w-48 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 6: Cloud Doc -->
+                <div onclick="openProjectModal('cloud-doc')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #06B6D4;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="cloud" class="w-4 h-4"></i> CLOUD COMPUTING
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Cloud Document <br>
+                            Management</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">Secure enterprise document
+                            storage with AES-256 encryption.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-cyan-600 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/tech_icon_cloud_screen_1778481537067.png" alt="Cloud"
+                        class="absolute bottom-6 right-6 w-48 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 7: Stock Predict -->
+                <div onclick="openProjectModal('stock-predict')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #2563EB;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="bar-chart-2" class="w-4 h-4"></i> FINTECH AI
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Stock Market <br>
+                            Prediction System</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">LSTM time-series forecasting for
+                            stock market movements.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-blue-700 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/stock_market_vector.png" alt="Stock Predict Vector"
+                        class="absolute bottom-6 right-6 w-56 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 8: Fraud Detect -->
+                <div onclick="openProjectModal('fraud-detect')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #7C3AED;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="search-check" class="w-4 h-4"></i> AI SECURITY
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Intelligent Fraud <br>
+                            Detection</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">Real-time banking transaction
+                            anomaly detection engine.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-purple-700 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/fraud_detection_vector.png" alt="Fraud Detection Vector"
+                        class="absolute bottom-6 right-6 w-48 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 9: Credit Risk -->
+                <div onclick="openProjectModal('credit-risk')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #F59E0B;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="activity" class="w-4 h-4"></i> FINANCE AI
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Credit Risk <br>
+                            Assessment System</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">Automated assessment system
+                            determining loan eligibility.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-amber-600 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/credit_risk_premium_vector.png" alt="Credit Risk Analytics"
+                        class="absolute bottom-6 right-6 w-56 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 10: Churn Predict -->
+                <div onclick="openProjectModal('churn-predict')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #14B8A6;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="pie-chart" class="w-4 h-4"></i> CRM ANALYSIS
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Customer Churn <br>
+                            Prediction</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">Identifying at-risk subscribers
+                            using K-Means clustering.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-teal-600 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/customer_churn_premium_v2.png" alt="Customer Churn Analysis"
+                        class="absolute bottom-6 right-6 w-56 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 11: Distributed Storage -->
+                <div onclick="openProjectModal('distributed-storage')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #64748B;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="server" class="w-4 h-4"></i> DISTRIBUTED SYSTEMS
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Distributed Cloud <br>
+                            File Storage</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">Decentralized file system
+                            sharding data across multiple nodes.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-slate-700 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/tech_icon_cloud_screen_1778481537067.png" alt="Distributed"
+                        class="absolute bottom-6 right-6 w-48 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 12: Traffic Mgmt -->
+                <div onclick="openProjectModal('traffic-mgmt')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #F97316;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i> SMART CITY IOT
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Traffic Congestion
+                            <br> Management
+                        </h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">IoT system optimizing signal
+                            timing via real-time density sensing.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-orange-600 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/traffic_mgmt_vector.png" alt="Traffic Mgmt Vector"
+                        class="absolute bottom-6 right-6 w-48 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 13: Recommend Engine -->
+                <div onclick="openProjectModal('recommend-engine')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #EAB308;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="sparkles" class="w-4 h-4"></i> RECOMMENDATION ENGINE
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Personalized <br>
+                            Recommendation</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">Collaborative filtering providing
+                            personalized product insights.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-yellow-600 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/tech_character_medical_screen_1778481453567.png" alt="Recs"
+                        class="absolute bottom-6 right-6 w-56 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 14: Health System -->
+                <div onclick="openProjectModal('health-system')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #DC2626;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="heart-pulse" class="w-4 h-4"></i> BIOTECH AI
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Healthcare Diagnosis
+                            <br> System
+                        </h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">Integrated system for diagnostic
+                            image analysis and medical records.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-red-700 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/tech_icon_dna_screen_1778481579422.png" alt="BioTech"
+                        class="absolute bottom-6 right-6 w-48 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 15: Sales Forecast -->
+                <div onclick="openProjectModal('sales-forecast')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #3B82F6;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="layout" class="w-4 h-4"></i> RETAIL ANALYTICS
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Sales Forecasting <br>
+                            Prediction</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">Enterprise tool predicting future
+                            retail demand and inventory needs.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-blue-600 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/tech_character_data_screen_1778481473574.png" alt="Retail"
+                        class="absolute bottom-6 right-6 w-56 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+
+                <!-- Project 16: Support Bot -->
+                <div onclick="openProjectModal('support-bot')"
+                    class="project-card group relative overflow-hidden rounded-[3rem] p-10 h-[430px] flex flex-col justify-between transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer reveal"
+                    style="background-color: #22C55E;">
+                    <div class="relative z-20 max-w-[70%]">
+                        <div
+                            class="flex items-center gap-2 text-white/80 font-black uppercase tracking-widest text-[10px] mb-4">
+                            <i data-lucide="messages-square" class="w-4 h-4"></i> NLP BOT
+                        </div>
+                        <h3 class="text-3xl font-black text-white font-outfit leading-tight mb-4">Customer Support <br>
+                            Chatbot</h3>
+                        <p class="text-white/90 text-base font-medium leading-relaxed">AI-driven agent handling FAQs and
+                            ticket creation autonomously.</p>
+                    </div>
+
+                    <div class="relative z-20 mt-auto">
+                        <button
+                            class="px-7 py-3.5 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-green-600 transition-all flex items-center gap-2 group/btn">
+                            Explore Project <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <img src="assets/img/generated/chatbot_vector.png" alt="AI Support Vector"
+                        class="absolute bottom-6 right-6 w-56 h-auto object-contain pointer-events-none group-hover:scale-110 transition-all duration-700 z-10">
+                </div>
+            </div>
+
+            <!-- Mobile Pagination Dots (Matches Reference) -->
+            <!-- Mobile Pagination Dots (Dynamically Generated) -->
+            <div class="slider-dots flex justify-center items-center gap-2 mt-12 md:hidden"></div>
+        </div>
+    </section>
+
+    <!-- Innovation Domains Section -->
+    <section id="domains" class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <h2 class="section-title font-black text-gray-900 mb-6 font-outfit">Innovation Domains</h2>
+                <p class="text-xl text-gray-500 max-w-3xl mx-auto font-medium">Our projects span across multiple
+                    cutting-edge technology domains to ensure comprehensive technical exposure.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Software Dev -->
+                <div
+                    class="group p-8 bg-white rounded-[2.5rem] border border-gray-100 hover:border-brand-blue/20 hover:shadow-premium hover:-translate-y-2 transition-all duration-500 reveal flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-brand-blue/5 text-brand-blue rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                        <i data-lucide="code" class="w-7 h-7"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-black mb-4 font-outfit">Software Development</h3>
+                        <p class="text-sm text-gray-500 font-medium mb-6">Full-stack web apps, enterprise software, and
+                            mobile applications using modern frameworks.</p>
+                    </div>
+                    <div class="pt-6 border-t border-gray-50 mt-auto">
+                        <span class="text-[10px] font-black text-brand-blue uppercase tracking-widest">Web, App,
+                            Enterprise</span>
+                    </div>
+                </div>
+
+                <!-- AI & ML -->
+                <div
+                    class="group p-8 bg-white rounded-[2.5rem] border border-gray-100 hover:border-brand-purple/20 hover:shadow-premium hover:-translate-y-2 transition-all duration-500 reveal flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-brand-purple/5 text-brand-purple rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-purple group-hover:text-white transition-colors">
+                        <i data-lucide="bot" class="w-7 h-7"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-black mb-4 font-outfit">AI & Machine Learning</h3>
+                        <p class="text-sm text-gray-500 font-medium mb-6">Predictive modeling, natural language
+                            processing, and computer vision projects.</p>
+                    </div>
+                    <div class="pt-6 border-t border-gray-50 mt-auto">
+                        <span class="text-[10px] font-black text-brand-purple uppercase tracking-widest">NLP, CNN,
+                            Forecasting</span>
+                    </div>
+                </div>
+
+                <!-- IoT & Embedded -->
+                <div
+                    class="group p-8 bg-white rounded-[2.5rem] border border-gray-100 hover:border-brand-orange/20 hover:shadow-premium hover:-translate-y-2 transition-all duration-500 reveal flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-brand-orange/5 text-brand-orange rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                        <i data-lucide="cpu" class="w-7 h-7"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-black mb-4 font-outfit">IoT & Embedded</h3>
+                        <p class="text-sm text-gray-500 font-medium mb-6">Hardware-software integration, smart systems,
+                            and sensor-based automation.</p>
+                    </div>
+                    <div class="pt-6 border-t border-gray-50 mt-auto">
+                        <span class="text-[10px] font-black text-brand-orange uppercase tracking-widest">Arduino, ESP32,
+                            Sensors</span>
+                    </div>
+                </div>
+
+                <!-- Data Science -->
+                <div
+                    class="group p-8 bg-white rounded-[2.5rem] border border-gray-100 hover:border-emerald-100 hover:shadow-premium hover:-translate-y-2 transition-all duration-500 reveal flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i data-lucide="bar-chart-3" class="w-7 h-7"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-black mb-4 font-outfit">Data Science</h3>
+                        <p class="text-sm text-gray-500 font-medium mb-6">Big data analysis, visualization, and
+                            strategic insights from complex datasets.</p>
+                    </div>
+                    <div class="pt-6 border-t border-gray-50 mt-auto">
+                        <span class="text-[10px] font-black text-emerald-600 uppercase tracking-widest">Analytics, Viz,
+                            Big Data</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="fixed inset-0 z-[200] hidden">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-xl" id="modal-overlay"></div>
+        <div class="absolute inset-x-4 top-[8%] bottom-[8%] md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-4xl bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col transform scale-95 opacity-0 transition-all duration-500"
+            id="modal-container">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center p-6 md:p-8 border-b border-gray-100">
+                <div class="flex items-center gap-4">
+                    <div id="modal-icon-bg"
+                        class="w-10 h-10 rounded-xl flex items-center justify-center bg-brand-blue/5">
+                        <i data-lucide="box" id="modal-icon" class="w-5 h-5 text-brand-blue"></i>
+                    </div>
+                    <div>
+                        <span id="modal-category"
+                            class="text-[9px] font-black uppercase tracking-widest block mb-0.5 text-brand-blue">Category</span>
+                        <h2 id="modal-title" class="text-xl font-black text-gray-900 font-outfit leading-none">Project
+                            Title</h2>
+                    </div>
+                </div>
+                <button id="modal-close"
+                    class="w-12 h-12 flex items-center justify-center bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-all shadow-xl border border-gray-100 z-50 group"
+                    aria-label="Close modal">
+                    <i data-lucide="x" class="w-6 h-6 transition-transform group-hover:rotate-90"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="flex-1 overflow-y-auto p-6 md:p-10 custom-scrollbar">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    <!-- Left: Preview & Output -->
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-3">Project Output
+                                Preview</p>
+                            <div
+                                class="aspect-video bg-slate-50 rounded-2xl border border-gray-100 flex items-center justify-center overflow-hidden relative group">
+                                <div id="modal-output-placeholder" class="text-center p-8">
+                                    <i data-lucide="layout" class="w-10 h-10 text-gray-200 mx-auto mb-3"></i>
+                                    <p class="text-xs font-bold text-gray-300 uppercase tracking-tighter">System Output
+                                        Mockup</p>
+                                </div>
+                                <img id="modal-output-image" src="" alt="Project Output"
+                                    class="absolute inset-0 w-full h-full object-cover hidden cursor-zoom-in transition-all duration-500 hover:scale-105"
+                                    onclick="openLightbox(this.src)">
+
+                                <!-- Slider Navigation -->
+                                <div id="modal-slider-nav"
+                                    class="absolute inset-0 flex items-center justify-between px-3 pointer-events-none hidden">
+                                    <button id="modal-prev-btn" onclick="changeProjectImage(-1)"
+                                        class="w-9 h-9 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white pointer-events-auto hover:bg-white/30 transition-all shadow-xl">
+                                        <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                    </button>
+                                    <button id="modal-next-btn" onclick="changeProjectImage(1)"
+                                        class="w-9 h-9 rounded-full bg-brand-purple/80 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white pointer-events-auto hover:scale-110 hover:bg-brand-purple transition-all shadow-xl">
+                                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Zoom Hint -->
+                                <div id="modal-zoom-hint"
+                                    class="absolute bottom-3 left-3 w-8 h-8 rounded-lg bg-black/20 backdrop-blur-md border border-white/10 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                                    <i data-lucide="maximize-2" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-3">System
+                                Workflow</p>
+                            <div id="modal-workflow"
+                                class="p-5 bg-brand-blue/5 rounded-2xl border border-brand-blue/10 text-gray-600 text-sm font-medium leading-relaxed italic">
+                                Workflow explanation...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Tech Stack & Features -->
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-3">Project
+                                Overview</p>
+                            <p id="modal-description" class="text-base text-gray-600 font-medium leading-relaxed">
+                                Detailed project description...</p>
+                        </div>
+
+                        <div>
+                            <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-3">Tech Stack</p>
+                            <div id="modal-tech-stack" class="flex flex-wrap gap-2">
+                                <!-- Dynamic tech badges -->
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-3">Key Features
+                            </p>
+                            <ul id="modal-features" class="space-y-2">
+                                <!-- Dynamic feature list -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-6 border-t border-gray-100 bg-gray-50/50 flex justify-end gap-4">
+                <a id="modal-request-link" href="contact.html"
+                    class="px-6 py-3 bg-brand-purple text-white rounded-xl font-black text-xs hover:scale-105 transition-all shadow-premium uppercase tracking-widest flex items-center gap-2">
+                    Request Full Source Code <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-[300] hidden flex items-center justify-center p-4 md:p-10">
+        <div class="absolute inset-0 bg-slate-900/95 backdrop-blur-2xl" onclick="closeLightbox()"></div>
+        <div class="relative max-w-7xl w-full h-full flex items-center justify-center">
+            <button onclick="closeLightbox()"
+                class="fixed top-6 right-6 w-12 h-12 flex items-center justify-center bg-white text-gray-900 rounded-full transition-all shadow-2xl z-[400] group"
+                aria-label="Close preview">
+                <i data-lucide="x" class="w-6 h-6 transition-transform group-hover:rotate-90"></i>
+            </button>
+            <img id="lightbox-image" src="" alt="Full Preview"
+                class="max-w-full max-h-full object-contain rounded-2xl shadow-2xl">
+        </div>
+    </div>
+    <script>
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox-modal');
+        const lightboxImg = document.getElementById('lightbox-image');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            // Only restore scroll if main modal is also closed
+            if (document.getElementById('project-modal').classList.contains('hidden')) {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        const PROJECT_DATA = {
+            'realtime-collab': {
+                title: 'Real-Time Collaboration Platform',
+                category: 'Web Platform',
+                icon: 'users',
+                images: ['uploads/realtim%20platform.png', 'uploads/realtime%20platform2.png'],
+                description: 'A robust digital workspace enabling multiple users to work on documents, code, and boards simultaneously with zero-latency synchronization.',
+                techStack: ['React.js', 'Node.js', 'Socket.io', 'MongoDB', 'Redis'],
+                features: ['Live cursors and multi-user editing', 'Instant chat and notifications', 'Version control and history', 'File sharing & permissions'],
+                workflow: 'User connects via WebSockets → Actions are broadcasted in real-time → Delta updates synced across all clients → State persisted in MongoDB.'
+            },
+            'health-ai-bot': {
+                title: 'Healthcare Diagnosis AI Chatbot',
+                category: 'AI & ML',
+                icon: 'bot',
+                images: ['uploads/Healthcare%20Diagnosis%20AI%20Chatbot.png', 'uploads/Healthcare%20Diagnosis%20AI%20Chatbot2.png'],
+                description: 'An intelligent medical assistant that uses NLP to analyze patient symptoms and provide preliminary diagnostic insights and advice.',
+                techStack: ['Python', 'TensorFlow', 'Flask', 'NLTK', 'React Native'],
+                features: ['Symptom analysis & triage', 'Medical database integration', 'Emergency priority detection', 'Appointment scheduling suggestions'],
+                workflow: 'Natural Language Input → Symptom Extraction (NER) → Diagnostic Model Inference → Probabilistic Result Generation → User Guidance.'
+            },
+            'student-prediction': {
+                title: 'Student Performance Prediction',
+                category: 'Data Science',
+                icon: 'trending-up',
+                images: ['uploads/student%20performance.png', 'uploads/student%20performance2.png', 'uploads/student%20performance3.png'],
+                description: 'Predictive analytics system that identifies students at risk of academic failure based on historical data and behavioral patterns.',
+                techStack: ['Python', 'Scikit-Learn', 'Pandas', 'Power BI', 'SQL'],
+                features: ['Predictive GPA modeling', 'Attendance correlation analysis', 'Early warning system', 'Interactive principal dashboard'],
+                workflow: 'Historical Data Ingestion → Feature Engineering (Engagement, Grades) → Random Forest Classification → Risk Level Assignment → Dashboard Visualization.'
+            },
+            'ai-lms': {
+                title: 'AI-Based Learning Management',
+                category: 'EdTech AI',
+                icon: 'graduation-cap',
+                images: ['uploads/AI-Based%20Learning%20Management.png', 'uploads/AI-Based%20Learning%20Management2.png', 'uploads/AI-Based%20Learning%20Management3.png'],
+                description: 'A personalized education platform that adapts course material and difficulty based on individual student learning speeds.',
+                techStack: ['Django', 'Python', 'React', 'PostgreSQL', 'AWS'],
+                features: ['Adaptive learning paths', 'Automated quiz generation', 'Performance analytics', 'AI tutor assistance'],
+                workflow: 'Student Assessment → Competency Mapping → AI Path Generation → Content Delivery → Continuous Feedback Loop.'
+            },
+            'fake-news': {
+                title: 'Fake News Detection System',
+                category: 'Cyber Security',
+                icon: 'shield-alert',
+                images: ['uploads/fake%20news%20detection.png', 'uploads/fake%20news%20detection2.png', 'uploads/fake%20news%20detection3.png'],
+                description: 'Advanced NLP system designed to verify the authenticity of news articles and social media posts using deep learning.',
+                techStack: ['Python', 'PyTorch', 'BERT', 'BeautifulSoup', 'Firebase'],
+                features: ['Real-time URL verification', 'Linguistic pattern analysis', 'Source credibility scoring', 'Visual truth indicators'],
+                workflow: 'News Extraction → Text Preprocessing → BERT Model Scoring → Fact-checking API Cross-ref → Reliability Verdict.'
+            },
+            'cloud-doc': {
+                title: 'Cloud Document Management',
+                category: 'Cloud Computing',
+                icon: 'cloud',
+                images: ['uploads/cloud%20verification.png', 'uploads/cloud%20verification2.png', 'uploads/cloud%20verification3.png', 'uploads/cloud%20verification4.png'],
+                description: 'Secure enterprise-grade document storage and management system with advanced search, encryption, and sharing capabilities.',
+                techStack: ['AWS S3', 'Node.js', 'Express', 'DynamoDB', 'OAuth2'],
+                features: ['AES-256 Encryption', 'OCR search functionality', 'Role-based access control', 'Multi-cloud backup'],
+                workflow: 'Document Upload → Encryption at Rest → Indexing for Search → Access Permission Check → Secure Link Generation.'
+            },
+            'stock-predict': {
+                title: 'Stock Market Prediction System',
+                category: 'FinTech AI',
+                icon: 'bar-chart-2',
+                images: ['uploads/stock%20market.png', 'uploads/stock%20market2.png', 'uploads/stock%20market3.png'],
+                description: 'Time-series forecasting model that predicts stock price movements using historical data and market sentiment analysis.',
+                techStack: ['Python', 'LSTMs', 'Alpha Vantage API', 'Plotly', 'Pandas'],
+                features: ['Price trend forecasting', 'Sentiment analysis (News)', 'Technical indicator overlay', 'Portfolio simulation'],
+                workflow: 'API Data Retrieval → LSTM Model Training → Trend Prediction → Volatility Assessment → Chart Rendering.'
+            },
+            'fraud-detect': {
+                title: 'Intelligent Fraud Detection',
+                category: 'AI Security',
+                icon: 'search-check',
+                images: ['uploads/fraud%20detection.png', 'uploads/fraud%20detection2.png'],
+                description: 'Machine learning system for banking sectors to detect and prevent fraudulent transactions in real-time.',
+                techStack: ['Python', 'XGBoost', 'Kafka', 'SQL Server', 'React'],
+                features: ['Anomaly detection engine', 'Real-time transaction scoring', 'Identity theft protection', 'Automated card blocking'],
+                workflow: 'Transaction Stream → Anomaly Pattern Matching → Risk Scoring → Instant SMS Alert → Decision persisted to Block/Allow.'
+            },
+            'credit-risk': {
+                title: 'Credit Risk Assessment System',
+                category: 'Finance AI',
+                icon: 'activity',
+                images: ['uploads/credit%20risk.png', 'uploads/credit%20risk2.png'],
+                description: 'Automated credit scoring system using ensemble learning to determine loan eligibility for banking applications.',
+                techStack: ['R', 'Python', 'Shiny', 'PostgreSQL', 'Tableau'],
+                features: ['Credit score generation', 'Default probability analysis', 'Income verification modeling', 'Policy compliance check'],
+                workflow: 'Applicant Data Entry → Feature Transformation → Logistic Regression/XGBoost → Credit Score Output → Approval Status.'
+            },
+            'churn-predict': {
+                title: 'Customer Churn Prediction',
+                category: 'CRM Analysis',
+                icon: 'pie-chart',
+                images: ['uploads/customer%20churn.png', 'uploads/customer%20churn2.png'],
+                description: 'Analyzes customer usage patterns to predict which subscribers are likely to cancel their service in the near future.',
+                techStack: ['Python', 'K-Means', 'Matplotlib', 'Scikit-learn', 'MySQL'],
+                features: ['Retention strategy generator', 'Usage trend visualization', 'Customer segmentation', 'Automated discount triggers'],
+                workflow: 'Subscription Data Upload → Cohort Analysis → Classification Model → Prediction List Generation → CRM Export.'
+            },
+            'distributed-storage': {
+                title: 'Distributed Cloud File Storage',
+                category: 'Distributed Systems',
+                icon: 'server',
+                images: ['uploads/distributed%20file.png'],
+                description: 'A decentralized storage system that shards data across multiple nodes for high availability and fault tolerance.',
+                techStack: ['Go', 'gRPC', 'Protobuf', 'Docker', 'Kubernetes'],
+                features: ['Auto-sharding and replication', 'Self-healing node recovery', 'Data integrity verification', 'Load balanced access'],
+                workflow: 'File Chunking → Parallel Node Distribution → Metadata Replication → Retrieval Merging → Error Correction.'
+            },
+            'traffic-mgmt': {
+                title: 'Traffic Congestion Management',
+                category: 'Smart City IoT',
+                icon: 'map-pin',
+                images: ['uploads/traffic%20congestion.png', 'uploads/traffic%20congestion2.png'],
+                description: 'IoT-based system that optimizes traffic signal timing based on real-time density sensed via cameras/sensors.',
+                techStack: ['OpenCV', 'Raspberry Pi', 'Python', 'MQTT', 'Node-RED'],
+                features: ['Real-time vehicle counting', 'Dynamic signal timing', 'Emergency vehicle priority', 'Congestion mapping'],
+                workflow: 'Camera Stream → Frame Analysis (OpenCV) → Density Calculation → MQTT Signal Update → Web Dashboard Update.'
+            },
+            'recommend-engine': {
+                title: 'AI Personalized Recommendation',
+                category: 'Recommendation Engine',
+                icon: 'sparkles',
+                images: ['uploads/ai%20recommendation.png', 'uploads/ai%20recommendation2.png', 'uploads/ai%20recommendation3.png'],
+                description: 'Collaborative filtering system that provides personalized product or content recommendations based on user behavior.',
+                techStack: ['Python', 'Surprise Library', 'Flask', 'PostgreSQL', 'Vue.js'],
+                features: ['User-User filtering', 'Item-Item similarities', 'Content-based tagging', 'Recommendation API'],
+                workflow: 'Interaction Logging → Matrix Factorization → Top-N Recommendation Generation → Dynamic UI Injection.'
+            },
+            'health-system': {
+                title: 'Healthcare Diagnosis System',
+                category: 'BioTech AI',
+                icon: 'heart-pulse',
+                images: ['uploads/diagnosis%20healthcare.png', 'uploads/diagnosis%20healthcare2.png'],
+                description: 'Integrated hospital system for diagnostic imaging analysis and medical record management with AI insights.',
+                techStack: ['DICOM', 'Python', 'PyTorch', 'PostgreSQL', 'Django'],
+                features: ['X-Ray/MRI AI analysis', 'EHR secure management', 'Doctor dashboard', 'Automated medical reports'],
+                workflow: 'Scan Upload → Preprocessing → CNN Model Inference → Abnormality Flagging → Radiologist Review.'
+            },
+            'sales-forecast': {
+                title: 'Sales Forecasting Prediction',
+                category: 'Retail Analytics',
+                icon: 'layout',
+                images: ['uploads/sales%20prediction.png', 'uploads/sales%20prediction2.png', 'uploads/sales%20prediction3.png', 'uploads/sales%20prediction4.png'],
+                description: 'Enterprise tool for retail businesses to predict future demand and optimize inventory using time-series AI.',
+                techStack: ['Python', 'Prophet', 'SQL', 'Excel', 'Streamlit'],
+                features: ['Seasonality analysis', 'Stockout prediction', 'Promotion impact modeling', 'Multi-store forecasting'],
+                workflow: 'Historical Sales Load → FB Prophet Modeling → Demand Forecast Output → Inventory Recommendation.'
+            },
+            'support-bot': {
+                title: 'Customer Support Chatbot',
+                category: 'NLP Bot',
+                icon: 'messages-square',
+                images: ['uploads/customer%20support.png', 'uploads/customer%20support2.png', 'uploads/customer%20support3.png'],
+                description: 'An AI-driven support agent that handles FAQs, ticket creation, and basic troubleshooting autonomously.',
+                techStack: ['Python', 'Rasa', 'Node.js', 'MongoDB', 'React'],
+                features: ['Automated FAQ resolution', 'Ticket escalation system', 'Intent recognition', 'Multilingual support'],
+                workflow: 'User Query → Intent & Entity Recognition → Knowledge Base Lookup → Action Selection → Natural Response.'
+            }
+        };
+
+        const modal = document.getElementById('project-modal');
+        const modalContainer = document.getElementById('modal-container');
+        const modalOverlay = document.getElementById('modal-overlay');
+
+        let currentProjectImages = [];
+        let currentImgIndex = 0;
+
+        function openProjectModal(id) {
+            const data = PROJECT_DATA[id];
+            if (!data) return;
+
+            document.getElementById('modal-title').textContent = data.title;
+            document.getElementById('modal-category').textContent = data.category;
+            document.getElementById('modal-description').textContent = data.description;
+            document.getElementById('modal-workflow').textContent = data.workflow;
+
+            // Update request link with project title
+            const requestLink = document.getElementById('modal-request-link');
+            if (requestLink) {
+                requestLink.href = `contact.html?project=${encodeURIComponent(data.title)}#contact-form`;
+            }
+
+            // Image Slider logic
+            currentProjectImages = data.images || (data.image ? [data.image] : []);
+            currentImgIndex = 0;
+            updateModalImage();
+
+            // Tech Stack
+            const techContainer = document.getElementById('modal-tech-stack');
+            techContainer.innerHTML = '';
+            data.techStack.forEach(tech => {
+                const badge = document.createElement('span');
+                badge.className = 'px-3 py-1.5 bg-gray-100 text-gray-600 text-[9px] font-black rounded-lg uppercase tracking-widest';
+                badge.textContent = tech;
+                techContainer.appendChild(badge);
+            });
+
+            // Features
+            const featureList = document.getElementById('modal-features');
+            featureList.innerHTML = '';
+            data.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.className = 'flex items-center gap-2.5 text-sm font-bold text-gray-600';
+                li.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> ${feature}`;
+                featureList.appendChild(li);
+            });
+
+            lucide.createIcons();
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContainer.classList.remove('scale-95', 'opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function updateModalImage() {
+            const placeholder = document.getElementById('modal-output-placeholder');
+            const img = document.getElementById('modal-output-image');
+            const nav = document.getElementById('modal-slider-nav');
+            const zoomHint = document.getElementById('modal-zoom-hint');
+
+            if (currentProjectImages.length > 0) {
+                const src = currentProjectImages[currentImgIndex];
+                img.onload = () => {
+                    img.classList.remove('hidden');
+                    placeholder.classList.add('hidden');
+                    zoomHint.classList.remove('hidden');
+
+                    if (currentProjectImages.length > 1) {
+                        nav.classList.remove('hidden');
+                    } else {
+                        nav.classList.add('hidden');
+                    }
+                };
+                img.onerror = () => {
+                    img.classList.add('hidden');
+                    placeholder.classList.remove('hidden');
+                    nav.classList.add('hidden');
+                    zoomHint.classList.add('hidden');
+                };
+                img.src = src;
+            } else {
+                img.classList.add('hidden');
+                placeholder.classList.remove('hidden');
+                nav.classList.add('hidden');
+                zoomHint.classList.add('hidden');
+            }
+        }
+
+        function changeProjectImage(dir) {
+            if (currentProjectImages.length <= 1) return;
+            currentImgIndex = (currentImgIndex + dir + currentProjectImages.length) % currentProjectImages.length;
+
+            // Add a quick fade effect
+            const img = document.getElementById('modal-output-image');
+            img.style.opacity = '0';
+            setTimeout(() => {
+                updateModalImage();
+                img.style.opacity = '1';
+            }, 200);
+        }
+
+        function closeModal() {
+            modalContainer.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        document.getElementById('modal-close').addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const processAvatars = () => {
+                document.querySelectorAll('.project-card img').forEach(img => {
+                    if (img.getAttribute('data-processed')) {
+                        img.style.opacity = '1';
+                        return;
+                    }
+                    const handleImage = () => {
+                        try {
+                            const canvas = document.createElement('canvas');
+                            canvas.width = img.naturalWidth;
+                            canvas.height = img.naturalHeight;
+                            const ctx = canvas.getContext('2d');
+                            ctx.drawImage(img, 0, 0);
+                            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                            const data = imageData.data;
+                            for (let i = 0; i < data.length; i += 4) {
+                                // Fuzzy Chroma Key (threshold 35 handles jagged/aliased black edges)
+                                if (data[i] < 35 && data[i + 1] < 35 && data[i + 2] < 35) {
+                                    data[i + 3] = 0;
+                                } else {
+                                    data[i + 3] = 255;
+                                }
+                            }
+                            ctx.putImageData(imageData, 0, 0);
+                            img.src = canvas.toDataURL('image/png');
+                            img.setAttribute('data-processed', 'true');
+                            img.style.opacity = '1';
+                            img.style.mixBlendMode = 'normal';
+                        } catch (e) {
+                            img.style.mixBlendMode = 'screen';
+                            img.style.opacity = '1';
+                        }
+                    };
+                    if (img.complete) handleImage();
+                    else img.onload = handleImage;
+                });
+            };
+            processAvatars();
+            if (typeof initMobileSliders === 'function') {
+                initMobileSliders();
+            }
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

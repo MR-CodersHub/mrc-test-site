@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MR CODERS HUB is a practical learning institute and digital consultancy in Chennai offering skill-based training, internships, web development, and digital marketing services.">
+    <title>MR CODERS HUB | EdTech Institute & Digital Consultancy in Chennai</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-purple': '#7C3AED',
+                        'brand-orange': '#F59E0B',
+                        'bg-main': '#F9FAFB',
+                        'deep-dark': '#0F172A',
+                    },
+                    boxShadow: {
+                        'premium': '0 25px 50px -12px rgba(0, 0, 0, 0.08)',
+                        'glow-blue': '0 0 30px rgba(30, 58, 138, 0.2)',
+                        'inner-glass': 'inset 0 0 20px rgba(255, 255, 255, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .reveal { opacity: 0; }
+        .reveal-active { animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #1E3A8A 0%, #7C3AED 50%, #F59E0B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-orb {
+            position: absolute;
+            filter: blur(140px);
+            z-index: -1;
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: orbFloat 10s infinite alternate;
+        }
+        @keyframes orbFloat {
+            0% { transform: translate(-10%, -10%) scale(1); }
+            100% { transform: translate(10%, 10%) scale(1.2); }
+        }
+    </style>
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="font-[Inter] bg-bg-main text-gray-900 overflow-x-hidden w-full antialiased">
+
+    <!-- Global Navigation Injected via main.js -->
+
+    <!-- High-Impact Tech Hero Section -->
+    <section class="relative py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-gray-900">
+        <!-- Professional 3D Abstract Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/img/bg2.jpg" 
+                 alt="Digital Innovation Architecture" 
+                 class="w-full h-full object-cover opacity-40 scale-105">
+            <!-- Dynamic Gradient Overlay for Readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-transparent to-gray-900/90"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(15,23,42,0.8)_100%)]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10 relative z-10 text-center">
+            <div class="reveal">
+                <h1 class="hero-title font-black mb-12 text-white font-outfit tracking-tighter leading-none">
+                    Building Talent.<br> 
+                    Delivering Solutions.<br>
+                    <span class="gradient-text italic font-serif">Driving Real Outcomes.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white/60 font-medium leading-relaxed max-w-5xl mx-auto mb-16 px-4"> We train individuals to become industry-ready and help businesses achieve measurable growth through real-world solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6 items-center">
+                    <a href="category1.html" class="w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-6 bg-white text-gray-900 rounded-[2rem] font-black text-lg sm:text-xl hover:bg-brand-blue hover:text-white transition-all shadow-2xl hover:scale-105">Explore Programs</a>
+                    <a href="contact.html" class="w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-6 bg-transparent border-2 border-white text-white rounded-[2rem] font-black text-lg sm:text-xl hover:bg-brand-blue hover:text-white transition-all shadow-2xl hover:scale-105">Work With Us</a>
+                </div>
+                <p class="mt-8 text-white/40 uppercase tracking-[0.3em] font-black text-xs">From classrooms to client projects—everything we build is rooted in execution.</p>
+            </div>
+        </div>
+    </section>    <!-- WHO YOU ARE SECTION -->
+    <section id="who-you-are" class="responsive-py bg-white adaptive-rounded responsive-mx shadow-sm border border-gray-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+                <div class="lg:col-span-7 reveal">
+                    <h2 class="text-xs font-black uppercase tracking-[0.5em] text-brand-purple mb-8 block">The Ecosystem</h2>
+                    <h3 class="section-title font-black text-gray-900 tracking-tighter leading-none mb-12">
+                        A Practical Learning & <br> <span class="text-brand-blue italic font-serif">Execution Ecosystem</span>
+                    </h3>
+                    <div class="space-y-6 text-xl text-gray-600 font-medium leading-relaxed">
+                        <p>MR CODERS HUB is not just a training institute or a service agency.</p>
+                        <p>We operate as a hybrid ecosystem where:</p>
+                        <ul class="space-y-4 border-l-4 border-brand-blue/20 pl-8 my-8">
+                            <li class="flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+                                Students learn by building real projects
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-brand-purple"></span>
+                                Businesses get solutions backed by execution
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-6 items-center pt-8">
+                            <span class="px-6 py-3 bg-gray-50 rounded-full text-brand-blue font-bold">→ Learning</span>
+                            <span class="px-6 py-3 bg-gray-50 rounded-full text-brand-purple font-bold">→ Building</span>
+                            <span class="px-6 py-3 bg-gray-50 rounded-full text-brand-orange font-bold">→ Delivering</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 reveal delay-200">
+                    <div class="responsive-p glass-card rounded-[3rem] border-gray-300 shadow-premium bg-gradient-to-br from-white to-gray-50">
+                        <h5 class="text-2xl font-black mb-8 text-gray-900">Why MR CODERS HUB Exists</h5>
+                        <p class="text-gray-600 mb-8 font-medium">The gap between education and industry is real. Students graduate without practical skills. Businesses struggle to find execution-ready talent.</p>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <svg class="w-6 h-6 text-brand-blue shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                <p class="text-sm font-bold text-gray-800">Training with real-world relevance</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <svg class="w-6 h-6 text-brand-blue shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                <p class="text-sm font-bold text-gray-800">Delivering solutions with real accountability</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DUAL MODEL SECTION -->
+    <section class="responsive-py max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
+        <div class="text-center mb-32 reveal">
+            <span class="text-xs font-black uppercase tracking-[0.5em] text-brand-orange mb-8 block underline decoration-brand-orange/20 decoration-8 underline-offset-[-2px]">Our Framework</span>
+            <h3 class="section-title font-black text-gray-900 tracking-tighter leading-none mb-12">Two Core Pillars. <br> <span class="gradient-text italic font-serif text-transparent bg-clip-text">One Unified System.</span></h3>
+            <p class="text-xl text-gray-500 font-medium max-w-3xl mx-auto">The same system that trains students is used to execute real client work. That’s why our approach is grounded in reality—not assumptions.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mobile-slider">
+            <!-- EdTech Pillar -->
+            <div class="reveal group">
+                <div class="responsive-p bg-white adaptive-rounded hover:shadow-premium transition-all border border-gray-200 relative overflow-hidden h-full">
+                    
+                    <h4 class="section-title font-black text-gray-950 mb-10 font-outfit">EdTech Institute</h4>
+                    <p class="text-lg text-gray-500 mb-10 font-medium">We train students through:</p>
+                    <ul class="space-y-6 mb-12">
+                        <li class="flex items-center gap-4 text-gray-900 font-bold">
+                            <span class="w-8 h-8 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue text-sm">01</span>
+                            Skill-based courses
+                        </li>
+                        <li class="flex items-center gap-4 text-gray-900 font-bold">
+                            <span class="w-8 h-8 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue text-sm">02</span>
+                            Internship programs
+                        </li>
+                        <li class="flex items-center gap-4 text-gray-900 font-bold">
+                            <span class="w-8 h-8 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue text-sm">03</span>
+                            Live project execution
+                        </li>
+                    </ul>
+                    <p class="text-brand-blue font-black italic">Our focus is job-ready skill development through real work.</p>
+                </div>
+            </div>
+
+            <!-- Consultancy Pillar -->
+            <div class="reveal delay-200 group">
+                <div class="responsive-p bg-white adaptive-rounded hover:shadow-premium transition-all border border-gray-200 relative overflow-hidden h-full">   
+                    <h4 class="section-title font-black text-gray-950 mb-10 font-outfit">Digital Consultancy</h4>
+                    <p class="text-lg text-gray-500 mb-10 font-medium">We help businesses through:</p>
+                    <ul class="space-y-6 mb-12">
+                        <li class="flex items-center gap-4 text-gray-900 font-bold">
+                            <span class="w-8 h-8 rounded-xl bg-brand-purple/10 flex items-center justify-center text-brand-purple text-sm">01</span>
+                            Web development
+                        </li>
+                        <li class="flex items-center gap-4 text-gray-900 font-bold">
+                            <span class="w-8 h-8 rounded-xl bg-brand-purple/10 flex items-center justify-center text-brand-purple text-sm">02</span>
+                            Digital marketing
+                        </li>
+                        <li class="flex items-center gap-4 text-gray-900 font-bold">
+                            <span class="w-8 h-8 rounded-xl bg-brand-purple/10 flex items-center justify-center text-brand-purple text-sm">03</span>
+                            Growth strategy
+                        </li>
+                        
+                    </ul>
+                    <p class="text-brand-purple font-black italic">Our focus is measurable business results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="responsive-py bg-gray-50 adaptive-rounded responsive-mx overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
+            <div class="text-center mb-24 reveal">
+                <h3 class="section-title font-black text-gray-900 tracking-tighter mb-8">Who We Serve</h3>
+                <p class="text-xl text-gray-500 font-medium max-w-2xl mx-auto">Bridging the gap between potential and performance across three major segments.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mobile-slider">
+                <div class="reveal group responsive-p bg-white rounded-[3rem] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all border border-gray-100">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-8 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                    </div>
+                    <h5 class="text-2xl font-black mb-4 text-gray-900">Students & Freshers</h5>
+                    <p class="text-gray-500 font-medium leading-relaxed">Looking to build real skills and become job-ready through practical project exposure.</p>
+                </div>
+                <div class="reveal delay-200 group responsive-p bg-white rounded-[3rem] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all border border-gray-100">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-purple/10 flex items-center justify-center text-brand-purple mb-8 group-hover:bg-brand-purple group-hover:text-white transition-all">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h5 class="text-2xl font-black mb-4 text-gray-900">Startups & Businesses</h5>
+                    <p class="text-gray-500 font-medium leading-relaxed">Looking for execution-driven digital solutions that deliver measurable growth.</p>
+                </div>
+                <div class="reveal delay-400 group responsive-p bg-white rounded-[3rem] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all border border-gray-100">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-orange/10 flex items-center justify-center text-brand-orange mb-8 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h5 class="text-2xl font-black mb-4 text-gray-900">Institutions</h5>
+                    <p class="text-gray-500 font-medium leading-relaxed">Looking to bridge the gap between academic theory and real industry requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="responsive-py max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+            <div class="reveal">
+                <h3 class="section-title font-black text-gray-950 mb-12 tracking-tighter">From Learning to <br> Real-World Execution</h3>
+                <div class="space-y-12">
+                    <div class="flex gap-8 group">
+                        <div class="w-16 h-16 rounded-3xl bg-black text-white flex items-center justify-center text-2xl font-black shrink-0 shadow-glow-blue group-hover:scale-110 transition-transform">1</div>
+                        <div>
+                            <h5 class="text-xl font-black mb-2">Structure</h5>
+                            <p class="text-gray-500 font-medium leading-relaxed">Students learn through structured programs designed by active industry leads.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 group">
+                        <div class="w-16 h-16 rounded-3xl bg-brand-blue text-white flex items-center justify-center text-2xl font-black shrink-0 group-hover:scale-110 transition-transform">2</div>
+                        <div>
+                            <h5 class="text-xl font-black mb-2">Build</h5>
+                            <p class="text-gray-500 font-medium leading-relaxed">They work on real-world projects that simulate actual production environments.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 group">
+                        <div class="w-16 h-16 rounded-3xl bg-brand-purple text-white flex items-center justify-center text-2xl font-black shrink-0 group-hover:scale-110 transition-transform">3</div>
+                        <div>
+                            <h5 class="text-xl font-black mb-2">Align</h5>
+                            <p class="text-gray-500 font-medium leading-relaxed">Those projects align with specific business needs and market demands.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 group">
+                        <div class="w-16 h-16 rounded-3xl bg-brand-orange text-white flex items-center justify-center text-2xl font-black shrink-0 group-hover:scale-110 transition-transform">4</div>
+                        <div>
+                            <h5 class="text-xl font-black mb-2">Deliver</h5>
+                            <p class="text-gray-500 font-medium leading-relaxed">Businesses get execution-backed solutions powered by a skilled ecosystem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal delay-400 space-y-12">
+                <div class="responsive-p bg-slate-900 text-white adaptive-rounded relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/20 to-transparent"></div>
+                    <div class="relative z-10">
+                        <h4 class="text-3xl font-black text-white mb-12">Built on Practical Execution</h4>
+                        <div class="grid grid-cols-2 gap-12">
+                            <div>
+                                <div class="text-4xl font-black text-brand-blue mb-2">120+</div>
+                                <p class="text-sm font-bold text-gray-300 uppercase tracking-widest">Projects Completed</p>
+                            </div>
+                            <div>
+                                <div class="text-4xl font-black text-brand-purple mb-2">100%</div>
+                                <p class="text-sm font-bold text-gray-300 uppercase tracking-widest">Execution Focus</p>
+                            </div>
+                        </div>
+                        <div class="mt-16 space-y-4">
+                            <p class="flex items-center gap-3 text-gray-400 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Multi-domain expertise</p>
+                            <p class="flex items-center gap-3 text-gray-400 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Real client and student work</p>
+                            <p class="flex items-center gap-3 text-gray-400 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Focus on measurable outcomes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="responsive-py bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-40">
+                <div class="reveal">
+                    <span class="text-xs md:text-sm lg:text-base font-black uppercase tracking-[0.5em] text-brand-blue mb-8 block">The Core Philosophy</span>
+                    <h3 class="section-title font-black text-gray-900 tracking-tighter leading-none ">Execution Over <br> <span class="gradient-text italic font-serif text-transparent bg-clip-text">Theory.</span></h3>
+                </div>
+                <div class="reveal delay-200">
+                    <div class="space-y-6">
+                        <div class="p-6 bg-white border border-gray-200 rounded-3xl shadow-sm flex items-center gap-6 group hover:border-brand-blue transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-blue/5 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all shrink-0 font-black">→</div>
+                            <p class="text-lg font-bold text-gray-800">Skills are built through doing, not watching</p>
+                        </div>
+                        <div class="p-6 bg-white border border-gray-200 rounded-3xl shadow-sm flex items-center gap-6 group hover:border-brand-purple transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-purple/5 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all shrink-0 font-black">→</div>
+                            <p class="text-lg font-bold text-gray-800">Projects matter more than certificates</p>
+                        </div>
+                        <div class="p-6 bg-white border border-gray-200 rounded-3xl shadow-sm flex items-center gap-6 group hover:border-brand-orange transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-orange/5 flex items-center justify-center text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-all shrink-0 font-black">→</div>
+                            <p class="text-lg font-bold text-gray-800">Results matter more than activity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mb-24 reveal">
+                <h3 class="text-3xl md:text-6xl font-black text-gray-900 tracking-tighter mb-8">What We Stand For</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="reveal group">
+                    <div class="responsive-p glass-card rounded-[3rem] border-gray-200 h-full hover:bg-brand-blue hover:text-white transition-all duration-500">
+                        <h5 class="text-2xl font-black mb-6">Execution First</h5>
+                        <p class="font-medium text-gray-500 group-hover:text-white/80">We prioritize real implementation over theoretical learning in every project we undertake.</p>
+                    </div>
+                </div>
+                <div class="reveal delay-200 group">
+                    <div class="responsive-p glass-card rounded-[3rem] border-gray-200 h-full hover:bg-brand-purple hover:text-white transition-all duration-500">
+                        <h5 class="text-2xl font-black mb-6">Industry Relevance</h5>
+                        <p class="font-medium text-gray-500 group-hover:text-white/80">Everything we teach and build is strictly aligned with current and future market needs.</p>
+                    </div>
+                </div>
+                <div class="reveal delay-400 group">
+                    <div class="responsive-p glass-card rounded-[3rem] border-gray-200 h-full hover:bg-brand-orange hover:text-white transition-all duration-500">
+                        <h5 class="text-2xl font-black mb-6">Scalable Impact</h5>
+                        <p class="font-medium text-gray-500 group-hover:text-white/80">From individual student growth to enterprise-level business expansion, everything is designed to scale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POSITIONING & TRUST REASONS -->
+    <section class="responsive-py bg-deep-dark text-black adaptive-rounded responsive-mx mb-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-10 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div class="reveal">
+                    <h3 class="section-title font-black text-white mb-8 tracking-tighter font-outfit">Local Roots. <br> <span class="text-brand-blue italic font-serif">Practical Impact.</span></h3>
+                    <p class="text-base md:text-lg lg:text-xl font-medium text-white/70 font-medium leading-relaxed mb-10">
+                        Based in <span class="text-brand-blue">Avadi, Chennai</span>, we work with students and businesses across Tamil Nadu—delivering practical learning and real-world execution.
+                    </p>
+                    
+                    <div class="mt-2 pt-12 border-t border-white/10">
+                        <h5 class="text-xl font-black mb-8 uppercase tracking-widest text-brand-orange">Why Choose MR CODERS HUB</h5>
+                        <ul class="space-y-6">
+                            <li class="flex items-center gap-4 text-lg text-slate-500 font-bold">
+                                <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+                                Practical learning approach
+                            </li>
+                            <li class="flex items-center gap-4 text-lg text-slate-500 font-bold">
+                                <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+                                Real project exposure
+                            </li>
+                            <li class="flex items-center gap-4 text-lg text-slate-500 font-bold">
+                                <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+                                Execution-focused consultancy
+                            </li>
+                            <li class="flex items-center gap-4 text-lg text-slate-500 font-bold">
+                                <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+                                Transparent and result-driven work
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="reveal delay-400 bg-slate-50/50 adaptive-rounded responsive-p border border-slate-100 shadow-sm">
+                    <h4 class="text-2xl sm:text-3xl md:text-4xl font-black mb-6 sm:mb-10 text-black tracking-tighter font-outfit leading-[1.1]">Where Learning <br class="hidden sm:block"><span class="text-brand-blue italic font-serif">Meets Execution</span></h4>
+                    <p class="text-base sm:text-lg md:text-xl text-black/70 font-medium leading-relaxed mb-8 sm:mb-10">
+                        We don’t separate learning and working. We integrate them. That’s why our ecosystem produces superior outcomes for both sides of the equation.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                        <div class="p-6 sm:p-8 bg-slate-50 rounded-3xl border border-gray-200 hover:border-brand-blue/20 transition-colors">
+                            <p class="text-[10px] uppercase tracking-widest text-brand-blue mb-3 font-black">For Students</p>
+                            <p class="text-lg text-black font-extrabold leading-tight">Gain Real Experience</p>
+                        </div>
+                        <div class="p-6 sm:p-8 bg-slate-50 rounded-3xl border border-gray-200 hover:border-brand-purple/20 transition-colors">
+                            <p class="text-[10px] uppercase tracking-widest text-brand-purple mb-3 font-black">For Business</p>
+                            <p class="text-lg text-black font-extrabold leading-tight">Get Real Results</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      <section class="responsive-py bg-slate-900 text-white adaptive-rounded responsive-mx mb-20 relative overflow-hidden reveal">
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <h2 class="hero-title font-black mb-8 leading-none">Start Your Journey or <br> <span class="italic font-serif ">Scale Your Business </span></h2>
+            <p class="text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto font-medium">Whether you’re a student building your career or a business looking to grow, we’re ready to work with you.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="contact.html" class="px-12 py-6 bg-white text-brand-blue rounded-full font-bold text-xl hover:scale-105 transition-all shadow-2xl">Work With Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Reveal Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+<style>
+  /* WhatsApp Button Container */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* On-load Animation */
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    animation: wa-float-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+  }
+
+  /* Hover Effects */
+  .whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
+    background-color: #20b858;
+  }
+
+  /* SVG Icon Sizing */
+  .whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+  }
+
+  /* Tooltip Styling */
+  .wa-tooltip {
+    position: absolute;
+    right: 75px; /* Spaced out from the button */
+    background-color: #1f2937; /* Dark slate color */
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateX(10px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Tooltip Arrow pointing to the button */
+  .wa-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #1f2937;
+  }
+
+  /* Show tooltip on hover (Desktop only) */
+  @media (hover: hover) {
+    .whatsapp-float:hover .wa-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  /* Keyframe Animation */
+  @keyframes wa-float-in {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+      width: 55px;
+      height: 55px;
+    }
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+    }
+    .wa-tooltip {
+      display: none; /* Hide tooltip on mobile to prevent clutter */
+    }
+  }
+</style>
+
+<!-- HTML Structure -->
+<a href="#" id="whatsapp-btn" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <!-- Official WhatsApp SVG Vector -->
+ <svg viewBox="0 0 24 24" fill="white">
+  <path d="M20.52 3.48A11.94 11.94 0 0012.05 0C5.4 0 .02 5.38.02 12.03c0 2.12.56 4.2 1.62 6.04L0 24l6.11-1.6a12.03 12.03 0 005.94 1.52h.01c6.65 0 12.03-5.38 12.03-12.03 0-3.21-1.25-6.22-3.57-8.41zM12.05 21.9h-.01a9.88 9.88 0 01-5.03-1.38l-.36-.21-3.63.95.97-3.54-.23-.36a9.86 9.86 0 01-1.51-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 012.9 7.01c0 5.47-4.45 9.92-9.92 9.92zm5.48-7.39c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/>
+</svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<!-- JavaScript Functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const waButton = document.getElementById('whatsapp-btn');
+    
+    // --- CONFIGURATION ---
+    // Use your actual MR CODERS HUB number (Country code without '+')
+    const phoneNumber = '919360739559'; 
+    
+    // Create a dynamic message based on the current page the user is viewing
+    const pageTitle = document.title.split('|')[0].trim();
+    const message = `Hello MR CODERS HUB! I was looking at the "${pageTitle}" page and I'd like to know more about your services.`;
+    
+    // Properly encode the message for URL transmission
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Construct the official WhatsApp API URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Assign to button
+    waButton.setAttribute('href', whatsappUrl);
+  });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally with GST Course in Avadi, Chennai | MR CODERS HUB</title>
+    <meta name="description" content="Learn Tally with GST and practical accounting skills in Chennai. Become job-ready for accounting roles with MR CODERS HUB.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-emerald': '#059669',
+                        'bg-main': '#F9FAFB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-blue: #1E3A8A;
+            --brand-emerald: #059669;
+        }
+
+        body { -webkit-font-smoothing: antialiased; }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal-active { opacity: 1; transform: translateY(0); }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--brand-emerald) 0%, var(--brand-blue) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="bg-bg-main text-gray-900 overflow-x-hidden antialiased">
+
+    <!-- Global Navigation -->
+
+    <!-- Navigation Spacer -->
+    <div class="h-16 lg:h-20"></div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-2 pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-emerald/5 rounded-full blur-[120px] -mr-48 -mt-48"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-blue/5 rounded-full blur-[100px] -ml-24 -mb-24"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 mb-8">
+                        <span class="w-2 h-2 rounded-full bg-brand-emerald animate-pulse"></span>
+                        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-emerald">Accounting & Compliance Track</span>
+                    </div>
+                    <h1 class="hero-title font-black mb-8 text-gray-900 font-outfit">
+                        Tally with GST Course <br> <span class="gradient-text italic font-serif text-emerald-600">for Job-Ready Skills</span>
+                    </h1>
+                    <p class="text-xl text-slate-500 font-medium leading-relaxed max-w-xl mb-12">
+                        Learn practical accounting, GST filing, and business operations using Tally at MR CODERS HUB, Avadi, Chennai.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="contact.html" class="px-10 py-5 bg-emerald-700 text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-xl shadow-emerald-500/20">
+                            Enroll Now
+                        </a>
+                        <a href="#curriculum" class="px-10 py-5 bg-white border border-gray-200 text-gray-900 rounded-2xl font-black text-lg hover:bg-gray-50 transition-all">
+                            Get Course Details
+                        </a>
+                    </div>
+                </div>
+                <div class="relative reveal delay-200">
+                    <div class="aspect-square rounded-[4rem] overflow-hidden shadow-2xl border-8 border-white">
+                        <img src="./assets/img/c7.jpg" 
+                             alt="Tally Accounting" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 p-8 glass-card rounded-3xl shadow-xl max-w-xs hidden md:block">
+                        <p class="text-sm font-bold text-gray-900 mb-2 italic font-serif">"Master GST Filing & Industrial Accounting in 3 Months."</p>
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 rounded-full bg-brand-emerald"></div>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">Practical & Job Oriented</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="responsive-py bg-white reveal">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="section-title font-black text-gray-900 font-outfit mb-8 leading-tight">Become Job-Ready in <br> <span class="gradient-text italic font-serif">Accounting and GST</span></h2>
+            <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                This course is designed to help you understand accounting fundamentals, manage business transactions, and handle GST compliance using Tally. You will gain practical experience required for real-world accounting roles.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. WHAT YOU WILL LEARN & TOOLS -->
+    <section class="py-24 bg-slate-50 reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div class="space-y-8">
+                    <h3 class="text-2xl font-black text-gray-900 font-outfit">What You Will Learn</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+                            <div class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="book-open" class="w-5 h-5"></i></div>
+                            <span class="font-bold text-gray-700 text-sm">Accounting Fundamentals</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+                            <div class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="monitor" class="w-5 h-5"></i></div>
+                            <span class="font-bold text-gray-700 text-sm text-nowrap">Tally Software Operations</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+                            <div class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="calculator" class="w-5 h-5"></i></div>
+                            <span class="font-bold text-gray-700 text-sm">GST Concepts & Filing</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+                            <div class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="package" class="w-5 h-5"></i></div>
+                            <span class="font-bold text-gray-700 text-sm">Inventory Management</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-black text-gray-900 font-outfit mb-10">Software Stack</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="px-8 py-4 bg-white rounded-2xl border border-slate-100 font-bold text-emerald-600 shadow-sm">Tally ERP / Prime</span>
+                        <span class="px-8 py-4 bg-white rounded-2xl border border-slate-100 font-bold text-gray-700 shadow-sm">GST Portal</span>
+                        <span class="px-8 py-4 bg-white rounded-2xl border border-slate-100 font-bold text-gray-700 shadow-sm">Accounting Formats</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PRACTICAL LEARNING APPROACH -->
+    <section class="py-24 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-2xl font-black text-gray-900 font-outfit">Learn by Handling Real Tasks</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 text-center">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mx-auto mb-6"><i data-lucide="edit-3" class="w-6 h-6 text-brand-emerald"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">Record Transactions</h4>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 text-center">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mx-auto mb-6"><i data-lucide="file-text" class="w-6 h-6 text-brand-emerald"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2 text-nowrap">Inventory & Billing</h4>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 text-center">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mx-auto mb-6"><i data-lucide="pie-chart" class="w-6 h-6 text-brand-emerald"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">Generate Reports</h4>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 text-center">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mx-auto mb-6"><i data-lucide="shield-check" class="w-6 h-6 text-brand-emerald"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">GST Entries & Filings</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. COURSE STRUCTURE (3 MONTH PATH) -->
+    <section id="curriculum" class="responsive-py bg-slate-900 text-white reveal adaptive-rounded mx-4 sm:mx-6 md:mx-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="section-title font-black mb-4 font-outfit">3-Month Practical Program</h2>
+                <p class="text-xl text-white/50 font-medium">A structured roadmap from core basics to final business compliance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Month 1 -->
+                <div class="p-10 bg-white/5 border border-white/10 rounded-[3rem] group hover:bg-white hover:text-slate-900 transition-all duration-500">
+                    <span class="text-[10px] font-black text-brand-emerald uppercase tracking-widest block mb-8">Month 01</span>
+                    <h4 class="text-2xl font-black mb-6 font-outfit">Accounting Foundation</h4>
+                    <ul class="space-y-4 mb-10 text-white/50 group-hover:text-slate-500 font-medium">
+                        <li class="flex items-center gap-3 text-sm"><i data-lucide="check" class="w-4 h-4 text-brand-emerald"></i> Principles & Ledger entries</li>
+                        <li class="flex items-center gap-3 text-sm"><i data-lucide="check" class="w-4 h-4 text-brand-emerald"></i> Journal & Voucher entries</li>
+                        <li class="flex items-center gap-3 text-sm"><i data-lucide="check" class="w-4 h-4 text-brand-emerald"></i> Tally interface navigation</li>
+                    </ul>
+                    <div class="pt-6 border-t border-white/10 group-hover:border-slate-100">
+                        <span class="text-[10px] font-black text-white/30 group-hover:text-slate-400 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-sm font-bold">Understand and record core transactions.</p>
+                    </div>
+                </div>
+
+                <!-- Month 2 -->
+                <div class="p-10 bg-white/5 border border-white/10 rounded-[3rem] group hover:bg-white hover:text-slate-900 transition-all duration-500">
+                    <span class="text-[10px] font-black text-brand-emerald uppercase tracking-widest block mb-8">Month 02</span>
+                    <h4 class="text-2xl font-black mb-6 font-outfit">GST & Operations</h4>
+                    <ul class="space-y-4 mb-10 text-white/50 group-hover:text-slate-500 font-medium">
+                        <li class="flex items-center gap-3 text-sm"><i data-lucide="check" class="w-4 h-4 text-brand-emerald"></i> Inventory & Stock tracking</li>
+                        <li class="flex items-center gap-3 text-sm"><i data-lucide="check" class="w-4 h-4 text-brand-emerald"></i> Tax structures & GST Entries</li>
+                        <li class="flex items-center gap-3 text-sm"><i data-lucide="check" class="w-4 h-4 text-brand-emerald"></i> Practical billing scenarios</li>
+                    </ul>
+                    <div class="pt-6 border-t border-white/10 group-hover:border-slate-100">
+                        <span class="text-[10px] font-black text-white/30 group-hover:text-slate-400 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-sm font-bold">Handle GST-based business operations.</p>
+                    </div>
+                </div>
+
+                <!-- Month 3 -->
+                <div class="p-10 bg-white/5 border border-white/10 rounded-[3rem] group hover:bg-white hover:text-slate-900 transition-all duration-500">
+                    <span class="text-[10px] font-black text-brand-emerald uppercase tracking-widest block mb-8">Month 03</span>
+                    <h4 class="text-2xl font-black mb-6 font-outfit">Reports & Compliance</h4>
+                    <ul class="space-y-4 mb-10 text-white/50 group-hover:text-slate-500 font-medium">
+                        <li class="flex items-center gap-3 text-sm"><i data-lucide="check" class="w-4 h-4 text-brand-emerald"></i> Financial reports (P&L, Bal. Sheet)</li>
+                        <li class="flex items-center gap-3 text-sm"><i data-lucide="check" class="w-4 h-4 text-brand-emerald"></i> Compliance reporting & analysis</li>
+                        <li class="flex items-center gap-3 text-sm"><i data-lucide="check" class="w-4 h-4 text-brand-emerald"></i> Final practical execution</li>
+                    </ul>
+                    <div class="pt-6 border-t border-white/10 group-hover:border-slate-100">
+                        <span class="text-[10px] font-black text-white/30 group-hover:text-slate-400 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-sm font-bold">Master complete accounting workflows.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. WHO SHOULD JOIN & OUTCOMES -->
+    <section class="py-32 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-32">
+                <div>
+                    <h3 class="text-2xl font-black text-gray-900 font-outfit mb-12">Who Should Join</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mobile-slider">
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex items-center gap-4 font-bold text-gray-900">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-brand-emerald"></i> B.Com / BBA Students
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex items-center gap-4 font-bold text-gray-900 text-nowrap">
+                            <i data-lucide="user-plus" class="w-6 h-6 text-brand-emerald"></i> Commerce Background
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex items-center gap-4 font-bold text-gray-900">
+                            <i data-lucide="search" class="w-6 h-6 text-brand-emerald"></i> Job Seekers
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex items-center gap-4 font-bold text-gray-900">
+                            <i data-lucide="briefcase" class="w-6 h-6 text-brand-emerald"></i> Small Business Owners
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-black text-gray-900 font-outfit mb-12">Career Opportunities</h3>
+                    <div class="space-y-4">
+                        <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm flex items-center justify-between group">
+                            <span class="font-bold text-gray-900">Accounts Executive</span>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-emerald"></i>
+                        </div>
+                        <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm flex items-center justify-between group">
+                            <span class="font-bold text-gray-900">Tally Operator</span>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-emerald"></i>
+                        </div>
+                        <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm flex items-center justify-between group">
+                            <span class="font-bold text-gray-900 text-nowrap">GST Assistant</span>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-emerald"></i>
+                        </div>
+                        <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm flex items-center justify-between group">
+                            <span class="font-bold text-gray-900">Billing Executive</span>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-emerald"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. LOCAL SEO SECTION -->
+    <section class="py-16 bg-slate-50 reveal">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-5xl font-black text-gray-900 font-outfit mb-8 leading-tight">Best Tally with GST Course in <span class="italic font-serif gradient-text">Avadi, Chennai</span></h2>
+            <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                MR CODERS HUB provides practical accounting and GST training for students across Chennai, Tamil Nadu, helping them gain real-world experience and job-ready skills.
+            </p>
+        </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section class="py-16 bg-white reveal">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-2xl md:text-5xl font-black text-gray-900 font-outfit">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Is this Tally course suitable for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, the course starts from accounting basics and progresses systematically to GST and advanced business operations.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900 text-nowrap">Will I learn GST filing in this course?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, GST concepts and practical handling in Tally are included, covering everything from entries to compliance reporting.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Do I need a commerce background?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Commerce background helps, but our foundations module is designed to help beginners from any field master accounting principles.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">What is the duration of the course?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            The course duration is 3 months, which includes intensive practical training and real business scenario handling.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FINAL CTA -->
+    <section class="responsive-py bg-slate-900 text-white text-center reveal adaptive-rounded mx-4 sm:mx-6 md:mx-10 mb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-emerald/5 blur-[120px] rounded-full"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="hero-title font-black mb-12 font-outfit leading-none tracking-tight">Start Your Career in <br> <span class="italic font-serif">Accounting Today</span></h2>
+            <p class="text-xl md:text-2xl text-white/50 mb-16 max-w-2xl mx-auto font-medium">
+                Gain practical accounting skills and become job-ready for industrial roles.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="contact.html" class="px-12 py-6 bg-brand-emerald text-white rounded-3xl font-black text-xl hover:scale-105 transition-all border-2 border-gray-700">
+                    Enroll Now
+                </a>
+                <a href="contact.html" class="px-12 py-6 bg-transparent border-2 border-white/20 text-white rounded-3xl font-black text-xl hover:bg-white/10 transition-all">
+                    Talk to Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const panel = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    const isOpen = panel.style.maxHeight;
+
+                    document.querySelectorAll('.faq-panel').forEach(p => p.style.maxHeight = null);
+                    document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                    if (!isOpen) {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+<style>
+  /* WhatsApp Button Container */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* On-load Animation */
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    animation: wa-float-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+  }
+
+  /* Hover Effects */
+  .whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
+    background-color: #20b858;
+  }
+
+  /* SVG Icon Sizing */
+  .whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+  }
+
+  /* Tooltip Styling */
+  .wa-tooltip {
+    position: absolute;
+    right: 75px; /* Spaced out from the button */
+    background-color: #1f2937; /* Dark slate color */
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateX(10px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Tooltip Arrow pointing to the button */
+  .wa-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #1f2937;
+  }
+
+  /* Show tooltip on hover (Desktop only) */
+  @media (hover: hover) {
+    .whatsapp-float:hover .wa-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  /* Keyframe Animation */
+  @keyframes wa-float-in {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+      width: 55px;
+      height: 55px;
+    }
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+    }
+    .wa-tooltip {
+      display: none; /* Hide tooltip on mobile to prevent clutter */
+    }
+  }
+</style>
+
+<!-- HTML Structure -->
+<a href="#" id="whatsapp-btn" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <!-- Official WhatsApp SVG Vector -->
+ <svg viewBox="0 0 24 24" fill="white">
+  <path d="M20.52 3.48A11.94 11.94 0 0012.05 0C5.4 0 .02 5.38.02 12.03c0 2.12.56 4.2 1.62 6.04L0 24l6.11-1.6a12.03 12.03 0 005.94 1.52h.01c6.65 0 12.03-5.38 12.03-12.03 0-3.21-1.25-6.22-3.57-8.41zM12.05 21.9h-.01a9.88 9.88 0 01-5.03-1.38l-.36-.21-3.63.95.97-3.54-.23-.36a9.86 9.86 0 01-1.51-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 012.9 7.01c0 5.47-4.45 9.92-9.92 9.92zm5.48-7.39c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/>
+</svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<!-- JavaScript Functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const waButton = document.getElementById('whatsapp-btn');
+    
+    // --- CONFIGURATION ---
+    // Use your actual MR CODERS HUB number (Country code without '+')
+    const phoneNumber = '919360739559'; 
+    
+    // Create a dynamic message based on the current page the user is viewing
+    const pageTitle = document.title.split('|')[0].trim();
+    const message = `Hello MR CODERS HUB! I was looking at the "${pageTitle}" page and I'd like to know more about your services.`;
+    
+    // Properly encode the message for URL transmission
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Construct the official WhatsApp API URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Assign to button
+    waButton.setAttribute('href', whatsappUrl);
+  });
+</script>
+</body>
+
+</html>

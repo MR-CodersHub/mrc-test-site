@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Full Stack Course in Chennai with Internship | MR CODERS HUB</title>
+    <meta name="description" content="Learn Python full stack development with real projects and internship in Chennai. Build frontend, backend, and deploy applications at MR CODERS HUB.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-indigo': '#4F46E5',
+                        'brand-yellow': '#EAB308',
+                        'bg-main': '#F9FAFB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-blue: #1E3A8A;
+            --brand-indigo: #4F46E5;
+        }
+
+        body { -webkit-font-smoothing: antialiased; }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal-active { opacity: 1; transform: translateY(0); }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-indigo) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="bg-bg-main text-gray-900 overflow-x-hidden antialiased">
+
+    <!-- Global Navigation -->
+
+    <!-- Navigation Spacer -->
+    <div class="h-16 lg:h-20"></div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-8 pb-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-indigo/5 rounded-full blur-[120px] -mr-48 -mt-48"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-blue/5 rounded-full blur-[100px] -ml-24 -mb-24"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 mb-8">
+                        <span class="w-2 h-2 rounded-full bg-brand-indigo animate-pulse"></span>
+                        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-indigo">AI & Data Full Stack Track</span>
+                    </div>
+                    <h1 class="hero-title font-black mb-8 text-gray-900 font-outfit">
+                        Python Full Stack <br> <span class="gradient-text italic font-serif">Developer Course</span>
+                    </h1>
+                    <p class="text-xl text-slate-500 font-medium leading-relaxed max-w-xl mb-12">
+                        Learn frontend, backend (Python), and full stack development with hands-on training at MR CODERS HUB, Avadi, Chennai. Build real applications and become job-ready.
+                    </p>
+                    <div class="flex flex-wrap gap-6 mb-12">
+                        <a href="contact.html" class="px-10 py-5 bg-brand-purple text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-xl shadow-indigo-500/20">
+                            Enroll Now
+                        </a>
+                        <a href="#curriculum" class="px-10 py-5 bg-white border border-gray-200 text-gray-900 rounded-2xl font-black text-lg hover:bg-gray-50 transition-all">
+                            Get Course Details
+                        </a>
+                    </div>
+                    <div class="flex flex-wrap gap-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center"><i data-lucide="check" class="w-3 h-3"></i></div>
+                            <span class="text-xs font-black uppercase tracking-widest text-slate-400">Real Projects</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center"><i data-lucide="check" class="w-3 h-3"></i></div>
+                            <span class="text-xs font-black uppercase tracking-widest text-slate-400">Internship Included</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center"><i data-lucide="check" class="w-3 h-3"></i></div>
+                            <span class="text-xs font-black uppercase tracking-widest text-slate-400">Portfolio Ready</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative reveal delay-200">
+                    <div class="aspect-square rounded-[4rem] overflow-hidden shadow-2xl border-8 border-white">
+                        <img src="./assets/img/c6.jpg" 
+                             alt="Python Development" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -top-10 -right-10 p-8 glass-card rounded-3xl shadow-xl max-w-xs hidden md:block">
+                        <p class="text-sm font-bold text-gray-900 mb-2 italic font-serif">"Master the world's most versatile stack with industrial execution."</p>
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 rounded-full bg-brand-indigo"></div>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">MR CODERS HUB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. COURSE OVERVIEW -->
+    <section class="py-16 bg-white reveal">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="section-title font-black text-gray-900 font-outfit mb-8 leading-tight">Become a Job-Ready <br> <span class="gradient-text italic font-serif">Python Full Stack Developer</span></h2>
+            <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                This course is designed to take you from programming fundamentals to building complete full stack applications. You will learn frontend, backend using Python frameworks, and deployment with real-world project experience.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. WHAT YOU WILL LEARN & TECHNOLOGIES -->
+    <section class="py-16 bg-slate-50 reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div>
+                    <h3 class="text-2xl font-black text-gray-900 font-outfit mb-10">What You Will Learn</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="code" class="w-5 h-5"></i></div>
+                            <span class="font-bold text-gray-900">Python Programming Fundamentals</span>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="layout" class="w-5 h-5"></i></div>
+                            <span class="font-bold text-gray-900">Frontend Dev (HTML, CSS, JS)</span>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="server" class="w-5 h-5"></i></div>
+                            <span class="font-bold text-gray-900">Backend Dev (Flask/Django)</span>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="database" class="w-5 h-5"></i></div>
+                            <span class="font-bold text-gray-900">Database Integration</span>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="zap" class="w-5 h-5"></i></div>
+                            <span class="font-bold text-gray-900">API Development</span>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="globe" class="w-5 h-5"></i></div>
+                            <span class="font-bold text-gray-900">Deployment & Hosting</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-black text-gray-900 font-outfit mb-10">Tools & Technologies</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="px-6 py-3 bg-white rounded-2xl border border-slate-100 font-bold text-indigo-600 shadow-sm">Python</span>
+                        <span class="px-6 py-3 bg-white rounded-2xl border border-slate-100 font-bold text-gray-700 shadow-sm">Django / Flask</span>
+                        <span class="px-6 py-3 bg-white rounded-2xl border border-slate-100 font-bold text-gray-700 shadow-sm">HTML5 / CSS3</span>
+                        <span class="px-6 py-3 bg-white rounded-2xl border border-slate-100 font-bold text-gray-700 shadow-sm">JavaScript</span>
+                        <span class="px-6 py-3 bg-white rounded-2xl border border-slate-100 font-bold text-gray-700 shadow-sm">MySQL / SQLite</span>
+                        <span class="px-6 py-3 bg-white rounded-2xl border border-slate-100 font-bold text-gray-700 shadow-sm">Git & GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. COURSE STRUCTURE (TIMELINE) -->
+    <section id="curriculum" class="responsive-py bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="section-title font-black text-gray-900 font-outfit mb-4">3-Month Learning Path</h2>
+                <p class="text-xl text-slate-500 font-medium">A structured roadmap from core basics to live deployment.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Month 1 -->
+                <div class="relative p-10 bg-slate-50 rounded-[3rem] border border-slate-100 group hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+                    <span class="text-[10px] font-black text-brand-indigo uppercase tracking-widest block mb-8">Month 01</span>
+                    <h4 class="text-2xl font-black text-gray-900 mb-6 font-outfit">Programming & Frontend</h4>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-indigo"></i> Python fundamentals & logic</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-indigo"></i> HTML Structure & CSS Styling</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-indigo"></i> Responsive Design basics</li>
+                    </ul>
+                    <div class="pt-6 border-t border-slate-200">
+                        <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-sm font-bold text-gray-900">Build structured web pages and logic.</p>
+                    </div>
+                </div>
+
+                <!-- Month 2 -->
+                <div class="relative p-10 bg-slate-50 rounded-[3rem] border border-slate-100 group hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+                    <span class="text-[10px] font-black text-brand-indigo uppercase tracking-widest block mb-8">Month 02</span>
+                    <h4 class="text-2xl font-black text-gray-900 mb-6 font-outfit">JavaScript & Backend</h4>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-indigo"></i> JavaScript & DOM manipulation</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-indigo"></i> Flask/Django backend basics</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-indigo"></i> API creation & integration</li>
+                    </ul>
+                    <div class="pt-6 border-t border-slate-200">
+                        <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-sm font-bold text-gray-900">Develop interactive logic & APIs.</p>
+                    </div>
+                </div>
+
+                <!-- Month 3 -->
+                <div class="relative p-10 bg-slate-50 rounded-[3rem] border border-slate-100 group hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+                    <span class="text-[10px] font-black text-brand-indigo uppercase tracking-widest block mb-8">Month 03</span>
+                    <h4 class="text-2xl font-black text-gray-900 mb-6 font-outfit">Full Stack & Deployment</h4>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-indigo"></i> Database connectivity (SQL)</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-indigo"></i> Authentication & Security</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-indigo"></i> Live deployment & hosting</li>
+                    </ul>
+                    <div class="pt-6 border-t border-slate-200">
+                        <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-sm font-bold text-gray-900">Build and deploy complete apps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. WHAT YOU WILL BUILD -->
+    <section class="py-16 bg-slate-50 reveal">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-5xl font-black mb-20 font-outfit">What You Will Build</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center">
+                    <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="monitor" class="w-7 h-7"></i></div>
+                    <span class="font-bold text-gray-900 text-sm">Full Stack Web <br> Applications</span>
+                </div>
+                <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center">
+                    <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="server" class="w-7 h-7"></i></div>
+                    <span class="font-bold text-gray-900 text-sm text-nowrap">Backend APIs (Python)</span>
+                </div>
+                <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center">
+                    <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="database" class="w-7 h-7"></i></div>
+                    <span class="font-bold text-gray-900 text-sm">Database-driven <br> Systems</span>
+                </div>
+                <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center">
+                    <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="rocket" class="w-7 h-7"></i></div>
+                    <span class="font-bold text-gray-900 text-sm">Live Deployed <br> Projects</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. INTERNSHIP & CAREER -->
+    <section class="py-32 bg-slate-900 text-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-8 font-outfit">Internship with Real <br> <span class="italic font-serif gradient-text">Development Projects</span></h2>
+                    <ul class="space-y-6 mb-12">
+                        <li class="flex items-center gap-4 text-lg font-bold">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-indigo"></i> Work on real applications
+                        </li>
+                        <li class="flex items-center gap-4 text-lg font-bold">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-indigo"></i> Get mentor guidance
+                        </li>
+                        <li class="flex items-center gap-4 text-lg font-bold">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-indigo"></i> Build production-level projects
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-12 glass-card rounded-[4rem] border-white/10 text-center">
+                    <i data-lucide="code" class="w-16 h-16 text-brand-indigo mx-auto mb-8"></i>
+                    <h3 class="text-2xl text-black font-black mb-4 font-outfit">Python Dev Internship</h3>
+                    <p class="text-black/50 mb-8 font-medium italic text-sm">"Bridge the gap between theoretical Python and industrial full stack execution."</p>
+                    <a href="booking.html" class="inline-block px-10 py-5 bg-white text-slate-900 rounded-2xl font-bold hover:bg-slate-100 transition-all">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. WHO SHOULD JOIN & OUTCOMES -->
+    <section class="py-32 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-32">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 font-outfit mb-12">Who Should Join</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mobile-slider">
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex items-center gap-4 font-bold text-gray-900">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-brand-indigo"></i> Students (BCA, BSc, etc.)
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex items-center gap-4 font-bold text-gray-900">
+                            <i data-lucide="user-plus" class="w-6 h-6 text-brand-indigo"></i> Beginners in Dev
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex items-center gap-4 font-bold text-gray-900">
+                            <i data-lucide="briefcase" class="w-6 h-6 text-brand-indigo"></i> IT Job Seekers
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex items-center gap-4 font-bold text-gray-900">
+                            <i data-lucide="refresh-cw" class="w-6 h-6 text-brand-indigo"></i> Career Switchers
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 font-outfit mb-12">Career Opportunities</h2>
+                    <div class="space-y-4">
+                        <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm flex items-center justify-between group">
+                            <span class="font-bold text-gray-900">Python Developer</span>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-indigo group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"></i>
+                        </div>
+                        <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm flex items-center justify-between group">
+                            <span class="font-bold text-gray-900">Full Stack Developer</span>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-indigo group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"></i>
+                        </div>
+                        <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm flex items-center justify-between group">
+                            <span class="font-bold text-gray-900">Backend Developer</span>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-indigo group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"></i>
+                        </div>
+                        <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm flex items-center justify-between group">
+                            <span class="font-bold text-gray-900 text-nowrap">Web App Developer</span>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-indigo group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. LOCAL SEO SECTION -->
+    <section class="py-8 bg-slate-50 reveal">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-5xl font-black text-gray-900 font-outfit mb-8 leading-tight">Best Python Full Stack Course in <span class="italic font-serif gradient-text">Avadi, Chennai</span></h2>
+            <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                MR CODERS HUB provides practical full stack development training using Python for students across Chennai, Tamil Nadu, helping them gain real-world experience and job-ready skills.
+            </p>
+        </div>
+    </section>
+
+    <!-- 9. FAQ -->
+    <section class="py-16 bg-white reveal">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-2xl md:text-5xl font-black text-gray-900 font-outfit">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Is this Python Full Stack course suitable for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, the course starts from basics and progresses systematically to advanced full stack development.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Will I build real projects?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, you will build and deploy multiple full stack applications, ensuring you have a portfolio for recruiters.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Which backend framework is used?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            We cover Python-based frameworks like Flask and provide a deep dive into Django for building robust backends.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">What is the duration of the course?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            The course duration is 3 months, which includes intensive training and a hands-on internship.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FINAL CTA -->
+    <section id="enroll" class="responsive-py bg-slate-900 text-white text-center reveal adaptive-rounded mx-4 sm:mx-6 md:mx-10 mb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-indigo/5 blur-[120px] rounded-full"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="hero-title font-black mb-12 font-outfit leading-none tracking-tight">Start Your Full Stack <br> <span class="italic font-serif ">Career with Python</span></h2>
+            <p class="text-xl md:text-2xl text-white/50 mb-16 max-w-2xl mx-auto font-medium">
+                Build real applications, gain industrial experience, and become job-ready.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="contact.html" class="px-12 py-6 bg-brand-indigo border-2 border-white/20 text-white rounded-full font-black text-xl hover:scale-105 transition-all">
+                    Enroll Now
+                </a>
+                <a href="#curriculum" class="px-12 py-6 bg-transparent border-2 border-white/20 text-white rounded-full font-black text-xl hover:bg-white/10 transition-all">
+                    Get Course Details
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const panel = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    const isOpen = panel.style.maxHeight;
+
+                    document.querySelectorAll('.faq-panel').forEach(p => p.style.maxHeight = null);
+                    document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                    if (!isOpen) {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+<style>
+  /* WhatsApp Button Container */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* On-load Animation */
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    animation: wa-float-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+  }
+
+  /* Hover Effects */
+  .whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
+    background-color: #20b858;
+  }
+
+  /* SVG Icon Sizing */
+  .whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+  }
+
+  /* Tooltip Styling */
+  .wa-tooltip {
+    position: absolute;
+    right: 75px; /* Spaced out from the button */
+    background-color: #1f2937; /* Dark slate color */
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateX(10px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Tooltip Arrow pointing to the button */
+  .wa-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #1f2937;
+  }
+
+  /* Show tooltip on hover (Desktop only) */
+  @media (hover: hover) {
+    .whatsapp-float:hover .wa-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  /* Keyframe Animation */
+  @keyframes wa-float-in {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+      width: 55px;
+      height: 55px;
+    }
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+    }
+    .wa-tooltip {
+      display: none; /* Hide tooltip on mobile to prevent clutter */
+    }
+  }
+</style>
+
+<!-- HTML Structure -->
+<a href="#" id="whatsapp-btn" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <!-- Official WhatsApp SVG Vector -->
+ <svg viewBox="0 0 24 24" fill="white">
+  <path d="M20.52 3.48A11.94 11.94 0 0012.05 0C5.4 0 .02 5.38.02 12.03c0 2.12.56 4.2 1.62 6.04L0 24l6.11-1.6a12.03 12.03 0 005.94 1.52h.01c6.65 0 12.03-5.38 12.03-12.03 0-3.21-1.25-6.22-3.57-8.41zM12.05 21.9h-.01a9.88 9.88 0 01-5.03-1.38l-.36-.21-3.63.95.97-3.54-.23-.36a9.86 9.86 0 01-1.51-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 012.9 7.01c0 5.47-4.45 9.92-9.92 9.92zm5.48-7.39c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/>
+</svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<!-- JavaScript Functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const waButton = document.getElementById('whatsapp-btn');
+    
+    // --- CONFIGURATION ---
+    // Use your actual MR CODERS HUB number (Country code without '+')
+    const phoneNumber = '919360739559'; 
+    
+    // Create a dynamic message based on the current page the user is viewing
+    const pageTitle = document.title.split('|')[0].trim();
+    const message = `Hello MR CODERS HUB! I was looking at the "${pageTitle}" page and I'd like to know more about your services.`;
+    
+    // Properly encode the message for URL transmission
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Construct the official WhatsApp API URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Assign to button
+    waButton.setAttribute('href', whatsappUrl);
+  });
+</script>
+</body>
+
+</html>

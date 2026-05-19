@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Development & Customized Tech Solutions | MR CODERS HUB</title>
+    <meta name="description"
+        content="Custom hardware development and technical solutions tailored to your business needs. From IoT to specialized projects, MR CODERS HUB delivers precision engineering.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-purple': '#7C3AED',
+                        'brand-orange': '#F59E0B',
+                        'bg-main': '#F9FAFB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px -15px rgba(15, 23, 42, 0.12)',
+                        'glow-blue': '0 0 30px rgba(15, 23, 42, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-blue: #1E3A8A;
+            --brand-purple: #7C3AED;
+            --brand-orange: #F59E0B;
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #1E3A8A 0%, #7C3AED 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .process-line {
+            position: absolute;
+            left: 28px;
+            top: 60px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #0f172a 0%, transparent 100%);
+        }
+
+        /* Align navbar layout with contact.html */
+        .max-w-7xl {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./assets/css/global.css">
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="bg-bg-main text-gray-900 overflow-x-hidden antialiased">
+
+    <!-- Global Navigation & Mobile Menu will be injected via main.js -->
+    <div class="h-16 lg:h-20"></div>
+
+    <!-- 1. HERO SECTION -->
+    <section
+        class="relative min-h-[80vh] sm:min-h-[95vh] flex items-center justify-center overflow-hidden py-8 bg-white">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-bg-main"></div>
+            <img src="./assets/img/bg2.jpg" alt="Background" class="w-full h-full object-cover opacity-10 grayscale">
+        </div>
+
+        <!-- Animated Background Blur -->
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2 z-0">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div class="reveal">
+                <div
+                    class="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-slate-900/5 border border-brand-blue/10 mb-8">
+                    <span class="w-2 h-2 rounded-full bg-slate-900 animate-pulse"></span>
+                    <span class="text-[10px] font-black uppercase tracking-[0.4em] text-brand-blue">Precision
+                        Engineering
+                        Solutions</span>
+                </div>
+
+                <h1 class="text-4xl md:text-7xl font-black mb-8 text-gray-900 font-outfit leading-tight tracking-tight">
+                    Hardware Development <br> <span class="gradient-text italic font-serif">& Customized
+                        Solutions</span>
+                </h1>
+
+                <p class="text-xl md:text-2xl text-slate-600 font-medium leading-relaxed max-w-3xl mx-auto mb-12">
+                    We provide hardware projects and customized engineering solutions tailored to specific business and
+                    technical requirements.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-6 mb-8">
+                    <a href="contact.html"
+                        class="px-10 py-5 bg-brand-purple text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-premium">
+                        Discuss Your Project
+                    </a>
+                    <a href="projects.html"
+                        class="px-10 py-5 bg-white border border-gray-200 text-gray-900 rounded-2xl font-black text-lg hover:bg-gray-50 transition-all">
+                        View Past Work
+                    </a>
+                </div>
+                <p class="text-sm font-bold text-slate-400 tracking-wider uppercase">Customized Hardware. Scalable
+                    Engineering. Proven Results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PROJECT SHOWCASE / FILTERS -->
+    <section class="max-w-7xl mx-auto px-6 py-12 md:py-20 reveal">
+        <div class="flex flex-col items-center">
+            <div class="text-center mb-16">
+                <h2 class="section-title font-black text-gray-900 font-outfit mb-4">Hardware Solution Areas</h2>
+                <p class="text-xl text-slate-500 font-medium">Explore our specialized hardware expertise across
+                    different domains.</p>
+            </div>
+            <!-- Filter Row -->
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-6 mb-16 sm:mb-24">
+                <button data-filter="all"
+                    class="filter-btn active px-6 sm:px-10 py-3 sm:py-4 bg-white border border-slate-200 text-slate-600 rounded-full font-bold shadow-sm hover:shadow-premium hover:border-brand-blue hover:text-brand-blue hover:-translate-y-1 transition-all duration-300">
+                    All
+                </button>
+                <button data-filter="industry"
+                    class="filter-btn px-6 sm:px-10 py-3 sm:py-4 bg-white border border-slate-200 text-slate-600 rounded-full font-bold shadow-sm hover:shadow-premium hover:border-brand-blue hover:text-brand-blue hover:-translate-y-1 transition-all duration-300">
+                    Industry
+                </button>
+                <button data-filter="student"
+                    class="filter-btn px-6 sm:px-10 py-3 sm:py-4 bg-white border border-slate-200 text-slate-600 rounded-full font-bold shadow-sm hover:shadow-premium hover:border-brand-blue hover:text-brand-blue hover:-translate-y-1 transition-all duration-300">
+                    Student
+                </button>
+                <button data-filter="future"
+                    class="filter-btn px-6 sm:px-10 py-3 sm:py-4 bg-white border border-slate-200 text-slate-600 rounded-full font-bold shadow-sm hover:shadow-premium hover:border-brand-blue hover:text-brand-blue hover:-translate-y-1 transition-all duration-300">
+                    Future
+                </button>
+            </div>
+
+            <!-- Image Card Layout (Centering Orphans) -->
+            <div class="flex flex-wrap justify-center gap-8 lg:gap-10 w-full" id="projectGrid">
+                <!-- Card 1: Industry -->
+                <div class="project-card group relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-premium transition-all duration-500 cursor-pointer w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]"
+                    data-category="industry" data-id="p1">
+                    <img src="./assets/img/generated/hardware-industry.png" alt="Industrial Hardware Development"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-brand-orange mb-2">Industry
+                            Solutions</span>
+                        <h4 class="text-white text-lg font-black font-outfit">Tube Testing Machine</h4>
+                    </div>
+                </div>
+
+                <!-- Card 2: Industry -->
+                <div class="project-card group relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-premium transition-all duration-500 cursor-pointer w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]"
+                    data-category="industry" data-id="p2">
+                    <img src="./uploads/high_density_pcb.png" alt="Advanced PCB Design"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-brand-orange mb-2">Industry
+                            Solutions</span>
+                        <h4 class="text-white text-lg font-black font-outfit">High-Density PCB Architecture</h4>
+                    </div>
+                </div>
+
+                <!-- Card 3: Student -->
+                <div class="project-card group relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-premium transition-all duration-500 cursor-pointer w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]"
+                    data-category="student" data-id="p3">
+                    <img src="./assets/img/generated/sensor-rc-car.png" alt="Sensor Remote Control Car"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-brand-blue mb-2">Educational
+                            Projects</span>
+                        <h4 class="text-white text-lg font-black font-outfit">Sensor Remote Control Car</h4>
+                    </div>
+                </div>
+
+                <!-- Card 4: Student -->
+                <div class="project-card group relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-premium transition-all duration-500 cursor-pointer w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]"
+                    data-category="student" data-id="p4">
+                    <img src="./assets/img/generated/hardware-student-2.png" alt="Collaborative Tech Lab"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-brand-blue mb-2">Educational
+                            Projects</span>
+                        <h4 class="text-white text-lg font-black font-outfit">Robotics & Team Collaboration</h4>
+                    </div>
+                </div>
+
+                <!-- Card 5: Future -->
+                <div class="project-card group relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-premium transition-all duration-500 cursor-pointer w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]"
+                    data-category="future" data-id="p5">
+                    <img src="./assets/img/generated/hardware-future-1.png" alt="Future Tech Concept"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-brand-purple mb-2">Future
+                            Concepts</span>
+                        <h4 class="text-white text-lg font-black font-outfit">Holographic Engineering Interfaces</h4>
+                    </div>
+                </div>
+
+                <!-- Card 6: Future -->
+                <div class="project-card group relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-premium transition-all duration-500 cursor-pointer w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]"
+                    data-category="future" data-id="p6">
+                    <img src="./assets/img/generated/hardware-future-2.png" alt="Sustainable Hardware"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-brand-purple mb-2">Future
+                            Concepts</span>
+                        <h4 class="text-white text-lg font-black font-outfit">Sustainable Green Technology</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 4. FINAL CTA SECTION -->
+     <section class="responsive-py bg-slate-900 text-white adaptive-rounded responsive-mx mb-20 relative overflow-hidden reveal">
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <h2 class="hero-title font-black mb-8 leading-none">Need a <br> <span class="italic font-serif">Custom Hardware Solution ?</span></h2>
+            <p class="text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto font-medium">
+                From IoT prototypes to industrial-grade PCB architecture—we build hardware that performs.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="contact.html" class="px-12 py-6 bg-white text-brand-blue rounded-full font-bold text-xl hover:scale-105 transition-all shadow-2xl">Start a Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be injected via main.js -->
+
+    <!-- 4. PROJECT DETAIL MODAL -->
+    <div id="projectModal" class="fixed inset-0 z-[150] hidden flex items-center justify-center p-4 sm:p-6 md:p-10">
+        <div id="modalOverlay"
+            class="absolute inset-0 bg-slate-950/40 backdrop-blur-xl transition-opacity duration-500 opacity-0"></div>
+
+        <div id="modalContent"
+            class="relative bg-white w-full max-w-4xl max-h-[95vh] rounded-[2.5rem] sm:rounded-[3rem] shadow-2xl overflow-hidden transform translate-y-10 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22, 1, 0.36, 1)] flex flex-col md:flex-row">
+            <!-- Modal Close -->
+            <button id="closeModal"
+                class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-md text-slate-500 rounded-full flex items-center justify-center hover:bg-red-50 hover:text-red-500 transition-all z-20 shadow-sm border border-slate-100">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Left: Image Section -->
+            <div class="md:w-[45%] h-56 md:h-auto relative overflow-hidden">
+                <img id="modalImg" src="" alt="Project Detail" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
+            </div>
+
+            <!-- Right: Content Section -->
+            <div class="md:w-[55%] p-6 sm:p-8 md:p-10 overflow-y-auto custom-scrollbar flex flex-col">
+                <div class="mb-6">
+                    <span id="modalCategory"
+                        class="text-[9px] font-black uppercase tracking-[0.2em] text-brand-blue mb-3 block">Category</span>
+                    <h2 id="modalTitle"
+                        class="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 font-outfit tracking-tighter leading-[1.1] mb-4">
+                        Project Title</h2>
+                    <p id="modalDesc" class="text-base text-slate-600 font-medium leading-relaxed mb-6">Detailed project
+                        description goes here.</p>
+
+                    <div class="space-y-4">
+                        <h4 class="text-[10px] font-black uppercase tracking-widest text-gray-400">Key Features</h4>
+                        <ul id="modalFeatures" class="space-y-3">
+                            <!-- Features will be injected here -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-auto pt-6 border-t border-slate-100">
+                    <a href="contact.html"
+                        class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 bg-slate-900 text-white rounded-xl font-black text-base hover:scale-105 shadow-lg shadow-blue-900/10 transition-all">
+                        Enquiry Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Project Data
+            const projectData = {
+                p1: {
+                    title: "Tube Testing Machine",
+                    category: "Industry Solutions",
+                    desc: "High-precision hardware prototypes designed for industrial automation and testing. Engineered for reliability in rigorous environments.",
+                    img: "./assets/img/generated/hardware-industry.png",
+                    features: ["Precision CNC components", "Integrated smart sensors", "Industrial-grade durability", "Real-time diagnostic feedback"]
+                },
+                p2: {
+                    title: "High-Density PCB Architecture",
+                    category: "Industry Solutions",
+                    desc: "Advanced multi-layer PCB design for high-performance computing and compact electronics. Focused on signal integrity and thermal efficiency.",
+                    img: "./uploads/high_density_pcb.png",
+                    features: ["16-layer stackup design", "Signal integrity optimization", "Compact thermal management", "High-speed data bus support"]
+                },
+                p3: {
+                    title: "Sensor Remote Control Car",
+                    category: "Educational Projects",
+                    desc: "An intelligent autonomous vehicle equipped with ultrasonic and infrared sensors for obstacle avoidance and path planning.",
+                    img: "./assets/img/generated/sensor-rc-car.png",
+                    features: ["Ultrasonic distance sensing", "Arduino Mega control system", "Dynamic obstacle avoidance", "Wireless Bluetooth interface"]
+                },
+                p4: {
+                    title: "Robotics & Team Collaboration",
+                    category: "Educational Projects",
+                    desc: "A collaborative robotics platform designed for students to learn multi-agent coordination and swarm intelligence.",
+                    img: "./assets/img/generated/hardware-student-2.png",
+                    features: ["Swarm coordination logic", "Distributed mesh networking", "Open-source control API", "Modular hardware extension"]
+                },
+                p5: {
+                    title: "Holographic Engineering Interfaces",
+                    category: "Future Concepts",
+                    desc: "A conceptual hardware interface utilizing holographic projections for immersive 3D engineering design and manipulation.",
+                    img: "./assets/img/generated/hardware-future-1.png",
+                    features: ["3D volumetric visualization", "Touchless gesture interaction", "Real-time CAD synchronization", "Multi-user collaborative mode"]
+                },
+                p6: {
+                    title: "Sustainable Green Technology",
+                    category: "Future Concepts",
+                    desc: "Eco-friendly hardware solution focused on renewable energy integration and biodegradable material usage in electronics.",
+                    img: "./assets/img/generated/hardware-future-2.png",
+                    features: ["High-efficiency solar cells", "Ultra-low power sleep modes", "Recyclable substrate materials", "Smart energy harvesting"]
+                }
+            };
+
+            // Modal Functionality
+            const modal = document.getElementById('projectModal');
+            const overlay = document.getElementById('modalOverlay');
+            const content = document.getElementById('modalContent');
+            const closeBtn = document.getElementById('closeModal');
+
+            function openModal(id) {
+                const data = projectData[id];
+                if (!data) return;
+
+                document.getElementById('modalTitle').textContent = data.title;
+                document.getElementById('modalCategory').textContent = data.category;
+                document.getElementById('modalDesc').textContent = data.desc;
+                document.getElementById('modalImg').src = data.img;
+
+                const featuresList = document.getElementById('modalFeatures');
+                featuresList.innerHTML = '';
+                data.features.forEach(feat => {
+                    const li = document.createElement('li');
+                    li.className = 'flex items-center gap-3 text-slate-700 font-bold';
+                    li.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span> ${feat}`;
+                    featuresList.appendChild(li);
+                });
+
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    overlay.classList.replace('opacity-0', 'opacity-100');
+                    content.classList.replace('translate-y-10', 'translate-y-0');
+                    content.classList.replace('opacity-0', 'opacity-100');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                overlay.classList.replace('opacity-100', 'opacity-0');
+                content.classList.replace('translate-y-0', 'translate-y-10');
+                content.classList.replace('opacity-100', 'opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 500);
+            }
+
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('click', () => openModal(card.getAttribute('data-id')));
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+            overlay.addEventListener('click', closeModal);
+
+            // Filtering Logic
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active', 'border-brand-blue', 'text-brand-blue', 'shadow-premium'));
+                    btn.classList.add('active', 'border-brand-blue', 'text-brand-blue', 'shadow-premium');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category').toLowerCase().includes(filter)) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.95)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            animation: wa-float-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
+            background-color: #20b858;
+        }
+
+        .whatsapp-float svg {
+            width: 34px;
+            height: 34px;
+            fill: currentColor;
+        }
+
+        .wa-tooltip {
+            position: absolute;
+            right: 75px;
+            background-color: #1f2937;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            transform: translateX(10px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .wa-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -6px;
+            transform: translateY(-50%);
+            border-width: 6px 0 6px 6px;
+            border-style: solid;
+            border-color: transparent transparent transparent #1f2937;
+        }
+
+        @media (hover: hover) {
+            .whatsapp-float:hover .wa-tooltip {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes wa-float-in {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .whatsapp-float svg {
+                width: 30px;
+                height: 30px;
+            }
+
+            .wa-tooltip {
+                display: none;
+            }
+        }
+    </style>
+    <a href="#" id="whatsapp-btn" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="white">
+            <path
+                d="M20.52 3.48A11.94 11.94 0 0012.05 0C5.4 0 .02 5.38.02 12.03c0 2.12.56 4.2 1.62 6.04L0 24l6.11-1.6a12.03 12.03 0 005.94 1.52h.01c6.65 0 12.03-5.38 12.03-12.03 0-3.21-1.25-6.22-3.57-8.41zM12.05 21.9h-.01a9.88 9.88 0 01-5.03-1.38l-.36-.21-3.63.95.97-3.54-.23-.36a9.86 9.86 0 01-1.51-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 012.9 7.01c0 5.47-4.45 9.92-9.92 9.92zm5.48-7.39c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z" />
+        </svg>
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const waButton = document.getElementById('whatsapp-btn');
+            const phoneNumber = '919360739559';
+            const pageTitle = document.title.split('|')[0].trim();
+            const message = `Hello MR CODERS HUB! I was looking at the "${pageTitle}" page and I'd like to know more about your hardware services.`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            waButton.setAttribute('href', whatsappUrl);
+        });
+    </script>
+</body>
+
+</html>

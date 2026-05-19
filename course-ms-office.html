@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Office Course in Chennai for Beginners | MR CODERS HUB</title>
+    <meta name="description" content="Learn MS Word, Excel, PowerPoint, and Outlook with practical training in Chennai. Build job-ready office skills at MR CODERS HUB.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'ms-word': '#2B579A',
+                        'ms-excel': '#217346',
+                        'ms-ppt': '#D24726',
+                        'ms-outlook': '#0078D4',
+                        'bg-main': '#F9FAFB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px -15px rgba(30, 58, 138, 0.12)',
+                        'glow-blue': '0 0 30px rgba(30, 58, 138, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-blue: #1E3A8A;
+        }
+
+        body { -webkit-font-smoothing: antialiased; }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal-active { opacity: 1; transform: translateY(0); }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--brand-blue) 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tool-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.4s ease;
+        }
+
+        .tool-card:hover { transform: translateY(-10px); }
+
+        .module-line {
+            position: absolute;
+            left: 24px;
+            top: 40px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--brand-blue) 0%, transparent 100%);
+        }
+    </style>
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="bg-bg-main text-gray-900 overflow-x-hidden antialiased">
+
+    <!-- Global Navigation -->
+
+    <!-- Navigation Spacer -->
+    <div class="h-16 lg:h-20"></div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-16 pb-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue/5 rounded-full blur-[120px] -mr-48 -mt-48"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] -ml-24 -mb-24"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-8">
+                        <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-blue-600">Essential Workplace Skills</span>
+                    </div>
+                    <h1 class="hero-title font-black mb-8 text-gray-900 font-outfit">
+                        MS Office Course <br> <span class="gradient-text italic font-serif">for Job-Ready Skills</span>
+                    </h1>
+                    <p class="text-xl text-slate-500 font-medium leading-relaxed mb-12">
+                        Learn Microsoft Word, Excel, PowerPoint, Outlook, and Teams with practical training at MR CODERS HUB, Avadi, Chennai.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="contact.html" class="w-full sm:w-auto px-10 py-5 bg-brand-blue text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-premium text-center">
+                            Enroll Now
+                        </a>
+                        <a href="#curriculum" class="w-full sm:w-auto px-10 py-5 bg-white border border-gray-200 text-gray-900 rounded-2xl font-black text-lg hover:bg-gray-50 transition-all text-center">
+                            Get Course Details
+                        </a>
+                    </div>
+                </div>
+                <div class="reveal delay-200">
+                    <div class="relative adaptive-rounded overflow-hidden shadow-premium aspect-video bg-slate-900">
+                        <img src="./assets/img/c4.jpg" 
+                             alt="MS Office Workplace" 
+                             class="w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. COURSE OVERVIEW -->
+    <section class="py-16 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span class="text-[10px] font-black text-brand-blue uppercase tracking-[0.5em] block mb-6">Career Backbone</span>
+                    <h2 class="section-title font-black text-gray-900 tracking-tight leading-tight mb-8 font-outfit">
+                        Master Essential <br> <span class="italic font-serif text-brand-blue">Office Skills</span>
+                    </h2>
+                    <p class="text-xl text-slate-600 font-medium leading-relaxed mb-8">
+                        This course is designed to help you become confident in using Microsoft Office tools for real workplace tasks. From document creation to data handling and presentations, you will learn skills used in every industry.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mobile-slider">
+                        <div class="flex items-center gap-3 font-black text-gray-900 uppercase tracking-tighter">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-ms-word"></i> MS Word
+                        </div>
+                        <div class="flex items-center gap-3 font-black text-gray-900 uppercase tracking-tighter">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-ms-excel"></i> MS Excel
+                        </div>
+                        <div class="flex items-center gap-3 font-black text-gray-900 uppercase tracking-tighter">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-ms-ppt"></i> MS PowerPoint
+                        </div>
+                        <div class="flex items-center gap-3 font-black text-gray-900 uppercase tracking-tighter">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-ms-outlook"></i> MS Outlook
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-12 rounded-[3.5rem] border border-slate-100">
+                    <h3 class="text-2xl font-black mb-8 font-outfit">What You Will Learn</h3>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i data-lucide="file-text" class="w-5 h-5 text-ms-word"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Document Creation</h4>
+                                <p class="text-sm text-slate-500 font-medium">Professional formatting and reporting in Word.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i data-lucide="table" class="w-5 h-5 text-ms-excel"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Data Handling</h4>
+                                <p class="text-sm text-slate-500 font-medium">Advanced Excel formulas and data analysis.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i data-lucide="presentation" class="w-5 h-5 text-ms-ppt"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Presentation Skills</h4>
+                                <p class="text-sm text-slate-500 font-medium">Impactful slides and business pitching.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="responsive-py bg-slate-50 reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="section-title font-black text-gray-900 font-outfit mb-4">Learn by Doing Real Tasks</h2>
+                <p class="text-xl text-slate-500 font-medium">Every module is followed by a real-world office scenario exercise.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="tool-card p-10 adaptive-rounded shadow-premium">
+                    <i data-lucide="file-edit" class="w-12 h-12 text-ms-word mb-8"></i>
+                    <h3 class="text-xl font-black mb-4  tracking-tighter">Professional Reports</h3>
+                    <p class="text-slate-500 font-medium text-sm leading-relaxed">Create structured documents, business letters, and resumes with automated numbering and styles.</p>
+                </div>
+                <div class="tool-card p-10 adaptive-rounded shadow-premium">
+                    <i data-lucide="bar-chart-2" class="w-12 h-12 text-ms-excel mb-8"></i>
+                    <h3 class="text-xl font-black mb-4  tracking-tighter">Financial Data</h3>
+                    <p class="text-slate-500 font-medium text-sm leading-relaxed">Manage company budgets, inventory, and payroll using logical formulas and pivot tables.</p>
+                </div>
+                <div class="tool-card p-10 adaptive-rounded shadow-premium">
+                    <i data-lucide="mail" class="w-12 h-12 text-ms-outlook mb-8"></i>
+                    <h3 class="text-xl font-black mb-4  tracking-tighter">Communication</h3>
+                    <p class="text-slate-500 font-medium text-sm leading-relaxed">Master email etiquette, calendar scheduling, and contact management for efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WHO SHOULD JOIN & WHY -->
+    <section class="py-32 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-2xl font-black text-gray-900 font-outfit mb-12">Who Should Join</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-brand-blue"></i>
+                            <span class="font-bold text-gray-900">Students (Any Degree)</span>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
+                            <i data-lucide="user-plus" class="w-6 h-6 text-brand-blue"></i>
+                            <span class="font-bold text-gray-900">Freshers</span>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
+                            <i data-lucide="briefcase" class="w-6 h-6 text-brand-blue"></i>
+                            <span class="font-bold text-gray-900">Office Staff</span>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
+                            <i data-lucide="search" class="w-6 h-6 text-brand-blue"></i>
+                            <span class="font-bold text-gray-900">Job Seekers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-12 bg-brand-blue adaptive-rounded text-white">
+                    <h3 class="text-2xl font-black mb-8 font-outfit">Why This Course Matters</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-4 text-white/80 font-medium"><i data-lucide="check" class="w-5 h-5 text-white"></i> Used in every corporate job</li>
+                        <li class="flex items-center gap-4 text-white/80 font-medium"><i data-lucide="check" class="w-5 h-5 text-white"></i> Essential for office productivity</li>
+                        <li class="flex items-center gap-4 text-white/80 font-medium"><i data-lucide="check" class="w-5 h-5 text-white"></i> Improves efficiency & professionalism</li>
+                        <li class="flex items-center gap-4 text-white/80 font-medium"><i data-lucide="check" class="w-5 h-5 text-white"></i> Required for business roles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CURRICULUM MODULES -->
+    <section id="curriculum" class="py-16 bg-bg-main reveal">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="text-2xl md:text-6xl font-black text-gray-900 font-outfit mb-4">Step-by-Step Training</h2>
+                <p class="text-xl text-slate-500 font-medium">Modular learning path from basics to advanced usage.</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Module 1 -->
+                <div class="p-10 bg-white rounded-[3rem] border border-slate-100 shadow-sm relative group">
+                    <div class="absolute left-[-2px] top-10 bottom-10 w-1 bg-ms-word rounded-full opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="flex flex-col md:flex-row gap-10">
+                        <div class="shrink-0">
+                            <div class="w-16 h-16 bg-ms-word/5 text-ms-word rounded-2xl flex items-center justify-center font-black text-2xl">W</div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-black text-gray-900 mb-4 font-outfit">Microsoft Word</h3>
+                            <p class="text-slate-500 font-medium mb-6">Creating and formatting documents, page layouts, tables, and professional design.</p>
+                            <div class="inline-block px-3 py-1 bg-ms-word/5 rounded-lg text-[10px] font-black text-ms-word uppercase tracking-widest">Outcome: Professional Reports</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Module 2 -->
+                <div class="p-10 bg-white rounded-[3rem] border border-slate-100 shadow-sm relative group">
+                    <div class="absolute left-[-2px] top-10 bottom-10 w-1 bg-ms-excel rounded-full opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="flex flex-col md:flex-row gap-10">
+                        <div class="shrink-0">
+                            <div class="w-16 h-16 bg-ms-excel/5 text-ms-excel rounded-2xl flex items-center justify-center font-black text-2xl">X</div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-black text-gray-900 mb-4 font-outfit">Microsoft Excel</h3>
+                            <p class="text-slate-500 font-medium mb-6">Excel basics, formulas, sorting, filtering, charts, and basic data analysis.</p>
+                            <div class="inline-block px-3 py-1 bg-ms-excel/5 rounded-lg text-[10px] font-black text-ms-excel uppercase tracking-widest">Outcome: Efficient Data Management</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Module 3 -->
+                <div class="p-10 bg-white rounded-[3rem] border border-slate-100 shadow-sm relative group">
+                    <div class="absolute left-[-2px] top-10 bottom-10 w-1 bg-ms-ppt rounded-full opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="flex flex-col md:flex-row gap-10">
+                        <div class="shrink-0">
+                            <div class="w-16 h-16 bg-ms-ppt/5 text-ms-ppt rounded-2xl flex items-center justify-center font-black text-2xl">P</div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-black text-gray-900 mb-4 font-outfit">Microsoft PowerPoint</h3>
+                            <p class="text-slate-500 font-medium mb-6">Slide design, animations, transitions, and business presentation techniques.</p>
+                            <div class="inline-block px-3 py-1 bg-ms-ppt/5 rounded-lg text-[10px] font-black text-ms-ppt uppercase tracking-widest">Outcome: Impactful Presentations</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Module 4 -->
+                <div class="p-10 bg-white rounded-[3rem] border border-slate-100 shadow-sm relative group">
+                    <div class="absolute left-[-2px] top-10 bottom-10 w-1 bg-ms-outlook rounded-full opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="flex flex-col md:flex-row gap-10">
+                        <div class="shrink-0">
+                            <div class="w-16 h-16 bg-ms-outlook/5 text-ms-outlook rounded-2xl flex items-center justify-center font-black text-2xl">O</div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-black text-gray-900 mb-4 font-outfit">Microsoft Outlook & Teams</h3>
+                            <p class="text-slate-500 font-medium mb-6">Email formatting, calendar scheduling, and team collaboration workflows.</p>
+                            <div class="inline-block px-3 py-1 bg-ms-outlook/5 rounded-lg text-[10px] font-black text-ms-outlook uppercase tracking-widest">Outcome: Corporate Communication</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="responsive-py bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="section-title font-black text-gray-900 font-outfit mb-12">Career Opportunities</h2>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:bg-brand-blue hover:text-white transition-all group">
+                            <h4 class="text-xl font-black mb-2">Office Executive</h4>
+                            <p class="text-xs text-slate-500 group-hover:text-white/70 font-medium">Managing daily workplace operations.</p>
+                        </div>
+                        <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:bg-brand-blue hover:text-white transition-all group">
+                            <h4 class="text-xl font-black mb-2">Data Entry</h4>
+                            <p class="text-xs text-slate-500 group-hover:text-white/70 font-medium">Handling information systems.</p>
+                        </div>
+                        <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:bg-brand-blue hover:text-white transition-all group">
+                            <h4 class="text-xl font-black mb-2">Admin Assistant</h4>
+                            <p class="text-xs text-slate-500 group-hover:text-white/70 font-medium">Coordinating business workflows.</p>
+                        </div>
+                        <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:bg-brand-blue hover:text-white transition-all group">
+                            <h4 class="text-xl font-black mb-2">Business Support</h4>
+                            <p class="text-xs text-slate-500 group-hover:text-white/70 font-medium">Assisting corporate leadership.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative rounded-[4rem] overflow-hidden aspect-square">
+                    <img src="./assets/img/c5.jpg" alt="Career Professional" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. LOCAL SEO & FAQ -->
+    <section class="py-32 bg-slate-50 reveal">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 font-outfit mb-8 leading-tight">Best MS Office Training in <span class="italic font-serif gradient-text">Avadi, Chennai</span></h2>
+                <p class="text-xl text-slate-500 font-medium max-w-3xl mx-auto leading-relaxed">
+                    MR CODERS HUB provides practical MS Office training for students and professionals across Chennai, helping them gain essential workplace skills.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-white rounded-[2.5rem] overflow-hidden border border-slate-100">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Is MS Office course useful for getting a job?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, MS Office skills are required in almost every corporate and office job globally. It is the baseline for professional work.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-white rounded-[2.5rem] overflow-hidden border border-slate-100">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Is this course suitable for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Absolutely. The course starts from the basics and progresses to advanced usage, ensuring everyone can follow along.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-white rounded-[2.5rem] overflow-hidden border border-slate-100">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Will I get practical training?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, the course includes hands-on exercises and real-world workplace tasks to build actual confidence.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FINAL CTA -->
+    <section class="responsive-py bg-slate-900 text-white text-center reveal adaptive-rounded mx-4 sm:mx-6 md:mx-10 mb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-white/5 blur-[120px] rounded-full"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="hero-title font-black mb-12 font-outfit leading-none tracking-tight">Build Essential <span class="italic font-serif">Office Skills</span> Today</h2>
+            <p class="text-xl md:text-2xl text-white/70 mb-16 max-w-2xl mx-auto font-medium">
+                Gain confidence, improve productivity, and get job-ready with our hands-on MS Office certification.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="contact.html" class="w-full sm:w-auto px-12 py-6 bg-white text-brand-blue rounded-3xl font-black text-xl hover:scale-105 transition-all shadow-premium">
+                    Enroll Now
+                </a>
+                <a href="contact.html" class="w-full sm:w-auto px-12 py-6 bg-transparent border-2 border-white/20 text-white rounded-3xl font-black text-xl hover:bg-white/10 transition-all">
+                    Talk to Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const panel = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    const isOpen = panel.style.maxHeight;
+
+                    document.querySelectorAll('.faq-panel').forEach(p => p.style.maxHeight = null);
+                    document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                    if (!isOpen) {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+<style>
+  /* WhatsApp Button Container */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* On-load Animation */
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    animation: wa-float-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+  }
+
+  /* Hover Effects */
+  .whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
+    background-color: #20b858;
+  }
+
+  /* SVG Icon Sizing */
+  .whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+  }
+
+  /* Tooltip Styling */
+  .wa-tooltip {
+    position: absolute;
+    right: 75px; /* Spaced out from the button */
+    background-color: #1f2937; /* Dark slate color */
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateX(10px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Tooltip Arrow pointing to the button */
+  .wa-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #1f2937;
+  }
+
+  /* Show tooltip on hover (Desktop only) */
+  @media (hover: hover) {
+    .whatsapp-float:hover .wa-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  /* Keyframe Animation */
+  @keyframes wa-float-in {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+      width: 55px;
+      height: 55px;
+    }
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+    }
+    .wa-tooltip {
+      display: none; /* Hide tooltip on mobile to prevent clutter */
+    }
+  }
+</style>
+
+<!-- HTML Structure -->
+<a href="#" id="whatsapp-btn" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <!-- Official WhatsApp SVG Vector -->
+ <svg viewBox="0 0 24 24" fill="white">
+  <path d="M20.52 3.48A11.94 11.94 0 0012.05 0C5.4 0 .02 5.38.02 12.03c0 2.12.56 4.2 1.62 6.04L0 24l6.11-1.6a12.03 12.03 0 005.94 1.52h.01c6.65 0 12.03-5.38 12.03-12.03 0-3.21-1.25-6.22-3.57-8.41zM12.05 21.9h-.01a9.88 9.88 0 01-5.03-1.38l-.36-.21-3.63.95.97-3.54-.23-.36a9.86 9.86 0 01-1.51-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 012.9 7.01c0 5.47-4.45 9.92-9.92 9.92zm5.48-7.39c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/>
+</svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<!-- JavaScript Functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const waButton = document.getElementById('whatsapp-btn');
+    
+    // --- CONFIGURATION ---
+    // Use your actual MR CODERS HUB number (Country code without '+')
+    const phoneNumber = '919360739559'; 
+    
+    // Create a dynamic message based on the current page the user is viewing
+    const pageTitle = document.title.split('|')[0].trim();
+    const message = `Hello MR CODERS HUB! I was looking at the "${pageTitle}" page and I'd like to know more about your services.`;
+    
+    // Properly encode the message for URL transmission
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Construct the official WhatsApp API URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Assign to button
+    waButton.setAttribute('href', whatsappUrl);
+  });
+</script>
+</body>
+
+</html>

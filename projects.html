@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR CodersHub | Project Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-purple': '#7C3AED',
+                        'brand-orange': '#F59E0B',
+                        'bg-main': '#F9FAFB',
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #3b82f6;
+            --dark: #0f172a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+
+        /* Premium Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .dark-glass {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Myna UI Inspired Ribbon Background */
+        .ribbon-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .ribbon {
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            border: 120px solid rgba(59, 130, 246, 0.04);
+            border-radius: 500px;
+            top: -25%;
+            left: -25%;
+            animation: drift 30s infinite linear;
+        }
+
+        .ribbon-2 {
+            border-color: rgba(30, 58, 138, 0.03);
+            width: 120%;
+            height: 120%;
+            top: 10%;
+            left: 20%;
+            animation: drift-reverse 45s infinite linear;
+        }
+
+        @keyframes drift {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes drift-reverse {
+            from {
+                transform: rotate(360deg);
+            }
+
+            to {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* Card Hover Effects */
+        .project-card {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .img-zoom {
+            transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .project-card:hover .img-zoom {
+            transform: scale(1.1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Modal Animation - Centered Scale */
+        #modal-container {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        #modal-container.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #modal-content {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: scale(0.9) translateY(20px);
+            opacity: 0;
+        }
+
+        #modal-container.active #modal-content {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
+.reveal-active { opacity: 1; transform: translateY(0); }
+
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-purple) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+    </style>
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="text-slate-900 overflow-x-hidden">
+    <!-- Myna UI Style Hero Section -->
+    <header class="relative min-h-[30vh] sm:min-h-[40vh] flex flex-col justify-center overflow-hidden py-20 sm:py-20">
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/img/bg2.jpg" 
+                 alt="Project Showcase" 
+                 class="w-full h-full object-cover opacity-40 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-bg-main"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10 w-full pt-20">
+            <div class="reveal">
+                <h1 class="hero-title font-black mb-8 text-gray-900 font-outfit leading-[1.1] sm:leading-none">
+                    Design. Code.<br /><span class="gradient-text italic font-serif">Deliver.</span>
+                </h1>
+
+                <p class="text-xl md:text-2xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto mb-12">
+                    Building digital experiences that prioritize function without sacrificing aesthetic excellence.
+                    From startup MVPs to enterprise-grade systems, we've got you covered.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 sm:mb-20">
+            <button
+                class="w-full sm:w-auto px-10 py-5 bg-brand-blue text-white rounded-full text-sm font-bold hover:bg-black hover:scale-105 transition-all shadow-2xl flex items-center justify-center space-x-2">
+                <span><a href="contact.html">Get a Free Quote</a></span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            
+        </div>
+
+        <!-- Integrated Filter Tabs -->
+        <div class="flex flex-wrap justify-center gap-3 overflow-x-auto pb-4 no-scrollbar" id="filters">
+            <button onclick="filterProjects('All')"
+                class="tab-btn px-8 py-3.5 rounded-full text-xs font-bold transition-all bg-brand-blue text-white uppercase tracking-widest">All
+                Work</button>
+            <button onclick="filterProjects('Creative')"
+                class="tab-btn px-8 py-3.5 rounded-full text-xs font-bold transition-all border border-slate-200 hover:border-brand-blue bg-white text-slate-500 uppercase tracking-widest">Creative</button>
+            <button onclick="filterProjects('Business')"
+                class="tab-btn px-8 py-3.5 rounded-full text-xs font-bold transition-all border border-slate-200 hover:border-brand-blue bg-white text-slate-500 uppercase tracking-widest">Business</button>
+            <button onclick="filterProjects('Tech')"
+                class="tab-btn px-8 py-3.5 rounded-full text-xs font-bold transition-all border border-slate-200 hover:border-brand-blue bg-white text-slate-500 uppercase tracking-widest">Tech</button>
+            <button onclick="filterProjects('Lifestyle')"
+                class="tab-btn px-8 py-3.5 rounded-full text-xs font-bold transition-all border border-slate-200 hover:border-brand-blue bg-white text-slate-500 uppercase tracking-widest">Lifestyle</button>
+        </div>
+        </div>
+        </div>
+        </div>
+    </header>
+
+    <!-- Project Grid -->
+    <main class="px-6 responsive-py max-w-7xl mx-auto">
+        <div id="project-grid" class="flex flex-wrap justify-center responsive-gap mobile-slider">
+            <!-- Dynamic Content -->
+        </div>
+    </main>
+
+    <!-- SECTION 3 — EXECUTION APPROACH -->
+    <section class="py-16 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title font-black text-gray-900 mb-4 font-outfit">How We Approach Every Project</h2>
+                <p class="text-[10px] font-black text-brand-blue uppercase tracking-[0.3em] mb-12">Execution is not a phase. It’s the foundation.</p>
+            </div>
+            <div class="flex flex-row justify-center responsive-gap mobile-slider">
+                <!-- Step 1 -->
+                <div class="responsive-p bg-slate-50 adaptive-rounded hover:shadow-xl transition-all group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-2rem)]">
+                    <div class="w-12 h-12 bg-brand-blue/10 text-brand-blue rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                        <i data-lucide="search" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-2 font-outfit">1. Understand</h3>
+                    <p class="text-slate-500 font-medium">Business problem and user behavior</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="responsive-p bg-slate-50 adaptive-rounded hover:shadow-xl transition-all group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-2rem)]">
+                    <div class="w-12 h-12 bg-brand-purple/10 text-brand-purple rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-purple group-hover:text-white transition-all">
+                        <i data-lucide="layout" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-2 font-outfit">2. Structure</h3>
+                    <p class="text-slate-500 font-medium">Plan solution with clear goals</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="responsive-p bg-slate-50 adaptive-rounded hover:shadow-xl transition-all group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-2rem)]">
+                    <div class="w-12 h-12 bg-brand-orange/10 text-brand-orange rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                        <i data-lucide="code" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-2 font-outfit">3. Execute</h3>
+                    <p class="text-slate-500 font-medium">Build, test, and deploy</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="responsive-p bg-slate-50 adaptive-rounded hover:shadow-xl transition-all group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-2rem)]">
+                    <div class="w-12 h-12 bg-green-500/10 text-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition-all">
+                        <i data-lucide="trending-up" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900 mb-2 font-outfit">4. Optimize</h3>
+                    <p class="text-slate-500 font-medium">Improve performance and results</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 7 — DUAL MODEL EXPLANATION (POWER SECTION) -->
+    <section class="responsive-py bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="section-title font-black text-gray-900 mb-4 font-outfit">Where Learning Meets Real Work</h2>
+                <p class="text-lg text-slate-500 font-medium italic">This is why our work reflects real-world relevance—not theory.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 sm:gap-12 mobile-slider">
+                <div class="responsive-p bg-slate-50 adaptive-rounded hover:shadow-2xl transition-all w-full md:w-[calc(50%-1.5rem)]">
+                    <div class="w-14 h-14 bg-brand-blue/10 text-brand-blue rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-black text-gray-900 mb-4 sm:mb-6 font-outfit">For Students</h3>
+                    <p class="text-base sm:text-lg text-slate-600 font-medium leading-relaxed">
+                        Students don't just learn syntax, they learn how to deliver client-ready work by contributing to real internal and external projects.
+                    </p>
+                </div>
+                <div class="responsive-p bg-slate-50 adaptive-rounded hover:shadow-2xl transition-all w-full md:w-[calc(50%-1.5rem)]">
+                    <div class="w-14 h-14 bg-brand-purple/10 text-brand-purple rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="briefcase" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-black text-gray-900 mb-4 sm:mb-6 font-outfit">For Businesses</h3>
+                    <p class="text-base sm:text-lg text-slate-600 font-medium leading-relaxed">
+                        Businesses get solutions that are backed by an ecosystem of fresh talent and expert mentorship, ensuring both innovation and reliability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5 — FINAL CTA -->
+    <section class="responsive-py bg-slate-900 text-white adaptive-rounded responsive-mx mb-20 relative overflow-hidden reveal text-center">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/20 to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+             <h2 class="hero-title font-black mb-12 font-outfit leading-none tracking-tight">Ready to Build <span class="italic font-serif">Something That Works?</span> </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-blue-500 mb-4 font-black">A student</p>
+                    <p class="text-xl font-black text-white italic font-serif">Build real skills</p>
+                </div>
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-purple-500 mb-4 font-black">A business</p>
+                    <p class="text-xl font-black text-white italic font-serif">Get real results</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="internship-booking.html" class="px-10 py-5 bg-white text-brand-blue rounded-full font-bold uppercase tracking-widest text-xs hover:scale-105 transition-all">Join as a Student</a>
+                <a href="contact.html" class="px-10 py-5 bg-brand-blue text-white rounded-full font-bold uppercase tracking-widest text-xs hover:scale-105 transition-all border border-white/20">Start a Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Modal - Centered Split Layout -->
+    <div id="modal-container" class="fixed inset-0 z-[100] flex items-center justify-center responsive-p">
+        <div id="modal-overlay" class="absolute inset-0 bg-slate-900/60 backdrop-blur-md" onclick="closeModal()"></div>
+
+        <div id="modal-content"
+            class="relative w-[95%] md:w-full max-w-5xl bg-white rounded-[32px] md:rounded-[40px] shadow-2xl overflow-hidden flex flex-col md:flex-row h-auto max-h-[90vh]">
+            <button onclick="closeModal()"
+                class="absolute top-6 right-6 z-20 w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 transition-all">
+                <i data-lucide="x" class="w-5 h-5 text-slate-800"></i>
+            </button>
+            <div id="modal-body" class="w-full flex flex-col md:flex-row overflow-y-auto">
+                <!-- Data Injected Here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const projects = [
+            {
+                id: 1,
+                category: "Creative",
+                title: "Pulse Events",
+                link: "https://pulse-events-website.vercel.app/",
+                problem: "Fragmented community engagement for live events.",
+                solution: "Discover and engage with local community events in real-time.",
+                description: "Pulse Events is a vibrant social discovery platform. It leverages geolocation to connect users with trending nearby events, featuring seamless calendar integration and social sharing mechanics.",
+                styleEngine: "Tailwind CSS",
+                techStack: ["Next.js", "Firebase", "Tailwind", "Motion"],
+                impact: "40% increase in repeat event attendance",
+                features: ["Smart Event Reminders", "Community Feedback Loop", "Dynamic Location Mapping", "Interactive Guest Lists"],
+                image: "assets/img/pulse_events_3d.png"
+            },
+            {
+                id: 2,
+                category: "Creative",
+                title: "StoryGrid Magazine",
+                link: "storygrid-magazine.vercel.app",
+                problem: "Traditional digital magazines lack engaging visual flow.",
+                solution: "Elevate editorial content with cinematic design.",
+                description: "StoryGrid redefines digital editorial design. It utilizes a custom CSS grid system that adapts to the mood of the content, creating a cinematic reading experience for long-form journalism.",
+                styleEngine: "CSS3",
+                techStack: ["React", "Custom CSS", "Prismic CMS", "GSAP"],
+                impact: "Average session duration increased by 3.5x",
+                features: ["Dynamic Layout Engine", "Smooth Scroll Parallax", "Dark/Light Reading Modes", "Engagement Heatmapping"],
+                image: "assets/img/mag_3d.png"
+            },
+            {
+                id: 3,
+                category: "Creative",
+                title: "Aurora Photography",
+                link: "https://aurora-photography-theta.vercel.app/",
+                problem: "Photographers struggling with low-fidelity gallery displays.",
+                solution: "High-resolution architecture for showcasing ultra-clear visual portfolios.",
+                description: "Aurora is a premium showcase for visual artists. It focuses on large-scale imagery and minimal disruption, using lazy-loading techniques to maintain performance without sacrificing clarity.",
+                styleEngine: "Tailwind CSS",
+                techStack: ["Astro", "Vanilla JS", "Vercel", "Framer"],
+                impact: "Zero-latency image loading across all devices",
+                features: ["Smart Image Compression", "Immersive Lightbox", "EXIF Data Display", "Client Proofing Gallery"],
+                image: "assets/img/aurora_photography_3d.png"
+            },
+            {
+                id: 4,
+                category: "Tech",
+                title: "Personal Portfolio",
+                link: "personal-portfolio-murex-eight-19.vercel.app",
+                problem: "Standard resumes fail to reflect technical engineering depth.",
+                solution: "Showcase technical engineering depth with interactive modules.",
+                description: "This portfolio is designed for engineers. It's built with a focus on web performance and clean architecture, featuring interactive code snippets and project documentation modules.",
+                styleEngine: "CSS3",
+                techStack: ["TypeScript", "Vite", "SCSS", "PostHTML"],
+                impact: "Ranked top 5% on Lighthouse performance audits",
+                features: ["Interactive Terminal", "GitHub API Integration", "Skill Progress Visuals", "Semantic HTML Structure"],
+                image: "assets/img/tech_portfolio_3d.png"
+            },
+            {
+                id: 5,
+                category: "Creative",
+                title: "Thunder Strings",
+                link: "https://music-band-lac.vercel.app/",
+                problem: "Artists unable to bridge digital streaming with live merch/tickets.",
+                solution: "Bridging the gap between digital streams and live commerce.",
+                description: "Music Band serves as a 360-degree digital home for musicians. It integrates Spotify/SoundCloud players with a custom e-commerce solution for exclusive merchandise drops.",
+                styleEngine: "Tailwind CSS",
+                techStack: ["SoundCloud API", "React", "Stripe", "Next.js"],
+                impact: "25% boost in direct-to-fan merchandise sales",
+                features: ["Integrated Audio Player", "Tour Date Management", "Exclusive Fan Area", "Dynamic Discography Grid"],
+                image: "assets/img/music_band_3d.png"
+            },
+            {
+                id: 6,
+                category: "Lifestyle",
+                title: "Medicare Health",
+                link: "https://health-clinic-gamma.vercel.app/",
+                problem: "Administrative friction in medical appointment booking.",
+                solution: "Professional healthcare portal for seamless clinic and appointment management.",
+                description: "A professional healthcare portal designed to reduce no-shows. It provides patients with a clean, low-stress interface for finding specialists and securing consultations.",
+                styleEngine: "CSS3",
+                techStack: ["PHP", "MySQL", "Bootstrap 5", "AJAX"],
+                impact: "Reduced front-desk phone calls by 60%",
+                features: ["Real-time Availability", "Doctor Profile Search", "Secure Patient Dashboard", "Automated Email Confirmations"],
+                image: "assets/img/health_clinic_3d.png"
+            },
+            {
+                id: 7,
+                category: "Tech",
+                title: "Smart Learn",
+                link: "smart-learn-eight-virid.vercel.app",
+                problem: "Online learning fatigue due to poor UI interaction.",
+                solution: "Gamified educational hub designed to maximize student engagement.",
+                description: "Smart Learn uses pedagogical design patterns to keep students engaged. It breaks down complex topics into digestible interactive modules with immediate feedback loops.",
+                styleEngine: "Tailwind CSS",
+                techStack: ["Vue.js", "Strapi", "Tailwind", "Chart.js"],
+                impact: "92% student completion rate in core modules",
+                features: ["Interactive Quiz Engine", "Progress Tracking Dashboard", "Peer Collaboration Space", "AI-Generated Study Plans"],
+                image: "assets/img/smart_learn_3d.png"
+            },
+            {
+                id: 8,
+                category: "Tech",
+                title: "VoltGear",
+                link: "voltgear-tech.vercel.app",
+                problem: "Tech products losing high-intent users on complex landing pages.",
+                solution: "High-performance product landing pages optimized for instant lead conversion.",
+                description: "VoltGear focuses on one thing: speed to conversion. The UI is built using advanced CSS performance techniques to ensure instant paint times on even the weakest mobile connections.",
+                styleEngine: "CSS3",
+                techStack: ["HTML5", "Vanilla CSS", "JS", "Cloudflare"],
+                impact: "Converted 12% more leads than legacy site",
+                features: ["One-tap Purchase Flow", "3D Product Visualization", "Responsive Comparison Grid", "Lazy-loaded Asset Pipeline"],
+                image: "assets/img/tech_3d.png"
+            },
+            {
+                id: 9,
+                category: "Business",
+                title: "NexaHomes",
+                link: "nexahomes-real-estate.vercel.app",
+                problem: "Home buyers overwhelmed by cluttered listing data.",
+                solution: "Immersive real estate portal that simplifies global property discovery.",
+                description: "NexaHomes elevates property searching to a lifestyle experience. It prioritizes emotional visual cues and removes the 'spreadsheet' feel from the home buying process.",
+                styleEngine: "Tailwind CSS",
+                techStack: ["Laravel", "Alpine.js", "PostgreSQL", "TileMaps"],
+                impact: "30% higher engagement on high-value listings",
+                features: ["Virtual Tour Integration", "Advanced Filter Logic", "Integrated Mortgage Tools", "Direct Agent Messaging"],
+                image: "assets/img/storygrid_3d.png"
+            },
+            {
+                id: 10,
+                category: "Business",
+                title: "Purple Shop",
+                link: "purple-mauve.vercel.app",
+                problem: "Small e-commerce sites feeling cheap and untrustworthy.",
+                solution: "Boutique e-commerce experience with refined, trust-building micro-interactions.",
+                description: "Purple Shop brings high-end brand aesthetics to accessible retail. It focuses on tactile UI feedback and buttery-smooth micro-interactions that build customer trust during checkout.",
+                styleEngine: "Tailwind CSS",
+                techStack: ["Next.js", "Shopify Storefront", "Tailwind", "Cart.js"],
+                impact: "Average order value increased by 15%",
+                features: ["Express Checkout Integration", "Dynamic Search & Filter", "Tactile UI Feedback", "Multi-currency Ready"],
+                image: "assets/img/ecom_3d.png"
+            },
+            {
+                id: 11,
+                category: "Lifestyle",
+                title: "Travelora",
+                link: "travelora-ten.vercel.app",
+                problem: "Travel planning software feeling like task management.",
+                solution: "Inspiration-led itinerary builder for planning seamless explorer travel.",
+                description: "Travelora turns planning into part of the vacation. It uses a card-based UX to help travelers visualize their trip, integrating local weather and flight data dynamically.",
+                styleEngine: "Tailwind CSS",
+                techStack: ["React", "Mapbox", "OpenWeather API", "Node.js"],
+                impact: "Users plan 2x more destination stops per trip",
+                features: ["Interactive Trip Timeline", "Budget Forecasting Tool", "Collaborative Trip Planning", "Offline Mode Export"],
+                image: "assets/img/travel_3d.png"
+            },
+            {
+                id: 12,
+                category: "Business",
+                title: "Nexus Startup",
+                link: "nexus-startup-psi.vercel.app",
+                problem: "Early-stage startups struggling to convey complex value props.",
+                solution: "Framework for communicating complex startup value propositions.",
+                description: "Nexus provides a narrative-first architecture for startups. It's designed to guide potential investors and early adopters through the vision, team, and roadmap with maximum clarity.",
+                styleEngine: "Tailwind CSS",
+                techStack: ["Vite", "GSAP", "Three.js", "Sanity CMS"],
+                impact: "Secure 3x more demo requests in first 30 days",
+                features: ["Animated Roadmap View", "Team Dynamic Components", "Social Proof Integration", "Growth Analytics Dashboard"],
+                image: "assets/img/hero_3d.png"
+            },
+            {
+                id: 13,
+                category: "Lifestyle",
+                title: "Cuisine Wave",
+                link: "cuisine-wave-restaurant.vercel.app",
+                problem: "Restaurant websites hiding menus behind PDFs.",
+                solution: "Zero-friction digital dining interface and reservation system for restaurants.",
+                description: "Cuisine Wave puts the food first. It's a digital-ready menu and reservation system that ensures potential diners can see exactly what they want and book a table in under 30 seconds.",
+                styleEngine: "Tailwind CSS",
+                techStack: ["SvelteKit", "Cloudinary", "Formspree", "Tailwind"],
+                impact: "Digital reservation rates increased by 50%",
+                features: ["Live Digital Menu", "One-tap Table Booking", "Menu Allergy Filters", "Instagram Social Grid"],
+                image: "assets/img/restaurant_3d.png"
+            },
+            {
+                id: 14,
+                category: "Lifestyle",
+                title: "Smile NGO",
+                link: "smile-ngo-site.vercel.app",
+                problem: "Donors losing interest due to lack of transparent impact data.",
+                solution: "Transparency-first platform for tracking real-time non-profit social impact.",
+                description: "Smile NGO focuses on building lasting trust. The site features live donation tracking and visual impact reports, making sure every contributor knows exactly where their help is going.",
+                styleEngine: "CSS3",
+                techStack: ["WordPress", "Custom Theme", "Elementor", "Stripe NGO"],
+                impact: "Achieved 20% growth in recurring monthly donors",
+                features: ["Live Impact Counter", "Secure Donation Bridge", "Volunteer Sign-up Flow", "Success Story Archives"],
+                image: "assets/img/ngo_3d.png"
+            },
+            {
+                id: 15,
+                category: "Lifestyle",
+                title: "Spartan Edge",
+                link: "gym-webapp-khaki.vercel.app",
+                problem: "Generic fitness apps failing to motivate long-term adherence.",
+                solution: "Personalized fitness dashboard designed for data-driven athletic growth.",
+                description: "Spartan Edge is a performance dashboard for the everyday athlete. It tracks progress visually and provides personalized workout adjustments based on historic user data.",
+                styleEngine: "Tailwind CSS",
+                techStack: ["Next.js", "Supabase", "PWA", "Lottie"],
+                impact: "45% increase in user retention over 90 days",
+                features: ["Workout Growth Charts", "Macro Tracking Module", "Social Challenge Engine", "Video Form Coaching"],
+                image: "assets/img/gym_3d.png"
+            }
+        ];
+
+        function renderProjects(category = 'All') {
+            const grid = document.getElementById('project-grid');
+            const filtered = category === 'All' ? projects : projects.filter(p => p.category === category);
+
+            const cardColors = [
+                'bg-[#FFC94D]', // Design
+                'bg-[#FD5D93]', // Skills
+                'bg-[#9171F8]', // Tech
+                'bg-[#6CA6FE]', // Business
+                'bg-[#506CF0]', // Tech
+                'bg-[#FFB547]'  // Gold
+            ];
+
+            grid.innerHTML = filtered.map((p, index) => {
+                const bgColor = cardColors[index % cardColors.length];
+                return `
+                <div class="project-card group ${bgColor} rounded-[32px] md:rounded-[48px] overflow-hidden cursor-pointer p-8 md:p-12 flex flex-col justify-start gap-8 md:justify-between min-h-[340px] md:aspect-square relative shadow-lg hover:shadow-2xl transition-all duration-500 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)]" onclick="openModal(${p.id})">
+                    <div class="relative z-10 flex flex-col space-y-3 md:space-y-4">
+                        <div class="flex items-center space-x-2 text-[10px] md:text-[11px] font-bold text-white/70 uppercase tracking-[0.2em]">
+                            <span>${p.category}</span>
+                            <i data-lucide="zap" class="w-3.5 h-3.5 text-white/50"></i>
+                        </div>
+                        
+                        <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-[1.1] max-w-[95%] md:max-w-[90%]">${p.title}</h3>
+                        <p class="text-white/90 text-sm md:text-base font-medium leading-relaxed max-w-[85%] md:max-w-[65%]">${p.solution}</p>
+                    </div>
+
+                    <div class="relative z-10 mt-auto md:mt-0">
+                        <button 
+                            onclick="event.stopPropagation(); window.open('${p.link}', '_blank')"
+                            class="inline-flex items-center space-x-2 px-4 md:px-6 py-3 bg-white/20 hover:bg-white text-white hover:text-slate-900 backdrop-blur-md rounded-full text-[9px] md:text-[10px] font-bold uppercase tracking-wider transition-all duration-300 group/btn shadow-lg border border-white/10">
+                            <span>Explore Project</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <!-- Illustration / Image at Bottom Right -->
+                    <div class="absolute bottom-4 right-4 md:bottom-6 md:right-6 w-32 h-32 md:w-48 md:h-48 transform translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-700 ease-out pointer-events-none">
+                        <img src="${p.image}" alt="${p.title}" class="w-full h-full object-contain filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]">
+                    </div>
+                </div>
+            `;
+            }).join('');
+
+            lucide.createIcons();
+
+            // Entry Animation
+            gsap.fromTo(".project-card",
+                { opacity: 0, scale: 0.95, y: 20 },
+                { opacity: 1, scale: 1, y: 0, duration: 1, stagger: 0.08, ease: "power4.out" }
+            );
+        }
+
+        function filterProjects(cat) {
+            // UI Toggle
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-blue', 'text-white');
+                btn.classList.add('border-slate-200', 'bg-white', 'text-slate-500');
+                if (btn.textContent.toLowerCase().includes(cat.toLowerCase().replace(' projects', ''))) {
+                    btn.classList.add('bg-brand-blue', 'text-white');
+                    btn.classList.remove('border-slate-200', 'bg-white', 'text-slate-500');
+                }
+            });
+            renderProjects(cat);
+        }
+
+        function openModal(id) {
+            const p = projects.find(it => it.id === id);
+            const container = document.getElementById('modal-container');
+            const body = document.getElementById('modal-body');
+
+            body.innerHTML = `
+                <div class="hidden md:flex w-full md:w-1/2 bg-slate-50 items-center justify-center p-12 min-h-[400px]">
+                    <img src="${p.image}" class="w-full h-full object-contain filter drop-shadow-2xl" />
+                </div>
+                <div class="w-full md:w-1/2 p-6 md:p-16 flex flex-col justify-center overflow-y-auto">
+                    <span class="text-slate-400 font-bold text-[10px] md:text-xs tracking-widest uppercase mb-4 block">${p.category}</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight tracking-tighter">${p.title}</h2>
+                    <p class="text-xl md:text-2xl font-bold text-brand-blue mb-8 leading-snug">${p.impact || ''}</p>
+                    
+                    <div class="prose prose-slate max-w-none mb-10">
+                        <p class="text-slate-500 leading-relaxed text-base md:text-lg font-medium">${p.description}</p>
+                    </div>
+
+                    <button 
+                        onclick="window.open('${p.link}', '_blank')"
+                        class="w-full py-5 bg-brand-blue hover:bg-black text-white rounded-full text-sm font-bold uppercase tracking-widest transition-all shadow-lg flex items-center justify-center gap-2">
+                        <span>Explore Project</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            `;
+
+            container.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            const container = document.getElementById('modal-container');
+            container.classList.remove('active');
+            setTimeout(() => {
+                document.body.style.overflow = '';
+            }, 400);
+        }
+
+        window.onload = () => {
+            renderProjects();
+            lucide.createIcons();
+        };
+
+        window.addEventListener('keydown', e => e.key === 'Escape' && closeModal());
+    </script>
+    
+    <!-- Floating WhatsApp Button -->
+<style>
+  /* WhatsApp Button Container */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* On-load Animation */
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    animation: wa-float-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+  }
+
+  /* Hover Effects */
+  .whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
+    background-color: #20b858;
+  }
+
+  /* SVG Icon Sizing */
+  .whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+  }
+
+  /* Tooltip Styling */
+  .wa-tooltip {
+    position: absolute;
+    right: 75px; /* Spaced out from the button */
+    background-color: #1f2937; /* Dark slate color */
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateX(10px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Tooltip Arrow pointing to the button */
+  .wa-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #1f2937;
+  }
+
+  /* Show tooltip on hover (Desktop only) */
+  @media (hover: hover) {
+    .whatsapp-float:hover .wa-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  /* Keyframe Animation */
+  @keyframes wa-float-in {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+      width: 55px;
+      height: 55px;
+    }
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+    }
+    .wa-tooltip {
+      display: none; /* Hide tooltip on mobile to prevent clutter */
+    }
+  }
+</style>
+
+<!-- HTML Structure -->
+<a href="#" id="whatsapp-btn" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <!-- Official WhatsApp SVG Vector -->
+ <svg viewBox="0 0 24 24" fill="white">
+  <path d="M20.52 3.48A11.94 11.94 0 0012.05 0C5.4 0 .02 5.38.02 12.03c0 2.12.56 4.2 1.62 6.04L0 24l6.11-1.6a12.03 12.03 0 005.94 1.52h.01c6.65 0 12.03-5.38 12.03-12.03 0-3.21-1.25-6.22-3.57-8.41zM12.05 21.9h-.01a9.88 9.88 0 01-5.03-1.38l-.36-.21-3.63.95.97-3.54-.23-.36a9.86 9.86 0 01-1.51-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 012.9 7.01c0 5.47-4.45 9.92-9.92 9.92zm5.48-7.39c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/>
+</svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<!-- JavaScript Functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const waButton = document.getElementById('whatsapp-btn');
+    
+    // --- CONFIGURATION ---
+    // Use your actual MR CODERS HUB number (Country code without '+')
+    const phoneNumber = '919360739559'; 
+    
+    // Create a dynamic message based on the current page the user is viewing
+    const pageTitle = document.title.split('|')[0].trim();
+    const message = `Hello MR CODERS HUB! I was looking at the "${pageTitle}" page and I'd like to know more about your services.`;
+    
+    // Properly encode the message for URL transmission
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Construct the official WhatsApp API URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Assign to button
+    waButton.setAttribute('href', whatsappUrl);
+  });
+</script>
+</body>
+
+</html>

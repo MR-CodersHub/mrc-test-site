@@ -1,0 +1,191 @@
+/* 
+  MR CODERS HUB — Global Design System v2
+  Ensures absolute consistency across all pages.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap');
+
+:root {
+    --brand-blue: #1E3A8A;
+    --brand-purple: #7C3AED;
+    --brand-orange: #F59E0B;
+    --bg-main: #F9FAFB;
+    --deep-dark: #0F172A;
+    --nav-height: 64px;
+}
+
+/* ── Base Reset ──────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: #111827;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+    padding-top: var(--nav-height); /* Prevent content jump when nav is fixed */
+}
+
+/* ── Text Selection ─────────────────────────────────────── */
+::selection {
+    background-color: rgba(30, 58, 138, 0.12); /* Ultra-subtle brand-blue */
+    color: inherit; /* Maintain original text color for a natural look */
+}
+
+::-moz-selection {
+    background-color: rgba(30, 58, 138, 0.12);
+    color: inherit;
+}
+
+/* Ensure gradient/transparent text is readable when selected */
+.gradient-text::selection {
+    -webkit-text-fill-color: var(--brand-blue);
+    background-color: rgba(30, 58, 138, 0.15);
+}
+
+/* ── Typography Standard ─────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    letter-spacing: -0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-size: clamp(1.85rem, 5vw, 3.5rem);
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+}
+
+/* ── Layout Standard ─────────────────────────────────────── */
+.max-w-7xl {
+    max-width: 80rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: clamp(1.5rem, 6vw, 3rem) !important;
+    padding-right: clamp(1.5rem, 6vw, 3rem) !important;
+}
+
+.responsive-py {
+    padding-top: clamp(4rem, 10vw, 8rem);
+    padding-bottom: clamp(4rem, 10vw, 8rem);
+}
+
+.responsive-p {
+    padding: clamp(1.5rem, 6vw, 3.5rem);
+}
+
+.adaptive-rounded {
+    border-radius: clamp(2rem, 5vw, 4rem);
+}
+
+.responsive-mx {
+    margin-left: clamp(0.5rem, 4vw, 2rem);
+    margin-right: clamp(0.5rem, 4vw, 2rem);
+}
+
+/* ── Common Components ───────────────────────────────────── */
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-purple) 50%, var(--brand-orange) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+.shadow-premium {
+    box-shadow: 0 25px 50px -12px rgba(30, 58, 138, 0.1);
+}
+
+/* ── Animations ──────────────────────────────────────────── */
+@keyframes premiumFadeUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(40px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.reveal {
+    opacity: 0;
+}
+
+.reveal-active {
+    animation: premiumFadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ── Navigation Stability ────────────────────────────────── */
+nav {
+    height: var(--nav-height) !important;
+    transition: all 0.4s ease;
+}
+
+.nav-link-active:not(.rounded-full) { 
+    color: var(--brand-blue) !important; 
+    font-weight: 800 !important;
+}
+
+/* ── Mobile Optimization ─────────────────────────────────── */
+@media (max-width: 767px) {
+    .mobile-slider {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 1.25rem !important;
+        padding-bottom: 2.5rem !important;
+        margin-left: -1.25rem !important;
+        margin-right: -1.25rem !important;
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+        scrollbar-width: none;
+    }
+    
+    .mobile-slider::-webkit-scrollbar { display: none; }
+    
+    .mobile-slider > * {
+        flex-shrink: 0 !important;
+        width: 86% !important;
+        scroll-snap-align: center !important;
+    }
+    
+    .hero-title { font-size: 2.5rem; }
+    .section-title { font-size: 2rem; }
+}
+
+/* Fix for icons */
+i[data-lucide], svg[data-lucide] {
+    display: inline-block;
+    stroke-width: 2.5;
+    vertical-align: middle;
+}

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Java Full Stack Course in Chennai with Internship | MR CODERS HUB</title>
+    <meta name="description" content="Learn Java Full Stack development with Spring Boot, SQL, and Real Projects in Chennai. Master backend and frontend engineering at MR CODERS HUB.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-purple': '#7C3AED',
+                        'brand-red': '#DC2626',
+                        'bg-main': '#F9FAFB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-blue: #1E3A8A;
+            --brand-purple: #7C3AED;
+            --brand-red: #DC2626;
+        }
+
+        body { -webkit-font-smoothing: antialiased; }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal-active { opacity: 1; transform: translateY(0); }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-purple) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="bg-bg-main text-gray-900 overflow-x-hidden antialiased">
+
+    <!-- Global Navigation -->
+
+    <!-- Navigation Spacer -->
+    <div class="h-16 lg:h-20"></div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-2 pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-red/5 rounded-full blur-[120px] -mr-48 -mt-48"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-purple/5 rounded-full blur-[100px] -ml-24 -mb-24"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-red-50 border border-red-100 mb-8">
+                        <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
+                        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-red">Enterprise Dev Track</span>
+                    </div>
+                    <h1 class="hero-title font-black mb-8 text-gray-900 font-outfit">
+                        Java Full Stack <br> <span class="gradient-text italic font-serif">Development Course</span>
+                    </h1>
+                    <p class="text-xl text-slate-500 font-medium leading-relaxed max-w-xl mb-12">
+                        Master Spring Boot, SQL, and modern frontend frameworks with hands-on training and real development projects at MR CODERS HUB, Avadi, Chennai.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="contact.html" class="px-10 py-5 bg-red-600 text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-xl">
+                            Enroll Now
+                        </a>
+                        <a href="#curriculum" class="px-10 py-5 bg-white border border-gray-200 text-gray-900 rounded-2xl font-black text-lg hover:bg-gray-50 transition-all">
+                            Get Course Details
+                        </a>
+                    </div>
+                </div>
+                <div class="relative reveal delay-200">
+                    <div class="aspect-square rounded-[4rem] overflow-hidden shadow-2xl border-8 border-white">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1470&auto=format&fit=crop" 
+                             alt="Java Development" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 p-8 glass-card rounded-3xl shadow-xl max-w-xs hidden md:block">
+                        <p class="text-sm font-bold text-gray-900 mb-2 italic font-serif">"3 Months of Pure Execution. From Zero to Enterprise Ready."</p>
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 rounded-full bg-brand-red"></div>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">Industry Focused</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. COURSE OVERVIEW -->
+    <section class="py-16 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="section-title font-black text-gray-900 font-outfit mb-8">Complete Java Full Stack <br> <span class="gradient-text italic font-serif">Development Curriculum</span></h2>
+                    <p class="text-lg text-slate-500 font-medium leading-relaxed mb-10">
+                        This curriculum is designed to take you from programming fundamentals to full stack application development with real-world execution. You won't just learn Java; you will build enterprise-grade systems.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="px-6 py-3 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-brand-red"></i>
+                            <span class="font-bold text-gray-900 text-sm">3 Months Duration</span>
+                        </div>
+                        <div class="px-6 py-3 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-3">
+                            <i data-lucide="layers" class="w-5 h-5 text-brand-red"></i>
+                            <span class="font-bold text-gray-900 text-sm">12 Modules</span>
+                        </div>
+                        <div class="px-6 py-3 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-3">
+                            <i data-lucide="briefcase" class="w-5 h-5 text-brand-red"></i>
+                            <span class="font-bold text-gray-900 text-sm">Internship Included</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                        <i data-lucide="code" class="w-10 h-10 text-brand-red mb-6"></i>
+                        <h4 class="font-black text-gray-900 mb-2">Backend</h4>
+                        <p class="text-xs text-slate-400 font-medium leading-relaxed">Spring Boot, REST APIs, Microservices basics.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                        <i data-lucide="layout" class="w-10 h-10 text-brand-red mb-6"></i>
+                        <h4 class="font-black text-gray-900 mb-2">Frontend</h4>
+                        <p class="text-xs text-slate-400 font-medium leading-relaxed">HTML, CSS, JS, API Integration.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                        <i data-lucide="database" class="w-10 h-10 text-brand-red mb-6"></i>
+                        <h4 class="font-black text-gray-900 mb-2">Database</h4>
+                        <p class="text-xs text-slate-400 font-medium leading-relaxed">SQL, JDBC, CRUD Operations.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                        <i data-lucide="rocket" class="w-10 h-10 text-brand-red mb-6"></i>
+                        <h4 class="font-black text-gray-900 mb-2">Production</h4>
+                        <p class="text-xs text-slate-400 font-medium leading-relaxed">Auth, Security, Deployment pipelines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. COURSE MODULES -->
+    <section id="curriculum" class="responsive-py bg-slate-50 reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="section-title font-black text-gray-900 font-outfit mb-4">Industrial Program Flow</h2>
+                <p class="text-xl text-slate-500 font-medium">Step-by-step from core concepts to enterprise production.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Module 1 -->
+                <div class="group p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    <span class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-6 block">Module 01</span>
+                    <h4 class="text-xl font-black text-gray-900 mb-4 font-outfit">Core Java Programming</h4>
+                    <ul class="text-sm text-slate-500 font-medium space-y-2 mb-8">
+                        <li>• Fundamentals and syntax</li>
+                        <li>• Control structures & logic building</li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-xs font-bold text-gray-700">Write structured Java programs.</p>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="group p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    <span class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-6 block">Module 02</span>
+                    <h4 class="text-xl font-black text-gray-900 mb-4 font-outfit">OOP & Collections</h4>
+                    <ul class="text-sm text-slate-500 font-medium space-y-2 mb-8">
+                        <li>• Inheritance, Polymorphism</li>
+                        <li>• Collections (ArrayList, HashMap)</li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-xs font-bold text-gray-700">Build scalable object-oriented programs.</p>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="group p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    <span class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-6 block">Module 03</span>
+                    <h4 class="text-xl font-black text-gray-900 mb-4 font-outfit">Exception Handling & File I/O</h4>
+                    <ul class="text-sm text-slate-500 font-medium space-y-2 mb-8">
+                        <li>• Error handling strategies</li>
+                        <li>• File reading and writing</li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-xs font-bold text-gray-700">Write stable and error-resistant apps.</p>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="group p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    <span class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-6 block">Module 04</span>
+                    <h4 class="text-xl font-black text-gray-900 mb-4 font-outfit">Frontend Development</h4>
+                    <ul class="text-sm text-slate-500 font-medium space-y-2 mb-8">
+                        <li>• HTML Structure & CSS Styling</li>
+                        <li>• Responsive Design Basics</li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-xs font-bold text-gray-700">Build clean responsive UIs.</p>
+                    </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="group p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    <span class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-6 block">Module 05</span>
+                    <h4 class="text-xl font-black text-gray-900 mb-4 font-outfit">JavaScript Core</h4>
+                    <ul class="text-sm text-slate-500 font-medium space-y-2 mb-8">
+                        <li>• DOM Manipulation</li>
+                        <li>• Interaction and Logic</li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-xs font-bold text-gray-700">Create interactive web applications.</p>
+                    </div>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="group p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    <span class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-6 block">Module 06</span>
+                    <h4 class="text-xl font-black text-gray-900 mb-4 font-outfit text-nowrap">Advanced JS & API</h4>
+                    <ul class="text-sm text-slate-500 font-medium space-y-2 mb-8">
+                        <li>• Data Fetching & Integration</li>
+                        <li>• Frontend-Backend Communication</li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-xs font-bold text-gray-700">Integrate real data into web apps.</p>
+                    </div>
+                </div>
+
+                <!-- Module 7 -->
+                <div class="group p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    <span class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-6 block">Module 07</span>
+                    <h4 class="text-xl font-black text-gray-900 mb-4 font-outfit">Java Backend (Spring Boot)</h4>
+                    <ul class="text-sm text-slate-500 font-medium space-y-2 mb-8">
+                        <li>• Spring Boot Fundamentals</li>
+                        <li>• REST API Development</li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-xs font-bold text-gray-700">Build robust backend systems.</p>
+                    </div>
+                </div>
+
+                <!-- Module 8 -->
+                <div class="group p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    <span class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-6 block">Module 08</span>
+                    <h4 class="text-xl font-black text-gray-900 mb-4 font-outfit">Database Integration</h4>
+                    <ul class="text-sm text-slate-500 font-medium space-y-2 mb-8">
+                        <li>• SQL Queries & Design</li>
+                        <li>• JDBC & CRUD Operations</li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-xs font-bold text-gray-700">Store and manage data efficiently.</p>
+                    </div>
+                </div>
+
+                <!-- Module 9 -->
+                <div class="group p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    <span class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-6 block">Module 09</span>
+                    <h4 class="text-xl font-black text-gray-900 mb-4 font-outfit ">Full Stack Integration</h4>
+                    <ul class="text-sm text-slate-500 font-medium space-y-2 mb-8">
+                        <li>• Connecting Frontend to Backend</li>
+                        <li>• API Data Flow</li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-xs font-bold text-gray-700">Build complete integrated apps.</p>
+                    </div>
+                </div>
+
+                <!-- Module 10 -->
+                <div class="group p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    <span class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-6 block">Module 10</span>
+                    <h4 class="text-xl font-black text-gray-900 mb-4 font-outfit ">Authentication & Security</h4>
+                    <ul class="text-sm text-slate-500 font-medium space-y-2 mb-8">
+                        <li>• User Auth Systems</li>
+                        <li>• Login Security Basics</li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-xs font-bold text-gray-700">Develop secure web applications.</p>
+                    </div>
+                </div>
+
+                <!-- Module 11 -->
+                <div class="group p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    <span class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-6 block">Module 11</span>
+                    <h4 class="text-xl font-black text-gray-900 mb-4 font-outfit">Deployment Pipelines</h4>
+                    <ul class="text-sm text-slate-500 font-medium space-y-2 mb-8">
+                        <li>• Hosting applications</li>
+                        <li>• Production Setup</li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-xs font-bold text-gray-700">Deploy real apps to production.</p>
+                    </div>
+                </div>
+
+                <!-- Module 12 -->
+                <div class="group p-10 rounded-[3rem] bg-white border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    <span class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-6 block">Module 12</span>
+                    <h4 class="text-xl font-black text-gray-900 mb-4 font-outfit">Capstone Project</h4>
+                    <ul class="text-sm text-slate-500 font-medium space-y-2 mb-8">
+                        <li>• Complete Full Stack Project</li>
+                        <li>• Project Presentation</li>
+                    </ul>
+                    <div class="mt-auto pt-6 border-t border-slate-50">
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-1">Outcome</span>
+                        <p class="text-xs font-bold text-gray-700">Create portfolio-ready project for jobs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WHAT YOU WILL BUILD -->
+    <section class="py-32 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-5xl font-black mb-20 font-outfit">What You Will Build</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="p-10 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-center">
+                    <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6"><i data-lucide="monitor" class="w-7 h-7 text-brand-red"></i></div>
+                    <span class="font-bold text-gray-900">Full Stack Web <br> Applications</span>
+                </div>
+                <div class="p-10 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-center">
+                    <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6"><i data-lucide="server" class="w-7 h-7 text-brand-red"></i></div>
+                    <span class="font-bold text-gray-900">REST APIs</span>
+                </div>
+                <div class="p-10 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-center">
+                    <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6"><i data-lucide="smartphone" class="w-7 h-7 text-brand-red"></i></div>
+                    <span class="font-bold text-gray-900">Dynamic Frontend <br> Interfaces</span>
+                </div>
+                <div class="p-10 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-center">
+                    <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6"><i data-lucide="database" class="w-7 h-7 text-brand-red"></i></div>
+                    <span class="font-bold text-gray-900">Database-Driven <br> Systems</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. INTERNSHIP SECTION -->
+    <section class="py-32 bg-slate-900 text-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-8 font-outfit">Internship with Real <br> <span class="italic font-serif gradient-text">Development Projects</span></h2>
+                    <ul class="space-y-6 mb-12">
+                        <li class="flex items-center gap-4 text-lg font-bold">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-red"></i> Work on real applications
+                        </li>
+                        <li class="flex items-center gap-4 text-lg font-bold">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-red"></i> Collaborate with mentors
+                        </li>
+                        <li class="flex items-center gap-4 text-lg font-bold">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-red"></i> Build production-level projects
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-12 glass-card rounded-[4rem] border-white/10 text-center">
+                    <i data-lucide="code-2" class="w-16 h-16 text-brand-red mx-auto mb-8"></i>
+                    <h3 class="text-2xl font-black mb-4 font-outfit text-black">Full Stack Internship</h3>
+                    <p class="text-black/50 mb-8 font-medium italic">"Execution is the only way to mastery. Join the hub."</p>
+                    <a href="booking.html" class="inline-block px-10 py-5 bg-white text-slate-900 rounded-2xl font-bold hover:bg-slate-100 transition-all">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CAREER OPPORTUNITIES -->
+    <section class="py-32 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl font-black text-gray-900 font-outfit">Career Opportunities After This Course</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 flex items-center justify-between group">
+                    <span class="font-bold text-gray-900">Java Developer</span>
+                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-red group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"></i>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 flex items-center justify-between group">
+                    <span class="font-bold text-gray-900">Full Stack Developer</span>
+                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-red group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"></i>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 flex items-center justify-between group">
+                    <span class="font-bold text-gray-900">Backend Developer</span>
+                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-red group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"></i>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 flex items-center justify-between group">
+                    <span class="font-bold text-gray-900">Software Engineer</span>
+                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-red group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. LOCAL SEO SECTION -->
+    <section class="py-32 bg-slate-50 reveal">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-black text-gray-900 font-outfit mb-8 leading-tight">Best Java Full Stack Course in <span class="italic font-serif gradient-text">Avadi, Chennai</span></h2>
+            <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                MR CODERS HUB provides hands-on full stack development training with real project experience for students across Chennai, helping them transition from fundamentals to enterprise execution.
+            </p>
+        </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section class="py-16 bg-white reveal">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-2xl md:text-5xl font-black text-gray-900 font-outfit">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Is this Java Full Stack course suitable for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, the course starts from core programming fundamentals and progresses systematically to advanced full stack development.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Will I build real projects?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Yes, you will build and deploy multiple full stack applications, including a major capstone project for your portfolio.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-slate-50 rounded-[2.5rem] overflow-hidden">
+                    <button class="faq-btn w-full p-8 flex items-center justify-between text-left group">
+                        <span class="text-xl font-bold text-gray-900">Do you include backend and database training?</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="faq-panel max-h-0 overflow-hidden transition-all duration-300 px-8">
+                        <div class="pb-8 text-lg text-slate-500 font-medium">
+                            Absolutely. We cover Spring Boot for backend and SQL for database management, ensuring you master the complete stack.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FINAL CTA -->
+    <section class="responsive-py bg-slate-900 text-white text-center reveal adaptive-rounded mx-4 sm:mx-6 md:mx-10 mb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-red/5 blur-[120px] rounded-full"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="hero-title font-black mb-12 font-outfit leading-none tracking-tight">Become an Enterprise <br> <span class="italic font-serif">Java Developer</span></h2>
+            <p class="text-xl md:text-2xl text-white/50 mb-16 max-w-2xl mx-auto font-medium">
+                Master the world's most robust programming ecosystem with industrial execution.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="contact.html" class="px-12 py-6 bg-brand-red text-white rounded-3xl font-black text-xl border-2 border-gray-700 hover:scale-105 transition-all ">
+                    Enroll Now
+                </a>
+                <a href="#curriculum" class="px-12 py-6 bg-transparent border-2 border-white/20 text-white rounded-3xl font-black text-xl hover:bg-white/10 transition-all">
+                    Get Course Details
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const panel = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    const isOpen = panel.style.maxHeight;
+
+                    document.querySelectorAll('.faq-panel').forEach(p => p.style.maxHeight = null);
+                    document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                    if (!isOpen) {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+<style>
+  /* WhatsApp Button Container */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* On-load Animation */
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    animation: wa-float-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+  }
+
+  /* Hover Effects */
+  .whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
+    background-color: #20b858;
+  }
+
+  /* SVG Icon Sizing */
+  .whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+  }
+
+  /* Tooltip Styling */
+  .wa-tooltip {
+    position: absolute;
+    right: 75px; /* Spaced out from the button */
+    background-color: #1f2937; /* Dark slate color */
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateX(10px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Tooltip Arrow pointing to the button */
+  .wa-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #1f2937;
+  }
+
+  /* Show tooltip on hover (Desktop only) */
+  @media (hover: hover) {
+    .whatsapp-float:hover .wa-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  /* Keyframe Animation */
+  @keyframes wa-float-in {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+      width: 55px;
+      height: 55px;
+    }
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+    }
+    .wa-tooltip {
+      display: none; /* Hide tooltip on mobile to prevent clutter */
+    }
+  }
+</style>
+
+<!-- HTML Structure -->
+<a href="#" id="whatsapp-btn" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <!-- Official WhatsApp SVG Vector -->
+ <svg viewBox="0 0 24 24" fill="white">
+  <path d="M20.52 3.48A11.94 11.94 0 0012.05 0C5.4 0 .02 5.38.02 12.03c0 2.12.56 4.2 1.62 6.04L0 24l6.11-1.6a12.03 12.03 0 005.94 1.52h.01c6.65 0 12.03-5.38 12.03-12.03 0-3.21-1.25-6.22-3.57-8.41zM12.05 21.9h-.01a9.88 9.88 0 01-5.03-1.38l-.36-.21-3.63.95.97-3.54-.23-.36a9.86 9.86 0 01-1.51-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.9a9.86 9.86 0 012.9 7.01c0 5.47-4.45 9.92-9.92 9.92zm5.48-7.39c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.95 1.18c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/>
+</svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<!-- JavaScript Functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const waButton = document.getElementById('whatsapp-btn');
+    
+    // --- CONFIGURATION ---
+    // Use your actual MR CODERS HUB number (Country code without '+')
+    const phoneNumber = '919360739559'; 
+    
+    // Create a dynamic message based on the current page the user is viewing
+    const pageTitle = document.title.split('|')[0].trim();
+    const message = `Hello MR CODERS HUB! I was looking at the "${pageTitle}" page and I'd like to know more about your services.`;
+    
+    // Properly encode the message for URL transmission
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Construct the official WhatsApp API URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Assign to button
+    waButton.setAttribute('href', whatsappUrl);
+  });
+</script>
+</body>
+
+</html>
