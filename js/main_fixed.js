@@ -217,9 +217,8 @@ function initNavbar() {
 }
 
 
-// ──────────────────────────────────────────
 // Global UI Injection
-// ─�const GLOBAL_NAV = `
+const GLOBAL_NAV = `
 <nav
         class="bg-white/90 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-gray-100 px-6 md:px-8 lg:px-10 h-16 flex items-center">
         <div class="max-w-7xl mx-auto w-full flex justify-between items-center h-full">
@@ -244,12 +243,11 @@ function initNavbar() {
                             </path>
                         </svg>
                     </div>
-                    <!-- Dropdown Content -->
                     <div
                         class="absolute top-full left-1/2 -translate-x-1/2 pt-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 w-72 z-50">
                         <div class="pt-4">
                             <div class="bg-white/95 backdrop-blur-xl border border-gray-200 rounded-2xl p-2 shadow-2xl shadow-blue-500/10 ring-1 ring-black/5">
-                                <!-- Edtech Section -->
+                                
                                 <div class="px-4 py-3 mt-1">
                                     <p class="text-[10px] font-black text-brand-blue uppercase tracking-[0.2em] mb-3 ml-1">Edtech</p>
                                     <div class="grid grid-cols-1 gap-1">
@@ -277,12 +275,10 @@ function initNavbar() {
                             </path>
                         </svg>
                     </div>
-                    <!-- Dropdown Content -->
                     <div
                         class="absolute top-full left-1/2 -translate-x-1/2 pt-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 w-72 z-50">
                         <div class="pt-4">
                             <div class="bg-white/95 backdrop-blur-xl border border-gray-200 rounded-2xl p-2 shadow-2xl shadow-blue-500/10 ring-1 ring-black/5">
-                                <!-- Services Section -->
                                 <div class="px-4 py-3 mt-1">
                                     <p class="text-[10px] font-black text-pink-600 uppercase tracking-[0.2em] mb-3 ml-1">Services</p>
                                     <div class="grid grid-cols-1 gap-1">
@@ -307,18 +303,11 @@ function initNavbar() {
             </div>
 
             <div class="flex items-center gap-4 justify-end h-full">
-                <!-- Desktop CTA -->
                 <a href="./contact.html"
                     class="hidden lg:inline-block px-8 py-3 bg-gradient-to-r from-brand-blue to-brand-purple rounded-full text-sm font-bold text-white shadow-lg shadow-blue-600/20 hover:scale-105 hover:shadow-blue-600/40 transition-all duration-300 whitespace-nowrap tracking-wide">Start a Project</a>
 
-                <!-- Hamburger Button (Mobile) -->
                 <button id="global-mobile-menu-btn"
                     class="lg:hidden w-11 h-11 flex items-center justify-center text-gray-900 bg-gray-50 rounded-xl hover:bg-gray-100 focus:outline-none relative z-50 transition-all border border-gray-100 active:scale-95">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-        </div>
-    </nav>`; border-gray-100 active:scale-95">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>

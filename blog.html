@@ -30,7 +30,7 @@
 
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <style>
@@ -89,58 +89,233 @@
             background-size: 30px 30px;
         }
 
-        /* ── Intern Profiles Scrolling ──────────────────────── */
-        .intern-scroll-container {
+        /* ── Talent Showcase CSS ──────────────────────── */
+        .showcase-scroll-container {
             position: relative;
             width: 100%;
             overflow: hidden;
-            padding: 2rem 0;
+            padding: 1.5rem 0;
         }
 
-        .intern-track {
+        .showcase-track {
             display: flex;
             width: max-content;
-            animation: scroll-left 40s linear infinite;
+            animation: scroll-left-showcase 75s linear infinite;
+            gap: 2.5rem; /* clean equal spacing */
         }
 
-        .intern-scroll-container:hover .intern-track {
+        /* Continuous rotation speed pauses elegantly on hover */
+        .showcase-scroll-container:hover .showcase-track {
             animation-play-state: paused;
         }
 
-        @keyframes scroll-left {
+        @keyframes scroll-left-showcase {
             0% {
                 transform: translateX(0);
             }
-
             100% {
                 transform: translateX(-50%);
             }
         }
 
-        .intern-card {
+        /* Tall portrait-style premium card */
+        .showcase-card {
             flex-shrink: 0;
-            width: 180px;
-            margin: 0 2rem;
+            width: 280px; /* premium size */
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
-        }
-
-        .intern-image-wrapper {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 2rem;
+            padding: 1.5rem 1.5rem 2rem 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            position: relative;
             overflow: hidden;
-            border: 3px solid white;
-            box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.1);
-            margin-bottom: 1rem;
-            transition: all 0.4s ease;
         }
 
-        .intern-card:hover .intern-image-wrapper {
-            transform: scale(1.1) translateY(-5px);
-            border-color: var(--brand-blue);
+        /* Ambient glow and dynamic shadows on hover */
+        .showcase-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 2rem;
+            padding: 2px;
+            background: linear-gradient(135deg, transparent, transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            transition: all 0.5s ease;
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 30px 60px -15px var(--accent-glow, rgba(30, 58, 138, 0.15));
+            background: rgba(255, 255, 255, 0.95);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Theme colors per card */
+        .showcase-card.editing-card {
+            --accent-color: #0D9488; /* Teal */
+            --accent-glow: rgba(13, 148, 136, 0.25);
+            --gradient-start: #0D9488;
+            --gradient-end: #06B6D4;
+        }
+        .showcase-card.designing-card {
+            --accent-color: #EA580C; /* Orange */
+            --accent-glow: rgba(234, 88, 12, 0.25);
+            --gradient-start: #EA580C;
+            --gradient-end: #F97316;
+        }
+        .showcase-card.photography-card {
+            --accent-color: #D97706; /* Golden Yellow */
+            --accent-glow: rgba(217, 119, 6, 0.25);
+            --gradient-start: #D97706;
+            --gradient-end: #F59E0B;
+        }
+        .showcase-card.videography-card {
+            --accent-color: #7C3AED; /* Purple */
+            --accent-glow: rgba(124, 58, 237, 0.25);
+            --gradient-start: #7C3AED;
+            --gradient-end: #8B5CF6;
+        }
+
+        .showcase-card:hover::before {
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+        }
+
+        /* Image Wrapper with zoom effect on hover */
+        .showcase-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 280px; /* Tall portrait style aspect */
+            border-radius: 1.5rem;
+            overflow: hidden;
+            border: 4px solid #ffffff;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), inset 0 0 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+        }
+
+        .showcase-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .showcase-card:hover .showcase-image-wrapper img {
+            transform: scale(1.08);
+        }
+
+        /* Overlapping Floating circular icon */
+        .floating-icon-btn {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid white;
+            box-shadow: 0 8px 20px var(--accent-glow);
+            z-index: 10;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Subtle micro-floating animation */
+        @keyframes microFloat {
+            0%, 100% { transform: translate(-50%, 50%) translateY(0); }
+            50% { transform: translate(-50%, 50%) translateY(-4px); }
+        }
+
+        .showcase-card .floating-icon-btn {
+            animation: microFloat 3.5s ease-in-out infinite;
+        }
+
+        .showcase-card.editing-card .floating-icon-btn { animation-delay: 0s; }
+        .showcase-card.designing-card .floating-icon-btn { animation-delay: 0.5s; }
+        .showcase-card.photography-card .floating-icon-btn { animation-delay: 1s; }
+        .showcase-card.videography-card .floating-icon-btn { animation-delay: 1.5s; }
+
+        .showcase-card:hover .floating-icon-btn {
+            transform: translate(-50%, 50%) scale(1.1);
+            box-shadow: 0 12px 25px var(--accent-glow);
+        }
+
+        /* Category Title */
+        .showcase-category {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        /* Tagline */
+        .showcase-tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: #64748b;
+            font-weight: 500;
+            line-height: 1.5;
+            height: 2.75rem; /* Two lines height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        .showcase-card:hover .showcase-tagline {
+            color: #1e293b;
+        }
+
+        /* Small bottom accent line */
+        .showcase-accent-line {
+            width: 32px;
+            height: 3.5px;
+            border-radius: 99px;
+            background: var(--accent-color);
+            margin-top: 1.25rem;
+            transition: width 0.4s ease;
+        }
+
+        .showcase-card:hover .showcase-accent-line {
+            width: 60px;
+        }
+
+        /* Mobile specific adjustments to maintain responsive behavior */
+        @media (max-width: 767px) {
+            .showcase-track {
+                gap: 1.5rem;
+            }
+            .showcase-card {
+                width: 250px;
+                padding: 1.25rem 1.25rem 1.75rem 1.25rem;
+            }
+            .showcase-image-wrapper {
+                height: 230px;
+            }
+            .floating-icon-btn {
+                width: 48px;
+                height: 48px;
+                border-width: 3.5px;
+            }
         }
 
         .gradient-text {
@@ -162,7 +337,281 @@
             opacity: 1;
             transform: translateY(0);
         }
-    </style>
+
+
+ .section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 48px;
+  }
+
+  /* Scroll container */
+  .scroll-outer {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+
+
+  .scroll-track {
+    display: flex;
+    gap: 50px;
+    width: max-content;
+    margin: 35px 0px;
+    animation: scroll-left 38s linear infinite;
+  }
+
+  .scroll-track:hover { animation-play-state: paused; }
+
+  @keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── THE CARD ── */
+  .intern-card {
+    width: 230px;
+    border-radius: 20px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    flex-shrink: 0;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+  }
+
+  .intern-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+  }
+
+  /* Photo area */
+  .card-photo-wrapper {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+    background: #e5e7eb;
+  }
+
+  .card-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .intern-card:hover .card-photo {
+    transform: scale(1.08);
+  }
+
+
+  /* Card body */
+  .card-body {
+    padding: 14px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .card-name-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .card-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f0f0f;
+    line-height: 1.2;
+  }
+
+  .verified-badge {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .card-bio {
+    font-size: 12px;
+    color: #6b7280;
+    line-height: 1.45;
+    font-weight: 400;
+  }
+
+  /* Stats row */
+  .card-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 6px;
+    gap: 4px;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+  }
+
+  .stat-value {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f0f0f;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .stat-value svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .stat-label {
+    font-size: 10px;
+    color: #9ca3af;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 28px;
+    background: transparent;
+  }
+
+  /* CTA button */
+  .card-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    background: #111;
+    color: #fff;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 11px 0;
+    border-radius: 12px;
+    margin-top: 2px;
+    letter-spacing: 0.01em;
+    transition: background 3s;
+  }
+
+  .card-cta svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .intern-card:hover .card-cta {
+    background: #1d4ed8;
+  }
+
+  /* Placeholder avatar when no image */
+  .card-photo-placeholder {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -1px;
+  }
+
+  /* Card color themes for variety */
+  .theme-teal   .card-photo-placeholder { background: linear-gradient(160deg, #0f766e, #14b8a6); }
+  .theme-violet .card-photo-placeholder { background: linear-gradient(160deg, #6d28d9, #a78bfa); }
+  .theme-rose   .card-photo-placeholder { background: linear-gradient(160deg, #be123c, #fb7185); }
+  .theme-amber  .card-photo-placeholder { background: linear-gradient(160deg, #b45309, #fbbf24); }
+  .theme-blue   .card-photo-placeholder { background: linear-gradient(160deg, #1e40af, #60a5fa); }
+  .theme-green  .card-photo-placeholder { background: linear-gradient(160deg, #15803d, #4ade80); }
+  .theme-pink   .card-photo-placeholder { background: linear-gradient(160deg, #9d174d, #f472b6); }
+  .theme-indigo .card-photo-placeholder { background: linear-gradient(160deg, #3730a3, #818cf8); }
+  .theme-cyan   .card-photo-placeholder { background: linear-gradient(160deg, #0e7490, #22d3ee); }
+  .theme-lime   .card-photo-placeholder { background: linear-gradient(160deg, #3f6212, #a3e635); }
+  .theme-slate  .card-photo-placeholder { background: linear-gradient(160deg, #334155, #94a3b8); }
+
+  /* ── FEATURED TALENT STYLING ── */
+  .intern-card.featured {
+    box-shadow: 0 0 0 2px #d4af37, 0 8px 24px rgba(212, 175, 55, 0.15);
+  }
+  .intern-card.featured:hover {
+    box-shadow: 0 0 0 2.5px #ffe066, 0 16px 36px rgba(212, 175, 55, 0.35);
+  }
+  
+  .featured-ribbon-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    z-index: 15;
+    pointer-events: none;
+  }
+  
+  .featured-ribbon {
+    position: absolute;
+    top: 24px;
+    left: -33px;
+    width: 150px;
+    transform: rotate(-45deg);
+    background: linear-gradient(135deg, #fff3b3 0%, #d4af37 45%, #b38600 70%, #805d00 100%);
+    color: #000;
+    font-size: 8.5px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    border-top: 1.5px solid rgba(255,255,255,0.45);
+    border-bottom: 1.5px solid rgba(0,0,0,0.15);
+    text-shadow: 0 0.5px 0.5px rgba(255,255,255,0.3);
+  }
+  
+  .featured-badge {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 1px 2px rgba(212, 175, 55, 0.4));
+  }
+
+</style>
 
     <script src="./js/main.js" defer></script>
 </head>
@@ -524,178 +973,14 @@
         </div>
     </section>
 
-    <!-- 3. INTERN PROFILES SECTION -->
-    <section class="py-16 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 text-center mb-24">
-            <p class="text-xs uppercase tracking-[0.4em] text-brand-blue font-bold mb-4">Our Talent</p>
-            <h2 class="section-title font-black text-gray-900">Intern Profiles</h2>
+    <section class="py-24 relative overflow-hidden bg-slate-50/40">
+        <!-- Ambient Radial Glowing Backgrounds -->
+        <div class="section">
+            <p class="section-label">Our Talent</p>
+            <h2 class="section-title">Intern Profiles</h2>
         </div>
-
-        <div class="intern-scroll-container reveal">
-            <div class="intern-track">
-                <a href="http://gowthami-portfolio-topaz.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/gowthami-pfp.png" class="w-full h-full object-cover" alt="Gowthami">
-                    </div>
-                    <p class="intern-name">Gowthami</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://harish-portfolio-virid.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/HARISH-PFP.png" class="w-full h-full object-cover" alt="Harish">
-                    </div>
-                    <p class="intern-name">Harish Raghav kumar S</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://kiruthika-portfolio-iota.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/kiruthika-pfp.png" class="w-full h-full object-cover" alt="Kiruthika">
-                    </div>
-                    <p class="intern-name">Kiruthika E</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://kishore-portfolio-brown.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/kishore-pfp.png" class="w-full h-full object-cover" alt="Kishore">
-                    </div>
-                    <p class="intern-name">Kishore</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://meenakshi-portfolio-six.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/meenakshi-pfp.png" class="w-full h-full object-cover" alt="Meenakshi">
-                    </div>
-                    <p class="intern-name">Meenakshi</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://pooja-portfolio-lac-eta.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/pooja-pfp.png" class="w-full h-full object-cover" alt="Pooja">
-                    </div>
-                    <p class="intern-name">Pooja</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://prashanth-portfolio-beta.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/PRASANTH-PFP.png" class="w-full h-full object-cover" alt="Prasanth">
-                    </div>
-                    <p class="intern-name">Prashanth</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://priyan-portfolio.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/PRIYAN-PFP.png" class="w-full h-full object-cover" alt="Priyan">
-                    </div>
-                    <p class="intern-name">Priyan</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://saranya-portfolio-navy.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/saranya-pfp.png" class="w-full h-full object-cover" alt="Saranya">
-                    </div>
-                    <p class="intern-name">Saranya</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://sweety-portfolio-two.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/sweety-pfp.png" class="w-full h-full object-cover" alt="Sweety">
-                    </div>
-                    <p class="intern-name">Sweety</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://tonya-portfolio.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/tonya-pfp.png" class="w-full h-full object-cover" alt="Tonya">
-                    </div>
-                    <p class="intern-name">Tonya</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <!-- Duplicated for Infinite Scroll -->
-                <a href="https://gowthami-portfolio-topaz.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/gowthami-pfp.png" class="w-full h-full object-cover" alt="Gowthami">
-                    </div>
-                    <p class="intern-name">Gowthami</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://harish-portfolio-virid.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/HARISH-PFP.png" class="w-full h-full object-cover" alt="Harish">
-                    </div>
-                    <p class="intern-name">Harish Raghav Kumar</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://kiruthika-portfolio-iota.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/kiruthika-pfp.png" class="w-full h-full object-cover" alt="Kiruthika">
-                    </div>
-                    <p class="intern-name">Kiruthika</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https:kishore-portfolio-brown.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/kishore-pfp.png" class="w-full h-full object-cover" alt="Kishore">
-                    </div>
-                    <p class="intern-name">Kishore</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://portfolio-lavanya-nine.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/lavanya-pfp.png" class="w-full h-full object-cover" alt="Lavanya">
-                    </div>
-                    <p class="intern-name">Lavanya</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://meenakshi-portfolio-six.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/meenakshi-pfp.png" class="w-full h-full object-cover" alt="Meenakshi">
-                    </div>
-                    <p class="intern-name">Meenakshi</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://pooja-portfolio-lac-eta.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/pooja-pfp.png" class="w-full h-full object-cover" alt="Pooja">
-                    </div>
-                    <p class="intern-name">Pooja</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://prashanth-portfolio-beta.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/PRASANTH-PFP.png" class="w-full h-full object-cover" alt="Prasanth">
-                    </div>
-                    <p class="intern-name">Prashanth</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://priyan-portfolio.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/PRIYAN-PFP.png" class="w-full h-full object-cover" alt="Priyan">
-                    </div>
-                    <p class="intern-name">Priyan</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://saranya-portfolio-navy.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/saranya-pfp.png" class="w-full h-full object-cover" alt="Saranya">
-                    </div>
-                    <p class="intern-name">Saranya</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://sweety-portfolio-two.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/sweety-pfp.png" class="w-full h-full object-cover" alt="Sweety">
-                    </div>
-                    <p class="intern-name">Sweety</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-                <a href="https://tonya-portfolio.vercel.app/" class="intern-card">
-                    <div class="intern-image-wrapper">
-                        <img src="./assets/img/tonya-pfp.png" class="w-full h-full object-cover" alt="Tonya">
-                    </div>
-                    <p class="intern-name">Tonya</p>
-                    <p class="intern-role">Web Intern</p>
-                </a>
-            </div>
+        <div class="scroll-outer">
+            <div class="scroll-track" id="track"></div>
         </div>
     </section>
 
@@ -837,6 +1122,95 @@
         </svg>
         <span class="wa-tooltip">Chat with us</span>
     </a>
+    
+<script>
+const interns = [
+  { name: "Gowthami R",   initials: "G",  theme: "theme-teal",   href: "http://gowthami-portfolio-topaz.vercel.app/",   img: "./assets/img/gowthami-pfp.png",   role: "Web Intern", bio: "Crafting clean, purposeful web experiences with a design-first mindset.", period: "1 Months" },
+  { name: "Harish Ragav Kumar S",     initials: "H",  theme: "theme-violet", href: "https://harish-portfolio-virid.vercel.app/",    img: "./assets/img/HARISH-PFP.png",     role: "Web Intern", bio: "Building robust front-ends with seamless UX and performance in focus.", period: "3 Months", project: "5", featured: true },
+  { name: "Jayapriya",    initials: "J",  theme: "theme-cyan",   href: "https://jayapriyajp2006-sketch.github.io/Portfolio/",   img: "./assets/img/jayapriya-pfp.jpeg",    role: "Web Intern", bio: "UI enthusiast dedicated to intuitive design and clean component work.", period: "1 Month", project: "3", featured: true },
+  { name: "Kiruthika E",initials: "KE", theme: "theme-rose",   href: "https://kiruthika-portfolio-iota.vercel.app/", img: "./assets/img/kiruthika-pfp.png",   role: "Web Intern", bio: "Bringing aesthetic vision and technical precision to every project.", period: "1 Month" },
+  { name: "Kishore",    initials: "K",  theme: "theme-amber",  href: "https://kishore-portfolio-brown.vercel.app/",  img: "./assets/img/kishore-pfp.png",    role: "Web Intern", bio: "Crafting clean, purposeful web experiences with a design-first mindset.", period: "1 Month" },
+  { name: "Meenakshi R",  initials: "M",  theme: "theme-blue",   href: "https://meenakshi-portfolio-six.vercel.app/",  img: "./assets/img/meenakshi-pfp.png",  role: "Web Intern", bio: "Passionate about building delightful user interfaces that truly connect.", period: "3 Months", project: "5", featured: true },
+  { name: "Pooja M",      initials: "P",  theme: "theme-green",  href: "https://pooja-portfolio-lac-eta.vercel.app/",  img: "./assets/img/pooja-pfp.png",      role: "Web Intern", bio: "Detail-oriented developer who loves clean code and great user flows.", period: "1 Month" },
+  { name: "Prashanth",  initials: "Pr", theme: "theme-pink",   href: "https://prashanth-portfolio-beta.vercel.app/", img: "./assets/img/PRASANTH-PFP.png",   role: "Web Intern", bio: "Creative problem solver focused on responsive, accessible web design.", period: "1 Month" },
+  { name: "Priyan V",     initials: "Pn", theme: "theme-indigo", href: "https://priyan-portfolio.vercel.app/",         img: "./assets/img/PRIYAN-PFP.png",     role: "Web Intern", bio: "Crafting clean, purposeful web experiences with a design-first mindset.", period: "1 Month" },
+  { name: "Saranya B",    initials: "S",  theme: "theme-cyan",   href: "https://saranya-portfolio-navy.vercel.app/",   img: "./assets/img/saranya-pfp.png",    role: "Web Intern", bio: "UI enthusiast dedicated to intuitive design and clean component work.", period: "1 Month" },
+  { name: "Shri Darssini",    initials: "S",  theme: "theme-cyan",   href: "https://shridarssini.github.io/Portfolio/",   img: "./assets/img/shridarsini-pfp.png",    role: "Web Intern", bio: "UI enthusiast dedicated to intuitive design and clean component work.", period: "1 Month", project: "3", featured: true },
+  { name: "Sweety T S",     initials: "Sw", theme: "theme-lime",   href: "https://sweety-portfolio-two.vercel.app/",    img: "./assets/img/sweety-pfp.png",     role: "Web Intern", bio: "Crafting engaging layouts that merge function with visual elegance.", period: "3 Months",  project: "5", featured: true },
+  { name: "Tonya B",      initials: "T",  theme: "theme-slate",  href: "https://tonya-portfolio.vercel.app/",          img: "./assets/img/tonya-pfp.png",      role: "Web Intern  ", bio: "Motivated developer building modern, user-centered web solutions.", period: "1 Month" },
+];
+
+function buildCard(intern) {
+  const isFeatured = !!intern.featured;
+  const cardClass = isFeatured ? `intern-card ${intern.theme} featured` : `intern-card ${intern.theme}`;
+  const ribbonHtml = isFeatured ? `
+    <div class="featured-ribbon-wrapper">
+      <div class="featured-ribbon">Featured Talent</div>
+    </div>
+  ` : '';
+
+  return `
+  <a href="${intern.href}" class="${cardClass}" target="_blank" rel="noopener noreferrer">
+    ${ribbonHtml}
+    <!-- Photo / Avatar -->
+    <div class="card-photo-wrapper">
+      ${intern.img ? `<img src="${intern.img}" alt="${intern.name}" class="card-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : ''}
+      <div class="card-photo-placeholder" ${intern.img ? 'style="display: none;"' : ''}>${intern.initials}</div>
+    </div>
+
+    <!-- Body -->
+    <div class="card-body">
+
+      <!-- Name + Badge -->
+      <div class="card-name-row">
+        <span class="card-name">${intern.name}</span>
+        ${isFeatured ? `
+          <svg class="featured-badge" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="10" fill="#d4af37"/>
+            <path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        ` : `<!-- <svg class="verified-badge" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="10" cy="10" r="10" fill="#2563eb"/>
+          <path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg> -->`}
+      </div>
+
+      <!-- Bio -->
+      <p class="card-bio">${intern.bio}</p>
+
+      <!-- Stats -->
+      <div class="card-stats">
+        <div class="stat">
+          <span class="stat-value" style="font-size: 12.5px;">${intern.period || '3 Months'}</span>
+          <span class="stat-label">Period</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">${intern.project || '1'}</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">${intern.role}</span>
+          <span class="stat-label">Role</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="card-cta">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        View Portfolio
+      </div>
+
+    </div>
+  </a>`;
+}
+
+const track = document.getElementById('track');
+// Original set + duplicate for infinite loop
+const allCards = [...interns, ...interns].map(buildCard).join('');
+track.innerHTML = allCards;
+</script>
 
     <!-- JavaScript Functionality -->
     <script>

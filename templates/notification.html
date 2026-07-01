@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Enquiry Received</title>
+<style>
+  body, table, td { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  body { margin: 0; padding: 0; background-color: #f4f5f7; }
+  .wrapper { width: 100%; background-color: #f4f5f7; padding: 32px 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+  .header { background-color: #4F46E5; padding: 32px 40px; text-align: center; }
+  .badge { display: inline-block; background-color: rgba(255,255,255,0.15); color: #ffffff; font-size: 12px; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 0.5px; }
+  .header h1 { color: #ffffff; font-size: 22px; margin: 0; font-weight: 600; }
+  .body-content { padding: 36px 40px; }
+  .intro { color: #374151; font-size: 15px; line-height: 1.6; margin: 0 0 24px; }
+  .details-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+  .details-table td { padding: 12px 0; border-bottom: 1px solid #eef0f3; font-size: 14px; vertical-align: top; }
+  .label { color: #6b7280; width: 120px; font-weight: 600; }
+  .value { color: #111827; }
+  .message-box { background-color: #f9fafb; border-left: 4px solid #4F46E5; border-radius: 6px; padding: 18px 20px; color: #374151; font-size: 14px; line-height: 1.6; }
+  .message-box p { margin: 0; }
+  .cta { text-align: center; margin-top: 28px; }
+  .cta a { background-color: #4F46E5; color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px 28px; border-radius: 6px; display: inline-block; }
+  .footer { padding: 24px 40px 32px; text-align: center; }
+  .footer p { color: #9ca3af; font-size: 12px; line-height: 1.6; margin: 4px 0; }
+  @media screen and (max-width: 600px) {
+    .header, .body-content, .footer { padding-left: 24px !important; padding-right: 24px !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <table class="container" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+      <tr>
+        <td class="header">
+          <span class="badge">NEW WEBSITE ENQUIRY</span>
+          <h1>&#128231; You've Got a New Enquiry</h1>
+        </td>
+      </tr>
+      <tr>
+        <td class="body-content">
+          <p class="intro">A visitor just submitted the contact form on <strong>{{company_website}}</strong>. Here are the details:</p>
+
+          <table class="details-table" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="label">Name</td>
+              <td class="value">{{customer_name}}</td>
+            </tr>
+            <tr>
+              <td class="label">Email</td>
+              <td class="value"><a href="mailto:{{customer_email}}" style="color:#4F46E5; text-decoration:none;">{{customer_email}}</a></td>
+            </tr>
+            <tr>
+              <td class="label">Phone</td>
+              <td class="value">{{customer_phone}}</td>
+            </tr>
+            <tr>
+              <td class="label">Subject</td>
+              <td class="value">{{subject}}</td>
+            </tr>
+            <tr>
+              <td class="label">Submitted</td>
+              <td class="value">{{submission_date}}</td>
+            </tr>
+          </table>
+
+          <div class="message-box">
+            <p>{{message_html}}</p>
+          </div>
+
+          <div class="cta">
+            <a href="mailto:{{customer_email}}">Reply to {{customer_name}}</a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="footer">
+          <p>Sent automatically from the contact form on {{company_website}}</p>
+          <p>IP Address: {{customer_ip}}</p>
+          <p>&copy; {{current_year}} {{company_name}}. All rights reserved.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

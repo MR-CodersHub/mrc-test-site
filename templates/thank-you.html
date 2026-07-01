@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>We've received your enquiry</title>
+<style>
+  body, table, td { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  body { margin: 0; padding: 0; background-color: #f4f5f7; }
+  .wrapper { width: 100%; background-color: #f4f5f7; padding: 32px 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+  .header { background-color: #4F46E5; padding: 40px 40px 32px; text-align: center; }
+  .check-circle { width: 56px; height: 56px; line-height: 56px; border-radius: 50%; background-color: rgba(255,255,255,0.15); color: #ffffff; font-size: 28px; margin: 0 auto 16px; text-align: center; }
+  .header h1 { color: #ffffff; font-size: 22px; margin: 0; font-weight: 600; }
+  .body-content { padding: 36px 40px; }
+  .greeting { color: #111827; font-size: 16px; font-weight: 600; margin: 0 0 12px; }
+  .intro { color: #374151; font-size: 15px; line-height: 1.7; margin: 0 0 24px; }
+  .summary-box { background-color: #f9fafb; border: 1px solid #eef0f3; border-radius: 8px; padding: 20px 22px; margin-bottom: 28px; }
+  .summary-box .label { color: #6b7280; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; margin: 0 0 4px; }
+  .summary-box .subject { color: #111827; font-size: 15px; font-weight: 600; margin: 0 0 14px; }
+  .summary-box .message { color: #374151; font-size: 14px; line-height: 1.6; margin: 0; }
+  .steps { margin: 0 0 28px; padding: 0; list-style: none; }
+  .steps td.step-num { width: 32px; vertical-align: top; }
+  .steps .num-circle { width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 50%; background-color: #EEF2FF; color: #4F46E5; font-weight: 700; font-size: 12px; display: inline-block; }
+  .steps td.step-text { font-size: 14px; color: #374151; line-height: 1.6; padding-bottom: 14px; }
+  .cta { text-align: center; margin-bottom: 8px; }
+  .cta a { background-color: #4F46E5; color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px 32px; border-radius: 6px; display: inline-block; }
+  .signoff { color: #374151; font-size: 14px; line-height: 1.6; margin-top: 28px; }
+  .footer { padding: 24px 40px 32px; text-align: center; border-top: 1px solid #f1f1f4; }
+  .footer p { color: #9ca3af; font-size: 12px; line-height: 1.6; margin: 4px 0; }
+  .footer a { color: #4F46E5; text-decoration: none; }
+  @media screen and (max-width: 600px) {
+    .header, .body-content, .footer { padding-left: 24px !important; padding-right: 24px !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <table class="container" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+      <tr>
+        <td class="header">
+          <div class="check-circle">&#10003;</div>
+          <h1>We've Got Your Message!</h1>
+        </td>
+      </tr>
+      <tr>
+        <td class="body-content">
+          <p class="greeting">Hi {{customer_name}},</p>
+          <p class="intro">
+            Thank you for reaching out to <strong>{{company_name}}</strong>. We've successfully received your enquiry
+            and our team is already on it &mdash; you can expect to hear back from us within <strong>{{response_time}}</strong>.
+          </p>
+
+          <div class="summary-box">
+            <p class="label">Your Enquiry</p>
+            <p class="subject">{{subject}}</p>
+            <p class="message">{{message_html}}</p>
+          </div>
+
+          <table width="100%" cellpadding="0" cellspacing="0" class="steps">
+            <tr>
+              <td class="step-num"><span class="num-circle">1</span></td>
+              <td class="step-text">Our team reviews every enquiry personally.</td>
+            </tr>
+            <tr>
+              <td class="step-num"><span class="num-circle">2</span></td>
+              <td class="step-text">We'll reach out to you at {{customer_email}} or by phone.</td>
+            </tr>
+            <tr>
+              <td class="step-num"><span class="num-circle">3</span></td>
+              <td class="step-text">We'll work with you to find the best solution.</td>
+            </tr>
+          </table>
+
+          <div class="cta">
+            <a href="{{company_website}}">Visit Our Website</a>
+          </div>
+
+          <p class="signoff">
+            Warm regards,<br>
+            The {{company_name}} Team
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="footer">
+          <p>Need to add anything? Just reply to this email or contact us at <a href="mailto:{{company_email}}">{{company_email}}</a></p>
+          <p>&copy; {{current_year}} {{company_name}}. All rights reserved.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

@@ -149,7 +149,7 @@
 
     <!-- 2. CONTACT FORM SECTION -->
     <section class="responsive-py relative z-20 -mt-12 md:-mt-32 px-4 sm:px-6">
-        <div class="max-w-7xl mx-auto bg-white rounded-[2rem] md:rounded-[3rem] shadow-premium overflow-hidden border border-gray-100">
+        <div class="max-w-7xl mx-auto bg-white rounded-[2rem] md:rounded-[3rem] shadow-premium overflow-visible border border-gray-100">
             <div class="grid grid-cols-1 lg:grid-cols-12">
 
                 <!-- Left: Content -->
@@ -202,7 +202,6 @@
                     </div>
                 </div>
 
-                <!-- Right: Form -->
                 <!-- Right: Form -->
                 <div
                     class="bg-gray-50/50 responsive-p lg:p-16 border-l border-gray-100 relative w-full overflow-visible flex flex-col min-h-[600px] lg:col-span-7 rounded-b-[3rem] lg:rounded-r-[3rem] lg:rounded-bl-none">
@@ -1270,11 +1269,9 @@
         function executeFinalSubmit(form, payload, submitBtn, originalHtml) {
             console.log('Structured Submission Payload:', JSON.stringify(payload, null, 2));
 
-            const webhookUrl = activeTab === 'student'
-                ? 'https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY5MDYzMzA0MzU1MjY0NTUzZCI_3D_pc/IjU3NjcwNTZlMDYzNzA0Mzc1MjY5NTUzZDUxMzci_pc'
-                : 'https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY5MDYzMzA0MzU1MjY0NTUzZCI_3D_pc/IjU3NjcwNTZlMDYzNTA0MzU1MjZmNTUzNzUxMzMi_pc';
+            const submitUrl = './mailer.php';
 
-            fetch(webhookUrl, {
+            fetch(submitUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -1282,22 +1279,35 @@
                 body: JSON.stringify(payload)
             })
                 .then(response => {
-                    alert('Success! Your structured data has been submitted.');
-                    submitBtn.innerHTML = '<span>SENT!</span><i data-lucide="check" class="w-4 h-4"></i>';
-                    submitBtn.classList.replace('bg-brand-blue', 'bg-green-600');
-                    lucide.createIcons();
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.status) {
+                        alert(data.message || 'Success! Your enquiry has been submitted.');
+                        submitBtn.innerHTML = '<span>SENT!</span><i data-lucide="check" class="w-4 h-4"></i>';
+                        submitBtn.classList.replace('bg-brand-blue', 'bg-green-600');
+                        lucide.createIcons();
 
-                    form.reset();
-                    state.category = '';
-                    state.serviceType = '';
-                    if (typeof resetCustomDropdowns === 'function') resetCustomDropdowns();
+                        form.reset();
+                        state.category = '';
+                        state.serviceType = '';
+                        if (typeof resetCustomDropdowns === 'function') resetCustomDropdowns();
 
-                    const dynamicId = activeTab === 'student' ? 'studentDynamic' : 'businessDynamic';
-                    const dynamicEl = document.getElementById(dynamicId);
-                    if (dynamicEl) {
-                        dynamicEl.style.maxHeight = '0px';
-                        dynamicEl.style.opacity = '0';
-                        setTimeout(() => { dynamicEl.innerHTML = ''; updateContainerHeight(); }, 500);
+                        const dynamicId = activeTab === 'student' ? 'studentDynamic' : 'businessDynamic';
+                        const dynamicEl = document.getElementById(dynamicId);
+                        if (dynamicEl) {
+                            dynamicEl.style.maxHeight = '0px';
+                            dynamicEl.style.opacity = '0';
+                            setTimeout(() => { dynamicEl.innerHTML = ''; updateContainerHeight(); }, 500);
+                        }
+                    } else {
+                        alert('Error: ' + (data.message || 'Something went wrong.'));
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalHtml;
+                        lucide.createIcons();
                     }
                 })
                 .catch(error => {

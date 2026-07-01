@@ -976,48 +976,51 @@
     </section>
     
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
 
-            const status = document.getElementById('formStatus');
-            const submitBtn = document.getElementById('submitBtn');
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
+                const status = document.getElementById('formStatus');
+                const submitBtn = document.getElementById('submitBtn');
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
 
-            // UI Feedback: Loading state
-            submitBtn.disabled = true;
-            const originalContent = submitBtn.innerHTML;
-            submitBtn.innerHTML = `<span>Processing...</span><i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i>`;
-            lucide.createIcons();
-
-            // Real API call to Pabbly Webhook
-            fetch('https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY5MDYzMzA0MzU1MjY0NTUzZCI_3D_pc/IjU3NjcwNTZlMDYzNzA0Mzc1MjY5NTUzZDUxMzci_pc', {
-                method: 'POST',
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                // UI Feedback: Success state
-                status.classList.remove('hidden', 'text-red-600');
-                status.classList.add('text-green-600');
-                status.textContent = "Success! Your message has been sent. We'll be in touch.";
-
-                submitBtn.innerHTML = `<span>Message Sent!</span><i data-lucide="check" class="w-4 h-4"></i>`;
-                submitBtn.classList.replace('bg-brand-blue', 'bg-green-600');
+                // UI Feedback: Loading state
+                submitBtn.disabled = true;
+                const originalContent = submitBtn.innerHTML;
+                submitBtn.innerHTML = `<span>Processing...</span><i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i>`;
                 lucide.createIcons();
 
-                this.reset();
-            })
-            .catch(error => {
-                console.error('Submission Error:', error);
-                status.classList.remove('hidden', 'text-green-600');
-                status.classList.add('text-red-600');
-                status.textContent = "Oops! Something went wrong. Please try again later.";
-                
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalContent;
-                lucide.createIcons();
+                // Real API call to Pabbly Webhook
+                fetch('https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY5MDYzMzA0MzU1MjY0NTUzZCI_3D_pc/IjU3NjcwNTZlMDYzNzA0Mzc1MjY5NTUzZDUxMzci_pc', {
+                    method: 'POST',
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    // UI Feedback: Success state
+                    status.classList.remove('hidden', 'text-red-600');
+                    status.classList.add('text-green-600');
+                    status.textContent = "Success! Your message has been sent. We'll be in touch.";
+
+                    submitBtn.innerHTML = `<span>Message Sent!</span><i data-lucide="check" class="w-4 h-4"></i>`;
+                    submitBtn.classList.replace('bg-brand-blue', 'bg-green-600');
+                    lucide.createIcons();
+
+                    this.reset();
+                })
+                .catch(error => {
+                    console.error('Submission Error:', error);
+                    status.classList.remove('hidden', 'text-green-600');
+                    status.classList.add('text-red-600');
+                    status.textContent = "Oops! Something went wrong. Please try again later.";
+                    
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalContent;
+                    lucide.createIcons();
+                });
             });
-        });
+        }
     </script>
 
     <!-- Hero cycling word and image animation -->
